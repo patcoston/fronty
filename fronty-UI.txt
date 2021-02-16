@@ -1,0 +1,62 @@
+Fronty User Interface Specification
+
+
+
+
+Search
+
+Filters
+- Skills/versions
+  - NOT
+  - Years required
+  - version plus
+- Employee Type (full-time, contractor, etc)
+- Company size
+- Salary range (per hour, week, month, year)
+- Industry
+  - NOT
+- Methodology (Agile, Waterfall, etc)
+- Commute
+  - enter address
+  - time/distance max (by car)
+- Mobile
+  - Responsive
+  - Mobile only
+  - Web only
+- Accessible
+  - 25% ADA Compliant
+  - 50% ADA Compliant
+  - 75% ADA Compliant
+  - 100% ADA Compliant
+  - 25% WCAG Compliant
+  - 50% WCAG Compliant
+  - 75% WCAG Compliant
+  - 100% WCAG Compliant
+- Industry
+  - NOT
+- Working from home: 0%, 10%, 20%, 30%, 40%, 50%, 60%, 70%, 80%, 90%, 100%
+- Benefits
+- Level of Experience: Intern, Junior, Senior
+- Education Required
+- Dress Code
+- Pets Allowed
+- External or Internal
+
+
+
+Add Skill
+- Text field to type
+- Skills that have the substring will appear in scrollable menu updated for each keyboard entry
+- Names of skills will have different variations plus version numbers
+  Examples:
+  JavaScript ES6 EcmaScript 2015
+  React.js ReactJS 16.x
+  Node.js NodeJS 
+  Node Packet Manager NPM 6.x
+- Click on a skill to add. It prevents duplicate entries. Maybe remove selections once selected.
+- Show skills added. Have dropdown for years required. 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10+
+- Have delete X for each skill added
+- Search list will be dynamically updated
+
+
+
