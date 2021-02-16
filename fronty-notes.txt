@@ -1,9 +1,33 @@
+NOTE: if node_modules folder is deleted, then restore with these commands
+npm install react-scripts
+
 git clone http://github.com/patcoston/fronty
 fronty-backup0
 
 npx create-react-app fronty --template typescript
 fronty-backup1
 
+git add .
+git commit
+git push
+
 GitHub/Git cheat sheet
 https://training.github.com/downloads/github-git-cheat-sheet.pdf
+
+npm start
+http://localhost:3000/
+
+npm run build
+fronty-backup2
+
+FTP and show how paths are absolute.
+
+package.json add
+"homepage": "./",
+
+npm run build
+fronty-backup3
+
+
+
 
