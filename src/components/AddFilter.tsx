@@ -1,9 +1,12 @@
 import React, { FC } from "react"
+import FilterSkill from "./filters/FilterSkill"
 
 const AddFilter: FC = () => {
   return (
     <>
-      <div>AddFilter</div>
+      <div>
+        <FilterSkill />
+      </div>
     </>
   )
 }
