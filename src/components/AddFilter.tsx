@@ -15,27 +15,30 @@ import FilterPetsAllowed from "./filters/FilterPetsAllowed"
 import FilterSalaryRange from "./filters/FilterSalaryRange"
 import FilterSkill from "./filters/FilterSkill"
 import FilterWorkingFromHome from "./filters/FilterWorkingFromHome"
+import FilterMenu from "./FilterMenu"
 import "./AddFilter.css"
 
 const AddFilter: FC = () => {
-  let filterShowAccessible = false
-  let filterShowBenefits = false
-  let filterShowCommute = false
-  let filterShowCompanySize = false
-  let filterShowDressCode = false
-  let filterShowEducationRequired = false
-  let filterShowEmployeeType = false
-  let filterShowExperienceLevel = false
-  let filterShowIndustry = false
-  let filterShowInternalExternal = false
-  let filterShowMethodology = false
-  let filterShowMobile = false
-  let filterShowPetsAllowed = false
-  let filterShowSalaryRange = false
-  let filterShowSkill = true
-  let filterShowWorkingFromHome = false
+  let filterShowMenu: boolean = false
+  let filterShowAccessible: boolean = false
+  let filterShowBenefits: boolean = false
+  let filterShowCommute: boolean = false
+  let filterShowCompanySize: boolean = false
+  let filterShowDressCode: boolean = false
+  let filterShowEducationRequired: boolean = false
+  let filterShowEmployeeType: boolean = false
+  let filterShowExperienceLevel: boolean = false
+  let filterShowIndustry: boolean = false
+  let filterShowInternalExternal: boolean = false
+  let filterShowMethodology: boolean = false
+  let filterShowMobile: boolean = false
+  let filterShowPetsAllowed: boolean = false
+  let filterShowSalaryRange: boolean = false
+  let filterShowSkill: boolean = false
+  let filterShowWorkingFromHome: boolean = false
 
-  const hideFilters = () => {
+  const showFilter = (type: string) => {
+    filterShowMenu = false
     filterShowAccessible = false
     filterShowBenefits = false
     filterShowCommute = false
@@ -52,12 +55,66 @@ const AddFilter: FC = () => {
     filterShowSalaryRange = false
     filterShowSkill = false
     filterShowWorkingFromHome = false
+    switch (type) {
+      case "Menu":
+        filterShowMenu = true
+        break
+      case "Accessible":
+        filterShowAccessible = true
+        break
+      case "Benefits":
+        filterShowBenefits = true
+        break
+      case "Commute":
+        filterShowCommute = true
+        break
+      case "CompanySize":
+        filterShowCompanySize = true
+        break
+      case "DressCode":
+        filterShowDressCode = true
+        break
+      case "EducationRequired":
+        filterShowEducationRequired = true
+        break
+      case "EmployeeType":
+        filterShowEmployeeType = true
+        break
+      case "ExperienceLevel":
+        filterShowExperienceLevel = true
+        break
+      case "Industry":
+        filterShowIndustry = true
+        break
+      case "InternalExternal":
+        filterShowInternalExternal = true
+        break
+      case "Methodology":
+        filterShowMethodology = true
+        break
+      case "Mobile":
+        filterShowMobile = true
+        break
+      case "PetsAllowed":
+        filterShowPetsAllowed = true
+        break
+      case "SalaryRange":
+        filterShowSalaryRange = true
+        break
+      case "Skill":
+        filterShowSkill = true
+        break
+      case "WorkingFromHome":
+        filterShowWorkingFromHome = true
+        break
+    }
   }
 
   return (
     <>
       <div className="addfilter">
-        <button onClick={hideFilters}>Add Filter</button>
+        <button onClick={() => showFilter("Menu")}>Add Filter</button>
+        <FilterMenu show={filterShowMenu} />
         <FilterAccessible show={filterShowAccessible} />
         <FilterBenefits show={filterShowBenefits} />
         <FilterCommute show={filterShowCommute} />
