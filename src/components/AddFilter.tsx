@@ -35,10 +35,29 @@ const AddFilter: FC = () => {
   let filterShowSkill = true
   let filterShowWorkingFromHome = false
 
+  const hideFilters = () => {
+    filterShowAccessible = false
+    filterShowBenefits = false
+    filterShowCommute = false
+    filterShowCompanySize = false
+    filterShowDressCode = false
+    filterShowEducationRequired = false
+    filterShowEmployeeType = false
+    filterShowExperienceLevel = false
+    filterShowIndustry = false
+    filterShowInternalExternal = false
+    filterShowMethodology = false
+    filterShowMobile = false
+    filterShowPetsAllowed = false
+    filterShowSalaryRange = false
+    filterShowSkill = false
+    filterShowWorkingFromHome = false
+  }
+
   return (
     <>
       <div className="addfilter">
-        <button>Add Filter</button>
+        <button onClick={hideFilters}>Add Filter</button>
         <FilterAccessible show={filterShowAccessible} />
         <FilterBenefits show={filterShowBenefits} />
         <FilterCommute show={filterShowCommute} />
