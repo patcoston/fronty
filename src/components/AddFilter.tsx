@@ -15,6 +15,7 @@ import FilterPetsAllowed from "./filters/FilterPetsAllowed"
 import FilterSalaryRange from "./filters/FilterSalaryRange"
 import FilterSkill from "./filters/FilterSkill"
 import FilterWorkingFromHome from "./filters/FilterWorkingFromHome"
+import "./AddFilter.css"
 
 const AddFilter: FC = () => {
   let filterShowAccessible = false
@@ -36,7 +37,7 @@ const AddFilter: FC = () => {
 
   return (
     <>
-      <div>
+      <div className="addfilter">
         <button>Add Filter</button>
         <FilterAccessible show={filterShowAccessible} />
         <FilterBenefits show={filterShowBenefits} />

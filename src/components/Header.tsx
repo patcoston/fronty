@@ -1,9 +1,10 @@
 import React, { FC } from "react"
+import "./Header.css"
 
 const Header: FC = () => {
   return (
     <>
-      <div>Fronty</div>
+      <div className="header">Fronty</div>
     </>
   )
 }
