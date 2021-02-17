@@ -114,7 +114,7 @@ const AddFilter: FC = () => {
     <>
       <div className="addfilter">
         <button onClick={() => showFilter("Menu")}>Add Filter</button>
-        <FilterMenu show={filterShowMenu} />
+        <FilterMenu show={filterShowMenu} showFilter={showFilter} />
         <FilterAccessible show={filterShowAccessible} />
         <FilterBenefits show={filterShowBenefits} />
         <FilterCommute show={filterShowCommute} />
