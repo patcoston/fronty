@@ -1,6 +1,10 @@
 import React, { FC } from "react"
 
-const FilterDressCode: FC = () => {
+interface Props {
+  show: boolean
+}
+
+const FilterDressCode: FC<Props> = ({ show }) => {
   return (
     <>
       <div>FilterDressCode</div>

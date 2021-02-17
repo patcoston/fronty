@@ -1,6 +1,10 @@
 import React, { FC } from "react"
 
-const FilterWorkingFromHome: FC = () => {
+interface Props {
+  show: boolean
+}
+
+const FilterWorkingFromHome: FC<Props> = ({ show }) => {
   return (
     <>
       <div>FilterWorkingFromHome</div>

@@ -1,6 +1,10 @@
 import React, { FC } from "react"
 
-const FilterExperienceLevel: FC = () => {
+interface Props {
+  show: boolean
+}
+
+const FilterExperienceLevel: FC<Props> = ({ show }) => {
   return (
     <>
       <div>FilterExperienceLevel</div>

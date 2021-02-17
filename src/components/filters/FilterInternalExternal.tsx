@@ -1,6 +1,10 @@
 import React, { FC } from "react"
 
-const FilterInternalExternal: FC = () => {
+interface Props {
+  show: boolean
+}
+
+const FilterInternalExternal: FC<Props> = ({ show }) => {
   return (
     <>
       <div>FilterInternalExternal</div>

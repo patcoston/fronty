@@ -1,6 +1,10 @@
 import React, { FC } from "react"
 
-const FilterMobile: FC = () => {
+interface Props {
+  show: boolean
+}
+
+const FilterMobile: FC<Props> = ({ show }) => {
   return (
     <>
       <div>FilterMobile</div>

@@ -1,7 +1,11 @@
 import React, { FC } from "react"
 import "./FilterSkill.css"
 
-const FilterSkill: FC = () => {
+interface Props {
+  show: boolean
+}
+
+const FilterSkill: FC<Props> = ({ show }) => {
   return (
     <>
       <div className="filter-skill-body">FilterSkill</div>

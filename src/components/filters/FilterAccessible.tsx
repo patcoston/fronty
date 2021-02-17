@@ -1,6 +1,10 @@
 import React, { FC } from "react"
 
-const FilterAccessible: FC = () => {
+interface Props {
+  show: boolean
+}
+
+const FilterAccessible: FC<Props> = ({ show }) => {
   return (
     <>
       <div>Filter Accessible</div>

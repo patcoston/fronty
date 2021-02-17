@@ -1,6 +1,10 @@
 import React, { FC } from "react"
 
-const FilterSalaryRange: FC = () => {
+interface Props {
+  show: boolean
+}
+
+const FilterSalaryRange: FC<Props> = ({ show }) => {
   return (
     <>
       <div>FilterSalaryRange</div>

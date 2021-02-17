@@ -1,6 +1,10 @@
 import React, { FC } from "react"
 
-const FilterPetsAllowed: FC = () => {
+interface Props {
+  show: boolean
+}
+
+const FilterPetsAllowed: FC<Props> = ({ show }) => {
   return (
     <>
       <div>FilterPetsAllowed</div>

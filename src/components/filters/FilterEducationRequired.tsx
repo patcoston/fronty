@@ -1,6 +1,10 @@
 import React, { FC } from "react"
 
-const FilterEducationRequired: FC = () => {
+interface Props {
+  show: boolean
+}
+
+const FilterEducationRequired: FC<Props> = ({ show }) => {
   return (
     <>
       <div>FilterEducationRequired</div>

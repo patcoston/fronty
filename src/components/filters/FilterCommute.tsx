@@ -1,6 +1,10 @@
 import React, { FC } from "react"
 
-const FilterCommute: FC = () => {
+interface Props {
+  show: boolean
+}
+
+const FilterCommute: FC<Props> = ({ show }) => {
   return (
     <>
       <div>Filter Commute</div>

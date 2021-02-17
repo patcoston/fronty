@@ -1,6 +1,10 @@
 import React, { FC } from "react"
 
-const FilterMethodology: FC = () => {
+interface Props {
+  show: boolean
+}
+
+const FilterMethodology: FC<Props> = ({ show }) => {
   return (
     <>
       <div>FilterMethodology</div>
