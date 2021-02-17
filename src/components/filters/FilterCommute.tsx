@@ -7,7 +7,9 @@ interface Props {
 const FilterCommute: FC<Props> = ({ show }) => {
   return (
     <>
-      <div>Filter Commute</div>
+      <div style={!show ? { display: "none" } : { display: "block" }}>
+        Filter Commute
+      </div>
     </>
   )
 }

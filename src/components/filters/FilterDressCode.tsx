@@ -7,7 +7,9 @@ interface Props {
 const FilterDressCode: FC<Props> = ({ show }) => {
   return (
     <>
-      <div>FilterDressCode</div>
+      <div style={!show ? { display: "none" } : { display: "block" }}>
+        FilterDressCode
+      </div>
     </>
   )
 }

@@ -7,7 +7,9 @@ interface Props {
 const FilterSalaryRange: FC<Props> = ({ show }) => {
   return (
     <>
-      <div>FilterSalaryRange</div>
+      <div style={!show ? { display: "none" } : { display: "block" }}>
+        FilterSalaryRange
+      </div>
     </>
   )
 }

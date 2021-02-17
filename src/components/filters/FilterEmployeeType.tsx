@@ -7,7 +7,9 @@ interface Props {
 const FilterEmployeeType: FC<Props> = ({ show }) => {
   return (
     <>
-      <div>FilterEmployeeType</div>
+      <div style={!show ? { display: "none" } : { display: "block" }}>
+        FilterEmployeeType
+      </div>
     </>
   )
 }

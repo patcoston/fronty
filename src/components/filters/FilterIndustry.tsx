@@ -7,7 +7,9 @@ interface Props {
 const FilterIndustry: FC<Props> = ({ show }) => {
   return (
     <>
-      <div>FilterIndustry</div>
+      <div style={!show ? { display: "none" } : { display: "block" }}>
+        FilterIndustry
+      </div>
     </>
   )
 }

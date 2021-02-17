@@ -7,7 +7,9 @@ interface Props {
 const FilterCompanySize: FC<Props> = ({ show }) => {
   return (
     <>
-      <div>Filter Company Size</div>
+      <div style={!show ? { display: "none" } : { display: "block" }}>
+        Filter Company Size
+      </div>
     </>
   )
 }

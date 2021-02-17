@@ -7,7 +7,9 @@ interface Props {
 const FilterExperienceLevel: FC<Props> = ({ show }) => {
   return (
     <>
-      <div>FilterExperienceLevel</div>
+      <div style={!show ? { display: "none" } : { display: "block" }}>
+        FilterExperienceLevel
+      </div>
     </>
   )
 }

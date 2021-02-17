@@ -7,7 +7,9 @@ interface Props {
 const FilterMobile: FC<Props> = ({ show }) => {
   return (
     <>
-      <div>FilterMobile</div>
+      <div style={!show ? { display: "none" } : { display: "block" }}>
+        FilterMobile
+      </div>
     </>
   )
 }

@@ -8,7 +8,12 @@ interface Props {
 const FilterSkill: FC<Props> = ({ show }) => {
   return (
     <>
-      <div className="filter-skill-body">FilterSkill</div>
+      <div
+        style={!show ? { display: "none" } : { display: "block" }}
+        className="filter-skill-body"
+      >
+        FilterSkill
+      </div>
     </>
   )
 }

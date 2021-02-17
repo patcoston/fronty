@@ -7,7 +7,9 @@ interface Props {
 const FilterInternalExternal: FC<Props> = ({ show }) => {
   return (
     <>
-      <div>FilterInternalExternal</div>
+      <div style={!show ? { display: "none" } : { display: "block" }}>
+        FilterInternalExternal
+      </div>
     </>
   )
 }

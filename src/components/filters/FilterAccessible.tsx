@@ -7,7 +7,9 @@ interface Props {
 const FilterAccessible: FC<Props> = ({ show }) => {
   return (
     <>
-      <div>Filter Accessible</div>
+      <div style={!show ? { display: "none" } : { display: "block" }}>
+        Filter Accessible
+      </div>
     </>
   )
 }

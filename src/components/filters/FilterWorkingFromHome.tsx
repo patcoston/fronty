@@ -7,7 +7,9 @@ interface Props {
 const FilterWorkingFromHome: FC<Props> = ({ show }) => {
   return (
     <>
-      <div>FilterWorkingFromHome</div>
+      <div style={!show ? { display: "none" } : { display: "block" }}>
+        FilterWorkingFromHome
+      </div>
     </>
   )
 }

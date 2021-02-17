@@ -7,7 +7,9 @@ interface Props {
 const FilterPetsAllowed: FC<Props> = ({ show }) => {
   return (
     <>
-      <div>FilterPetsAllowed</div>
+      <div style={!show ? { display: "none" } : { display: "block" }}>
+        FilterPetsAllowed
+      </div>
     </>
   )
 }
