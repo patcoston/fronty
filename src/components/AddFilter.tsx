@@ -38,6 +38,7 @@ const AddFilter: FC = () => {
     setFilterShowSalaryRange,
     setFilterShowSkill,
     setFilterShowWorkingFromHome,
+    setShowResults,
   } = useStore()
 
   const showFilter = (menuType: string) => {
@@ -58,6 +59,7 @@ const AddFilter: FC = () => {
     setFilterShowSalaryRange(false)
     setFilterShowSkill(false)
     setFilterShowWorkingFromHome(false)
+    setShowResults(false)
     switch (menuType) {
       case "Menu":
         setFilterShowMenu(true)
@@ -110,6 +112,9 @@ const AddFilter: FC = () => {
       case "WorkingFromHome":
         setFilterShowWorkingFromHome(true)
         break
+      case "ShowResults":
+        setShowResults(true)
+        break
     }
   }
 
@@ -132,7 +137,7 @@ const AddFilter: FC = () => {
         <FilterMobile />
         <FilterPetsAllowed />
         <FilterSalaryRange />
-        <FilterSkill />
+        <FilterSkill showFilter={showFilter} />
         <FilterWorkingFromHome />
       </div>
     </>

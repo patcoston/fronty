@@ -2,7 +2,11 @@ import React, { FC } from "react"
 import { useStore } from "../../store/StoreProvider"
 import "./FilterSkill.css"
 
-const FilterSkill: FC = () => {
+interface Props {
+  showFilter(arg: string): void
+}
+
+const FilterSkill: FC<Props> = ({ showFilter }) => {
   const { filterShowSkill } = useStore()
   return (
     <>
@@ -55,7 +59,9 @@ const FilterSkill: FC = () => {
             <option value="">jQuery 2.x</option>
             <option value="">jQuery 3.x</option>
           </select>
-          <button>Submit Filter</button>
+          <button onClick={() => showFilter("ShowResults")}>
+            Submit Filter
+          </button>
         </div>
       </div>
     </>
