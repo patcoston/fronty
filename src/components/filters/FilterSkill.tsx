@@ -11,13 +11,16 @@ const FilterSkill: FC = () => {
         className="filter-skill-body"
       >
         <div>
+          <label className="filter-skill-type-skill-label">
+            Type desired tech to filter list below
+          </label>
           <input type="text" />
         </div>
         <div>
           <label htmlFor="choose-skill" className="filter-skills-choose-label">
             Choose one or more skills
           </label>
-          <select id="choose-skill" multiple>
+          <select id="choose-skill" className="filter-skill-list" multiple>
             <option value="">JavaScript ES5 ECMAScript 5 2009</option>
             <option value="">JavaScript ES6 ECMAScript 2015</option>
             <option value="">JavaScript ES7 ECMAScript 2016</option>
@@ -52,6 +55,7 @@ const FilterSkill: FC = () => {
             <option value="">jQuery 2.x</option>
             <option value="">jQuery 3.x</option>
           </select>
+          <button>Submit Filter</button>
         </div>
       </div>
     </>

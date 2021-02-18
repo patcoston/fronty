@@ -2,6 +2,14 @@
   background-color: fff;
 }
 
+.filter-skill-list {
+  display: block;
+}
+
+.filter-skill-type-skill-label {
+  display: block;
+}
+
 .filter-skills-choose-label {
   display: block;
 }
