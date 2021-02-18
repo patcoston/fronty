@@ -138,7 +138,7 @@ const AddFilter: FC = () => {
         <FilterPetsAllowed />
         <FilterSalaryRange />
         <FilterSkill showFilter={showFilter} />
-        <FilterWorkingFromHome />
+        <FilterWorkingFromHome showFilter={showFilter} />
       </div>
     </>
   )

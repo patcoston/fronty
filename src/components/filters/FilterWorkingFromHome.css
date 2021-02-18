@@ -4,3 +4,14 @@
   margin: 5px;
   padding: 5px;
 }
+
+.percent-working-from-home li {
+  list-style: none;
+  text-align: left;
+  margin-left: 0;
+  cursor: pointer;
+}
+
+.wfh-label {
+  display: block;
+}
