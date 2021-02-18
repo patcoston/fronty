@@ -2,7 +2,11 @@ import React, { FC } from "react"
 import { useStore } from "../../store/StoreProvider"
 import "./FilterCompanySize.css"
 
-const FilterCompanySize: FC = () => {
+interface Props {
+  showFilter(arg: string): void
+}
+
+const FilterCompanySize: FC<Props> = ({ showFilter }) => {
   const { filterShowCompanySize } = useStore()
   return (
     <>

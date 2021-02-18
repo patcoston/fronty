@@ -2,7 +2,11 @@ import React, { FC } from "react"
 import { useStore } from "../../store/StoreProvider"
 import "./FilterMobile.css"
 
-const FilterMobile: FC = () => {
+interface Props {
+  showFilter(arg: string): void
+}
+
+const FilterMobile: FC<Props> = ({ showFilter }) => {
   const { filterShowMobile } = useStore()
   return (
     <>

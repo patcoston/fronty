@@ -2,7 +2,11 @@ import React, { FC } from "react"
 import { useStore } from "../../store/StoreProvider"
 import "./FilterExperienceLevel.css"
 
-const FilterExperienceLevel: FC = () => {
+interface Props {
+  showFilter(arg: string): void
+}
+
+const FilterExperienceLevel: FC<Props> = ({ showFilter }) => {
   const { filterShowExperienceLevel } = useStore()
   return (
     <>

@@ -123,20 +123,20 @@ const AddFilter: FC = () => {
       <div className="add-filter">
         <button onClick={() => showFilter("Menu")}>Add Filter</button>
         <FilterMenu showFilter={showFilter} />
-        <FilterAccessible />
-        <FilterBenefits />
-        <FilterCommute />
-        <FilterCompanySize />
-        <FilterDressCode />
-        <FilterEducationRequired />
-        <FilterEmployeeType />
-        <FilterExperienceLevel />
-        <FilterIndustry />
-        <FilterInternalExternal />
-        <FilterMethodology />
-        <FilterMobile />
-        <FilterPetsAllowed />
-        <FilterSalaryRange />
+        <FilterAccessible showFilter={showFilter} />
+        <FilterBenefits showFilter={showFilter} />
+        <FilterCommute showFilter={showFilter} />
+        <FilterCompanySize showFilter={showFilter} />
+        <FilterDressCode showFilter={showFilter} />
+        <FilterEducationRequired showFilter={showFilter} />
+        <FilterEmployeeType showFilter={showFilter} />
+        <FilterExperienceLevel showFilter={showFilter} />
+        <FilterIndustry showFilter={showFilter} />
+        <FilterInternalExternal showFilter={showFilter} />
+        <FilterMethodology showFilter={showFilter} />
+        <FilterMobile showFilter={showFilter} />
+        <FilterPetsAllowed showFilter={showFilter} />
+        <FilterSalaryRange showFilter={showFilter} />
         <FilterSkill showFilter={showFilter} />
         <FilterWorkingFromHome showFilter={showFilter} />
       </div>

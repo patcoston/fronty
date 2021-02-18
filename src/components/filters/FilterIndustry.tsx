@@ -2,7 +2,11 @@ import React, { FC } from "react"
 import { useStore } from "../../store/StoreProvider"
 import "./FilterIndustry.css"
 
-const FilterIndustry: FC = () => {
+interface Props {
+  showFilter(arg: string): void
+}
+
+const FilterIndustry: FC<Props> = ({ showFilter }) => {
   const { filterShowIndustry } = useStore()
   return (
     <>

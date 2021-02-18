@@ -2,7 +2,11 @@ import React, { FC } from "react"
 import { useStore } from "../../store/StoreProvider"
 import "./FilterMethodology.css"
 
-const FilterMethodology: FC = () => {
+interface Props {
+  showFilter(arg: string): void
+}
+
+const FilterMethodology: FC<Props> = ({ showFilter }) => {
   const { filterShowMethodology } = useStore()
   return (
     <>

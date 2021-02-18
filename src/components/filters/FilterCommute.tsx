@@ -2,7 +2,11 @@ import React, { FC } from "react"
 import { useStore } from "../../store/StoreProvider"
 import "./FilterCommute.css"
 
-const FilterCommute: FC = () => {
+interface Props {
+  showFilter(arg: string): void
+}
+
+const FilterCommute: FC<Props> = ({ showFilter }) => {
   const { filterShowCommute } = useStore()
   return (
     <>

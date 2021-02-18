@@ -2,7 +2,11 @@ import React, { FC } from "react"
 import { useStore } from "../../store/StoreProvider"
 import "./FilterEducationRequired.css"
 
-const FilterEducationRequired: FC = () => {
+interface Props {
+  showFilter(arg: string): void
+}
+
+const FilterEducationRequired: FC<Props> = ({ showFilter }) => {
   const { filterShowEducationRequired } = useStore()
   return (
     <>

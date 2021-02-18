@@ -2,7 +2,11 @@ import React, { FC } from "react"
 import { useStore } from "../../store/StoreProvider"
 import "./FilterPetsAllowed.css"
 
-const FilterPetsAllowed: FC = () => {
+interface Props {
+  showFilter(arg: string): void
+}
+
+const FilterPetsAllowed: FC<Props> = ({ showFilter }) => {
   const { filterShowPetsAllowed } = useStore()
   return (
     <>

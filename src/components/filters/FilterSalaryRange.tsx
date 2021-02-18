@@ -2,7 +2,11 @@ import React, { FC } from "react"
 import { useStore } from "../../store/StoreProvider"
 import "./FilterSalaryRange.css"
 
-const FilterSalaryRange: FC = () => {
+interface Props {
+  showFilter(arg: string): void
+}
+
+const FilterSalaryRange: FC<Props> = ({ showFilter }) => {
   const { filterShowSalaryRange } = useStore()
   return (
     <>

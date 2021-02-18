@@ -2,7 +2,11 @@ import React, { FC } from "react"
 import { useStore } from "../../store/StoreProvider"
 import "./FilterAccessible.css"
 
-const FilterAccessible: FC = () => {
+interface Props {
+  showFilter(arg: string): void
+}
+
+const FilterAccessible: FC<Props> = ({ showFilter }) => {
   const { filterShowAccessible } = useStore()
   return (
     <>
