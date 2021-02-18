@@ -19,7 +19,7 @@ import FilterMenu from "./FilterMenu"
 import "./AddFilter.css"
 
 const AddFilter: FC = () => {
-  let filterShowMenu: boolean = false
+  let filterShowMenu: boolean = true
   let filterShowAccessible: boolean = false
   let filterShowBenefits: boolean = false
   let filterShowCommute: boolean = false
