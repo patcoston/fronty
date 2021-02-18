@@ -1,5 +1,6 @@
 import React from "react"
 import AddFilter from "./components/AddFilter"
+import ShowResults from "./components/ShowResults"
 import Header from "./components/Header"
 import Footer from "./components/Footer"
 import "./App.css"
@@ -12,6 +13,7 @@ function App() {
       </header>
       <main className="App-main">
         <AddFilter />
+        <ShowResults />
       </main>
       <footer className="App-footer">
         <Footer />
