@@ -15,6 +15,7 @@ const FilterMobile: FC<Props> = ({ showFilter }) => {
         className="filter-mobile-body"
       >
         Filter Mobile
+        <button onClick={() => showFilter("ShowResults")}>Submit Filter</button>
       </div>
     </>
   )

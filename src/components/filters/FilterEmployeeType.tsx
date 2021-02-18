@@ -17,6 +17,7 @@ const FilterEmployeeType: FC<Props> = ({ showFilter }) => {
         className="filter-employee-type-body"
       >
         Filter Employee Type
+        <button onClick={() => showFilter("ShowResults")}>Submit Filter</button>
       </div>
     </>
   )

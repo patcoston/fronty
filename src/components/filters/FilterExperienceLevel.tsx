@@ -19,6 +19,7 @@ const FilterExperienceLevel: FC<Props> = ({ showFilter }) => {
         className="filter-experience-level-body"
       >
         Filter Experience Level
+        <button onClick={() => showFilter("ShowResults")}>Submit Filter</button>
       </div>
     </>
   )

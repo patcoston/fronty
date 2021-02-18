@@ -16,7 +16,8 @@ const FilterAccessible: FC<Props> = ({ showFilter }) => {
         }
         className="filter-accessible-body"
       >
-        Filter Accessible
+        <label>Filter on Accessibility</label>
+        <button onClick={() => showFilter("ShowResults")}>Submit Filter</button>
       </div>
     </>
   )

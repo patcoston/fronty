@@ -15,6 +15,7 @@ const FilterIndustry: FC<Props> = ({ showFilter }) => {
         className="filter-industry-body"
       >
         Filter Industry
+        <button onClick={() => showFilter("ShowResults")}>Submit Filter</button>
       </div>
     </>
   )

@@ -19,6 +19,7 @@ const FilterInternalExternal: FC<Props> = ({ showFilter }) => {
         className="filter-internal-external-body"
       >
         Filter Internal External
+        <button onClick={() => showFilter("ShowResults")}>Submit Filter</button>
       </div>
     </>
   )

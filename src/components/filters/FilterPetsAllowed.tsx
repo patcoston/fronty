@@ -17,6 +17,7 @@ const FilterPetsAllowed: FC<Props> = ({ showFilter }) => {
         className="filter-pets-allowed-body"
       >
         Filter Pets Allowed
+        <button onClick={() => showFilter("ShowResults")}>Submit Filter</button>
       </div>
     </>
   )

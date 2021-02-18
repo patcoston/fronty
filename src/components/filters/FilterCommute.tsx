@@ -15,6 +15,7 @@ const FilterCommute: FC<Props> = ({ showFilter }) => {
         className="filter-commute-body"
       >
         Filter Commute
+        <button onClick={() => showFilter("ShowResults")}>Submit Filter</button>
       </div>
     </>
   )

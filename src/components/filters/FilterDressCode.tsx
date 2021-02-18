@@ -17,6 +17,7 @@ const FilterDressCode: FC<Props> = ({ showFilter }) => {
         className="filter-dress-code-body"
       >
         Filter Dress Code
+        <button onClick={() => showFilter("ShowResults")}>Submit Filter</button>
       </div>
     </>
   )

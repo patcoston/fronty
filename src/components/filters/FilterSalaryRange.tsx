@@ -17,6 +17,7 @@ const FilterSalaryRange: FC<Props> = ({ showFilter }) => {
         className="filter-salary-range-body"
       >
         Filter Salary Range
+        <button onClick={() => showFilter("ShowResults")}>Submit Filter</button>
       </div>
     </>
   )

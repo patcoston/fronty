@@ -19,6 +19,7 @@ const FilterEducationRequired: FC<Props> = ({ showFilter }) => {
         className="filter-education-required-body"
       >
         Filter Education Required
+        <button onClick={() => showFilter("ShowResults")}>Submit Filter</button>
       </div>
     </>
   )

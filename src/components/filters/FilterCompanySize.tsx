@@ -17,6 +17,7 @@ const FilterCompanySize: FC<Props> = ({ showFilter }) => {
         className="filter-company-size-body"
       >
         Filter Company Size
+        <button onClick={() => showFilter("ShowResults")}>Submit Filter</button>
       </div>
     </>
   )

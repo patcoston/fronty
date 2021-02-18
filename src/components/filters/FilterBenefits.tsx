@@ -15,6 +15,7 @@ const FilterBenefits: FC<Props> = ({ showFilter }) => {
         className="filter-benefits-body"
       >
         Filter Benefits
+        <button onClick={() => showFilter("ShowResults")}>Submit Filter</button>
       </div>
     </>
   )

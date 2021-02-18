@@ -17,6 +17,7 @@ const FilterMethodology: FC<Props> = ({ showFilter }) => {
         className="filter-methodology-body"
       >
         Filter Methodology
+        <button onClick={() => showFilter("ShowResults")}>Submit Filter</button>
       </div>
     </>
   )
