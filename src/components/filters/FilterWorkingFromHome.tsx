@@ -1,14 +1,18 @@
 import React, { FC } from "react"
+import { useStore } from "../../store/StoreProvider"
 
-interface Props {
-  show: boolean
-}
-
-const FilterWorkingFromHome: FC<Props> = ({ show }) => {
+const FilterWorkingFromHome: FC = () => {
+  const { filterShowWorkingFromHome } = useStore()
   return (
     <>
-      <div style={!show ? { display: "none" } : { display: "block" }}>
-        FilterWorkingFromHome
+      <div
+        style={
+          !filterShowWorkingFromHome
+            ? { display: "none" }
+            : { display: "block" }
+        }
+      >
+        Filter Working FromHome
       </div>
     </>
   )

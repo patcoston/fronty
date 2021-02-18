@@ -1,14 +1,18 @@
 import React, { FC } from "react"
+import { useStore } from "../../store/StoreProvider"
 
-interface Props {
-  show: boolean
-}
-
-const FilterEducationRequired: FC<Props> = ({ show }) => {
+const FilterEducationRequired: FC = () => {
+  const { filterShowEducationRequired } = useStore()
   return (
     <>
-      <div style={!show ? { display: "none" } : { display: "block" }}>
-        FilterEducationRequired
+      <div
+        style={
+          !filterShowEducationRequired
+            ? { display: "none" }
+            : { display: "block" }
+        }
+      >
+        Filter Education Required
       </div>
     </>
   )

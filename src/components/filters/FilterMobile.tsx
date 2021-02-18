@@ -1,14 +1,14 @@
 import React, { FC } from "react"
+import { useStore } from "../../store/StoreProvider"
 
-interface Props {
-  show: boolean
-}
-
-const FilterMobile: FC<Props> = ({ show }) => {
+const FilterMobile: FC = () => {
+  const { filterShowMobile } = useStore()
   return (
     <>
-      <div style={!show ? { display: "none" } : { display: "block" }}>
-        FilterMobile
+      <div
+        style={!filterShowMobile ? { display: "none" } : { display: "block" }}
+      >
+        Filter Mobile
       </div>
     </>
   )

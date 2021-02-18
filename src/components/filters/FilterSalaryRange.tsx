@@ -1,14 +1,16 @@
 import React, { FC } from "react"
+import { useStore } from "../../store/StoreProvider"
 
-interface Props {
-  show: boolean
-}
-
-const FilterSalaryRange: FC<Props> = ({ show }) => {
+const FilterSalaryRange: FC = () => {
+  const { filterShowSalaryRange } = useStore()
   return (
     <>
-      <div style={!show ? { display: "none" } : { display: "block" }}>
-        FilterSalaryRange
+      <div
+        style={
+          !filterShowSalaryRange ? { display: "none" } : { display: "block" }
+        }
+      >
+        Filter Salary Range
       </div>
     </>
   )

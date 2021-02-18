@@ -1,18 +1,16 @@
 import React, { FC } from "react"
+import { useStore } from "../../store/StoreProvider"
 import "./FilterSkill.css"
 
-interface Props {
-  show: boolean
-}
-
-const FilterSkill: FC<Props> = ({ show }) => {
+const FilterSkill: FC = () => {
+  const { filterShowSkill } = useStore()
   return (
     <>
       <div
-        style={!show ? { display: "none" } : { display: "block" }}
+        style={!filterShowSkill ? { display: "none" } : { display: "block" }}
         className="filter-skill-body"
       >
-        FilterSkill
+        Filter Skill
       </div>
     </>
   )

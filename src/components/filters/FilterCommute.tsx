@@ -1,13 +1,13 @@
 import React, { FC } from "react"
+import { useStore } from "../../store/StoreProvider"
 
-interface Props {
-  show: boolean
-}
-
-const FilterCommute: FC<Props> = ({ show }) => {
+const FilterCommute: FC = () => {
+  const { filterShowCommute } = useStore()
   return (
     <>
-      <div style={!show ? { display: "none" } : { display: "block" }}>
+      <div
+        style={!filterShowCommute ? { display: "none" } : { display: "block" }}
+      >
         Filter Commute
       </div>
     </>

@@ -1,13 +1,15 @@
 import React, { FC } from "react"
+import { useStore } from "../../store/StoreProvider"
 
-interface Props {
-  show: boolean
-}
-
-const FilterCompanySize: FC<Props> = ({ show }) => {
+const FilterCompanySize: FC = () => {
+  const { filterShowCompanySize } = useStore()
   return (
     <>
-      <div style={!show ? { display: "none" } : { display: "block" }}>
+      <div
+        style={
+          !filterShowCompanySize ? { display: "none" } : { display: "block" }
+        }
+      >
         Filter Company Size
       </div>
     </>

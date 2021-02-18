@@ -33,5 +33,4 @@ Vue 3.x
 jQuery 1.x
 jQuery 2.x
 jQuery 3.x
-jQuery 1.x
 

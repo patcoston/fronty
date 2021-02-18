@@ -1,13 +1,15 @@
 import React, { FC } from "react"
+import { useStore } from "../../store/StoreProvider"
 
-interface Props {
-  show: boolean
-}
-
-const FilterAccessible: FC<Props> = ({ show }) => {
+const FilterAccessible: FC = () => {
+  const { filterShowAccessible } = useStore()
   return (
     <>
-      <div style={!show ? { display: "none" } : { display: "block" }}>
+      <div
+        style={
+          !filterShowAccessible ? { display: "none" } : { display: "block" }
+        }
+      >
         Filter Accessible
       </div>
     </>

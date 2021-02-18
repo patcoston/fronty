@@ -1,14 +1,16 @@
 import React, { FC } from "react"
+import { useStore } from "../../store/StoreProvider"
 
-interface Props {
-  show: boolean
-}
-
-const FilterPetsAllowed: FC<Props> = ({ show }) => {
+const FilterPetsAllowed: FC = () => {
+  const { filterShowPetsAllowed } = useStore()
   return (
     <>
-      <div style={!show ? { display: "none" } : { display: "block" }}>
-        FilterPetsAllowed
+      <div
+        style={
+          !filterShowPetsAllowed ? { display: "none" } : { display: "block" }
+        }
+      >
+        Filter Pets Allowed
       </div>
     </>
   )

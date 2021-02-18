@@ -16,96 +16,99 @@ import FilterSalaryRange from "./filters/FilterSalaryRange"
 import FilterSkill from "./filters/FilterSkill"
 import FilterWorkingFromHome from "./filters/FilterWorkingFromHome"
 import FilterMenu from "./FilterMenu"
+import { useStore } from "../store/StoreProvider"
 import "./AddFilter.css"
 
 const AddFilter: FC = () => {
-  let filterShowMenu: boolean = true
-  let filterShowAccessible: boolean = false
-  let filterShowBenefits: boolean = false
-  let filterShowCommute: boolean = false
-  let filterShowCompanySize: boolean = false
-  let filterShowDressCode: boolean = false
-  let filterShowEducationRequired: boolean = false
-  let filterShowEmployeeType: boolean = false
-  let filterShowExperienceLevel: boolean = false
-  let filterShowIndustry: boolean = false
-  let filterShowInternalExternal: boolean = false
-  let filterShowMethodology: boolean = false
-  let filterShowMobile: boolean = false
-  let filterShowPetsAllowed: boolean = false
-  let filterShowSalaryRange: boolean = false
-  let filterShowSkill: boolean = false
-  let filterShowWorkingFromHome: boolean = false
+  const {
+    setFilterShowMenu,
+    setFilterShowAccessible,
+    setFilterShowBenefits,
+    setFilterShowCommute,
+    setFilterShowCompanySize,
+    setFilterShowDressCode,
+    setFilterShowEducationRequired,
+    setFilterShowEmployeeType,
+    setFilterShowExperienceLevel,
+    setFilterShowIndustry,
+    setFilterShowInternalExternal,
+    setFilterShowMethodology,
+    setFilterShowMobile,
+    setFilterShowPetsAllowed,
+    setFilterShowSalaryRange,
+    setFilterShowSkill,
+    setFilterShowWorkingFromHome,
+  } = useStore()
 
-  const showFilter = (type: string) => {
-    filterShowMenu = false
-    filterShowAccessible = false
-    filterShowBenefits = false
-    filterShowCommute = false
-    filterShowCompanySize = false
-    filterShowDressCode = false
-    filterShowEducationRequired = false
-    filterShowEmployeeType = false
-    filterShowExperienceLevel = false
-    filterShowIndustry = false
-    filterShowInternalExternal = false
-    filterShowMethodology = false
-    filterShowMobile = false
-    filterShowPetsAllowed = false
-    filterShowSalaryRange = false
-    filterShowSkill = false
-    filterShowWorkingFromHome = false
-    switch (type) {
+  const showFilter = (menuType: string) => {
+    setFilterShowMenu(false)
+    setFilterShowAccessible(false)
+    setFilterShowBenefits(false)
+    setFilterShowCommute(false)
+    setFilterShowCompanySize(false)
+    setFilterShowDressCode(false)
+    setFilterShowEducationRequired(false)
+    setFilterShowEmployeeType(false)
+    setFilterShowExperienceLevel(false)
+    setFilterShowIndustry(false)
+    setFilterShowInternalExternal(false)
+    setFilterShowMethodology(false)
+    setFilterShowMobile(false)
+    setFilterShowPetsAllowed(false)
+    setFilterShowSalaryRange(false)
+    setFilterShowSkill(false)
+    setFilterShowWorkingFromHome(false)
+    switch (menuType) {
       case "Menu":
-        filterShowMenu = true
+        setFilterShowMenu(true)
         break
       case "Accessible":
-        filterShowAccessible = true
+        setFilterShowAccessible(true)
         break
       case "Benefits":
-        filterShowBenefits = true
+        setFilterShowBenefits(true)
         break
       case "Commute":
-        filterShowCommute = true
+        setFilterShowCommute(true)
         break
       case "CompanySize":
-        filterShowCompanySize = true
+        setFilterShowCompanySize(true)
         break
       case "DressCode":
-        filterShowDressCode = true
+        setFilterShowDressCode(true)
         break
       case "EducationRequired":
-        filterShowEducationRequired = true
+        setFilterShowEducationRequired(true)
         break
       case "EmployeeType":
-        filterShowEmployeeType = true
+        setFilterShowEmployeeType(true)
         break
       case "ExperienceLevel":
-        filterShowExperienceLevel = true
+        setFilterShowExperienceLevel(true)
         break
       case "Industry":
-        filterShowIndustry = true
+        setFilterShowIndustry(true)
         break
       case "InternalExternal":
-        filterShowInternalExternal = true
+        setFilterShowInternalExternal(true)
         break
       case "Methodology":
-        filterShowMethodology = true
+        setFilterShowMethodology(true)
         break
       case "Mobile":
-        filterShowMobile = true
+        setFilterShowMobile(true)
         break
       case "PetsAllowed":
-        filterShowPetsAllowed = true
+        setFilterShowPetsAllowed(true)
         break
       case "SalaryRange":
-        filterShowSalaryRange = true
+        setFilterShowSalaryRange(true)
         break
       case "Skill":
-        filterShowSkill = true
+        setFilterShowSkill(true)
         break
       case "WorkingFromHome":
-        filterShowWorkingFromHome = true
+        setFilterShowWorkingFromHome(true)
         break
     }
   }
@@ -114,23 +117,23 @@ const AddFilter: FC = () => {
     <>
       <div className="addfilter">
         <button onClick={() => showFilter("Menu")}>Add Filter</button>
-        <FilterMenu show={filterShowMenu} showFilter={showFilter} />
-        <FilterAccessible show={filterShowAccessible} />
-        <FilterBenefits show={filterShowBenefits} />
-        <FilterCommute show={filterShowCommute} />
-        <FilterCompanySize show={filterShowCompanySize} />
-        <FilterDressCode show={filterShowDressCode} />
-        <FilterEducationRequired show={filterShowEducationRequired} />
-        <FilterEmployeeType show={filterShowEmployeeType} />
-        <FilterExperienceLevel show={filterShowExperienceLevel} />
-        <FilterIndustry show={filterShowIndustry} />
-        <FilterInternalExternal show={filterShowInternalExternal} />
-        <FilterMethodology show={filterShowMethodology} />
-        <FilterMobile show={filterShowMobile} />
-        <FilterPetsAllowed show={filterShowPetsAllowed} />
-        <FilterSalaryRange show={filterShowSalaryRange} />
-        <FilterSkill show={filterShowSkill} />
-        <FilterWorkingFromHome show={filterShowWorkingFromHome} />
+        <FilterMenu showFilter={showFilter} />
+        <FilterAccessible />
+        <FilterBenefits />
+        <FilterCommute />
+        <FilterCompanySize />
+        <FilterDressCode />
+        <FilterEducationRequired />
+        <FilterEmployeeType />
+        <FilterExperienceLevel />
+        <FilterIndustry />
+        <FilterInternalExternal />
+        <FilterMethodology />
+        <FilterMobile />
+        <FilterPetsAllowed />
+        <FilterSalaryRange />
+        <FilterSkill />
+        <FilterWorkingFromHome />
       </div>
     </>
   )

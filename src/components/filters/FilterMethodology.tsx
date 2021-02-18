@@ -1,14 +1,16 @@
 import React, { FC } from "react"
+import { useStore } from "../../store/StoreProvider"
 
-interface Props {
-  show: boolean
-}
-
-const FilterMethodology: FC<Props> = ({ show }) => {
+const FilterMethodology: FC = () => {
+  const { filterShowMethodology } = useStore()
   return (
     <>
-      <div style={!show ? { display: "none" } : { display: "block" }}>
-        FilterMethodology
+      <div
+        style={
+          !filterShowMethodology ? { display: "none" } : { display: "block" }
+        }
+      >
+        Filter Methodology
       </div>
     </>
   )

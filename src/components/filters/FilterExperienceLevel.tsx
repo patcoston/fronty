@@ -1,14 +1,18 @@
 import React, { FC } from "react"
+import { useStore } from "../../store/StoreProvider"
 
-interface Props {
-  show: boolean
-}
-
-const FilterExperienceLevel: FC<Props> = ({ show }) => {
+const FilterExperienceLevel: FC = () => {
+  const { filterShowExperienceLevel } = useStore()
   return (
     <>
-      <div style={!show ? { display: "none" } : { display: "block" }}>
-        FilterExperienceLevel
+      <div
+        style={
+          !filterShowExperienceLevel
+            ? { display: "none" }
+            : { display: "block" }
+        }
+      >
+        Filter Experience Level
       </div>
     </>
   )
