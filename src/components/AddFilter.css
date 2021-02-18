@@ -1,4 +1,7 @@
-.addfilter {
+.add-filter {
   border: 1px solid black;
   margin: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }

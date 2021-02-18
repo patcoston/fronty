@@ -120,7 +120,7 @@ const AddFilter: FC = () => {
 
   return (
     <>
-      <div className="addfilter">
+      <div className="add-filter">
         <button onClick={() => showFilter("Menu")}>Add Filter</button>
         <FilterMenu showFilter={showFilter} />
         <FilterAccessible />
