@@ -1,5 +1,6 @@
 import React, { FC } from "react"
 import { useStore } from "../../store/StoreProvider"
+import "./FilterCommute.css"
 
 const FilterCommute: FC = () => {
   const { filterShowCommute } = useStore()
@@ -7,6 +8,7 @@ const FilterCommute: FC = () => {
     <>
       <div
         style={!filterShowCommute ? { display: "none" } : { display: "block" }}
+        className="filter-commute-body"
       >
         Filter Commute
       </div>

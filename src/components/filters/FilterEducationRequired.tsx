@@ -1,5 +1,6 @@
 import React, { FC } from "react"
 import { useStore } from "../../store/StoreProvider"
+import "./FilterEducationRequired.css"
 
 const FilterEducationRequired: FC = () => {
   const { filterShowEducationRequired } = useStore()
@@ -11,6 +12,7 @@ const FilterEducationRequired: FC = () => {
             ? { display: "none" }
             : { display: "block" }
         }
+        className="filter-education-required-body"
       >
         Filter Education Required
       </div>

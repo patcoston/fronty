@@ -1,5 +1,6 @@
 import React, { FC } from "react"
 import { useStore } from "../../store/StoreProvider"
+import "./FilterPetsAllowed.css"
 
 const FilterPetsAllowed: FC = () => {
   const { filterShowPetsAllowed } = useStore()
@@ -9,6 +10,7 @@ const FilterPetsAllowed: FC = () => {
         style={
           !filterShowPetsAllowed ? { display: "none" } : { display: "block" }
         }
+        className="filter-pets-allowed-body"
       >
         Filter Pets Allowed
       </div>

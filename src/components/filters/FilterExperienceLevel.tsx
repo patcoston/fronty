@@ -1,5 +1,6 @@
 import React, { FC } from "react"
 import { useStore } from "../../store/StoreProvider"
+import "./FilterExperienceLevel.css"
 
 const FilterExperienceLevel: FC = () => {
   const { filterShowExperienceLevel } = useStore()
@@ -11,6 +12,7 @@ const FilterExperienceLevel: FC = () => {
             ? { display: "none" }
             : { display: "block" }
         }
+        className="filter-experience-level-body"
       >
         Filter Experience Level
       </div>

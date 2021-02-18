@@ -1,5 +1,6 @@
 import React, { FC } from "react"
 import { useStore } from "../../store/StoreProvider"
+import "./FilterIndustry.css"
 
 const FilterIndustry: FC = () => {
   const { filterShowIndustry } = useStore()
@@ -7,6 +8,7 @@ const FilterIndustry: FC = () => {
     <>
       <div
         style={!filterShowIndustry ? { display: "none" } : { display: "block" }}
+        className="filter-industry-body"
       >
         Filter Industry
       </div>
