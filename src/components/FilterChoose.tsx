@@ -12,7 +12,7 @@ const FilterMobile: FC<Props> = ({ showFilter, show, list, label }) => {
   return (
     <>
       <div
-        style={!show ? { display: "none" } : { display: "block" }}
+        style={!show ? { display: "none" } : { display: "flex" }}
         className="filter-choose-body"
       >
         <label htmlFor="filter-choose">Filter on {label}</label>
