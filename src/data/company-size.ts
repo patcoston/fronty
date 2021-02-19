@@ -1,4 +1,4 @@
-export const companSize = [
+export const companySize = [
   "1-10",
   "11-50",
   "51-100",

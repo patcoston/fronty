@@ -15,15 +15,15 @@ const FilterBenefits: FC<Props> = ({ showFilter }) => {
         style={!filterShowBenefits ? { display: "none" } : { display: "block" }}
         className="filter-benefits-body"
       >
-        <label htmlFor="choose-accessibility">Filter on Accessibility</label>
+        <label htmlFor="choose-benefits">Filter on Benefits</label>
         <select
-          id="choose-accessibility"
-          className="filter-skill-list"
+          id="choose-benefits"
+          className="filter-benefit-list"
           multiple
           size={9}
         >
           {benefits.map(benefit => (
-            <option value="{access}">{benefit}</option>
+            <option value="{benefit}">{benefit}</option>
           ))}
         </select>
         <button onClick={() => showFilter("ShowResults")}>Submit Filter</button>
