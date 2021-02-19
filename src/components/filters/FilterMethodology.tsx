@@ -1,5 +1,6 @@
 import React, { FC } from "react"
 import { useStore } from "../../store/StoreProvider"
+import { methodology } from "../../data/methodology"
 import "./FilterMethodology.css"
 
 interface Props {
@@ -16,7 +17,17 @@ const FilterMethodology: FC<Props> = ({ showFilter }) => {
         }
         className="filter-methodology-body"
       >
-        Filter Methodology
+        <label htmlFor="choose-methodology">Filter on Dress Code</label>
+        <select
+          id="choose-methodology"
+          className="filter-methodology-list"
+          multiple
+          size={7}
+        >
+          {methodology.map(val => (
+            <option value={val}>{val}</option>
+          ))}
+        </select>
         <button onClick={() => showFilter("ShowResults")}>Submit Filter</button>
       </div>
     </>
