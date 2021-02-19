@@ -1,5 +1,6 @@
 import React, { FC } from "react"
 import { useStore } from "../../store/StoreProvider"
+import { internalExternal } from "../../data/internal-external"
 import "./FilterInternalExternal.css"
 
 interface Props {
@@ -18,7 +19,17 @@ const FilterInternalExternal: FC<Props> = ({ showFilter }) => {
         }
         className="filter-internal-external-body"
       >
-        Filter Internal External
+        <label htmlFor="choose-internal-external">Filter on Dress Code</label>
+        <select
+          id="choose-internal-external"
+          className="filter-internal-external-list"
+          multiple
+          size={5}
+        >
+          {internalExternal.map(val => (
+            <option value={val}>{val}</option>
+          ))}
+        </select>
         <button onClick={() => showFilter("ShowResults")}>Submit Filter</button>
       </div>
     </>
