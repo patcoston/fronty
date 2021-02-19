@@ -24,7 +24,9 @@ const FilterMobile: FC<Props> = ({ showFilter, show, list, label }) => {
           size={size}
         >
           {list.map(val => (
-            <option value={val}>{val}</option>
+            <option key={val} value={val}>
+              {val}
+            </option>
           ))}
         </select>
         <button onClick={() => showFilter("ShowResults")}>Add Filter</button>

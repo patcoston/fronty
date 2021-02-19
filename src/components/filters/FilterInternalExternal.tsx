@@ -14,7 +14,7 @@ const FilterInternalExternal: FC<Props> = ({ showFilter }) => {
       showFilter={showFilter}
       show={filterShowInternalExternal}
       list={internalExternal}
-      label={"Mobile"}
+      label={"Internal or External"}
     />
   )
 }

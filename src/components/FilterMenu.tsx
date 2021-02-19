@@ -29,17 +29,17 @@ const FilterMenu: FC<Props> = ({ showFilter }) => {
           </li>
           <li onClick={() => showFilter("Industry")}>Industry</li>
           <li onClick={() => showFilter("InternalExternal")}>
-            InternalExternal
+            Internal or External
           </li>
           <li onClick={() => showFilter("Methodology")}>Methodology</li>
           <li onClick={() => showFilter("Mobile")}>Mobile</li>
           <li onClick={() => showFilter("PetsAllowed")}>Pets Allowed</li>
+          <li onClick={() => showFilter("Company")}>Popular Companies</li>
           <li onClick={() => showFilter("SalaryRange")}>Salary Range</li>
           <li onClick={() => showFilter("Skill")}>Skill</li>
           <li onClick={() => showFilter("WorkingFromHome")}>
             Working From Home
           </li>
-          <li onClick={() => showFilter("Company")}>Popular Companies</li>
         </ul>
       </div>
     </>

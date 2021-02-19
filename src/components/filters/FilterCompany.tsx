@@ -14,7 +14,7 @@ const FilterCompany: FC<Props> = ({ showFilter }) => {
       showFilter={showFilter}
       show={filterShowCompany}
       list={company}
-      label={"Benefits"}
+      label={"Popular Companies"}
     />
   )
 }
