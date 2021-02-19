@@ -1,5 +1,4 @@
 export const education = [
-  "No Education required",
   "High School Equivalency",
   "High School Diploma",
   "Boot-Camp (less than 1 year)",

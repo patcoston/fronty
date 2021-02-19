@@ -1,5 +1,6 @@
 import React, { FC } from "react"
 import { useStore } from "../../store/StoreProvider"
+import { education } from "../../data/education"
 import "./FilterEducationRequired.css"
 
 interface Props {
@@ -18,7 +19,17 @@ const FilterEducationRequired: FC<Props> = ({ showFilter }) => {
         }
         className="filter-education-required-body"
       >
-        Filter Education Required
+        <label htmlFor="choose-education-required">Filter on Dress Code</label>
+        <select
+          id="choose-education-required"
+          className="filter-education-required-list"
+          multiple
+          size={9}
+        >
+          {education.map(ed => (
+            <option value={ed}>{ed}</option>
+          ))}
+        </select>
         <button onClick={() => showFilter("ShowResults")}>Submit Filter</button>
       </div>
     </>
