@@ -1,5 +1,6 @@
 import React, { FC } from "react"
 import { useStore } from "../../store/StoreProvider"
+import { industry } from "../../data/industry"
 import "./FilterIndustry.css"
 
 interface Props {
@@ -14,7 +15,17 @@ const FilterIndustry: FC<Props> = ({ showFilter }) => {
         style={!filterShowIndustry ? { display: "none" } : { display: "block" }}
         className="filter-industry-body"
       >
-        Filter Industry
+        <label htmlFor="choose-industry">Filter on Industry</label>
+        <select
+          id="choose-industry"
+          className="filter-industry-list"
+          multiple
+          size={6}
+        >
+          {industry.map(ind => (
+            <option value={ind}>{ind}</option>
+          ))}
+        </select>
         <button onClick={() => showFilter("ShowResults")}>Submit Filter</button>
       </div>
     </>

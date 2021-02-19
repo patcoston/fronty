@@ -17,7 +17,7 @@ const FilterEmployeeType: FC<Props> = ({ showFilter }) => {
         }
         className="filter-employee-type-body"
       >
-        <label htmlFor="choose-employee-type">Filter on Dress Code</label>
+        <label htmlFor="choose-employee-type">Filter on Employee Type</label>
         <select
           id="choose-employee-type"
           className="filter-employee-type-list"

@@ -19,7 +19,9 @@ const FilterEducationRequired: FC<Props> = ({ showFilter }) => {
         }
         className="filter-education-required-body"
       >
-        <label htmlFor="choose-education-required">Filter on Dress Code</label>
+        <label htmlFor="choose-education-required">
+          Filter on Education Requied
+        </label>
         <select
           id="choose-education-required"
           className="filter-education-required-list"

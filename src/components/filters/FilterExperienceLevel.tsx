@@ -19,7 +19,7 @@ const FilterExperienceLevel: FC<Props> = ({ showFilter }) => {
         }
         className="filter-experience-level-body"
       >
-        <label htmlFor="choose-experience-level">Filter on Dress Code</label>
+        <label htmlFor="choose-experience-level">Filter on Exeprience</label>
         <select
           id="choose-experience-level"
           className="filter-experience-level-list"
