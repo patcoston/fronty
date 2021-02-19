@@ -9,6 +9,7 @@ interface Props {
 }
 
 const FilterMobile: FC<Props> = ({ showFilter, show, list, label }) => {
+  const size = list.length < 11 ? list.length : 10
   return (
     <>
       <div
@@ -20,7 +21,7 @@ const FilterMobile: FC<Props> = ({ showFilter, show, list, label }) => {
           id="filter-choose"
           className="filter-choose-list"
           multiple
-          size={list.length}
+          size={size}
         >
           {list.map(val => (
             <option value={val}>{val}</option>
