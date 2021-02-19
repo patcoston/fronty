@@ -11,14 +11,12 @@ interface Props {
 const FilterMobile: FC<Props> = ({ showFilter }) => {
   const { filterShowMobile } = useStore()
   return (
-    <>
-      <FilterChoose
-        showFilter={showFilter}
-        show={filterShowMobile}
-        list={mobile}
-        label={"Mobile"}
-      />
-    </>
+    <FilterChoose
+      showFilter={showFilter}
+      show={filterShowMobile}
+      list={mobile}
+      label={"Mobile"}
+    />
   )
 }
 

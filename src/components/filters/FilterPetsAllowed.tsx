@@ -11,14 +11,12 @@ interface Props {
 const FilterPetsAllowed: FC<Props> = ({ showFilter }) => {
   const { filterShowPetsAllowed } = useStore()
   return (
-    <>
-      <FilterChoose
-        showFilter={showFilter}
-        show={filterShowPetsAllowed}
-        list={pets}
-        label={"Pets Allowed"}
-      />
-    </>
+    <FilterChoose
+      showFilter={showFilter}
+      show={filterShowPetsAllowed}
+      list={pets}
+      label={"Pets Allowed"}
+    />
   )
 }
 
