@@ -1,4 +1,5 @@
 import React, { FC } from "react"
+import FilterChoose from "../FilterChoose"
 import { useStore } from "../../store/StoreProvider"
 import { dressCode } from "../../data/dress-code"
 import "./FilterDressCode.css"
@@ -11,25 +12,12 @@ const FilterDressCode: FC<Props> = ({ showFilter }) => {
   const { filterShowDressCode } = useStore()
   return (
     <>
-      <div
-        style={
-          !filterShowDressCode ? { display: "none" } : { display: "block" }
-        }
-        className="filter-dress-code-body"
-      >
-        <label htmlFor="choose-dress-code">Filter on Dress Code</label>
-        <select
-          id="choose-dress-code"
-          className="filter-dress-code-list"
-          multiple
-          size={6}
-        >
-          {dressCode.map(dress => (
-            <option value={dress}>{dress}</option>
-          ))}
-        </select>
-        <button onClick={() => showFilter("ShowResults")}>Submit Filter</button>
-      </div>
+      <FilterChoose
+        showFilter={showFilter}
+        show={filterShowDressCode}
+        list={dressCode}
+        label={"Dress Code"}
+      />
     </>
   )
 }
