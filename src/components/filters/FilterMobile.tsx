@@ -1,5 +1,6 @@
 import React, { FC } from "react"
 import { useStore } from "../../store/StoreProvider"
+import { mobile } from "../../data/mobile"
 import "./FilterMobile.css"
 
 interface Props {
@@ -14,7 +15,17 @@ const FilterMobile: FC<Props> = ({ showFilter }) => {
         style={!filterShowMobile ? { display: "none" } : { display: "block" }}
         className="filter-mobile-body"
       >
-        Filter Mobile
+        <label htmlFor="choose-mobile">Filter on Mobile</label>
+        <select
+          id="choose-mobile"
+          className="filter-mobile-list"
+          multiple
+          size={4}
+        >
+          {mobile.map(val => (
+            <option value={val}>{val}</option>
+          ))}
+        </select>
         <button onClick={() => showFilter("ShowResults")}>Submit Filter</button>
       </div>
     </>

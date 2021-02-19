@@ -19,7 +19,9 @@ const FilterInternalExternal: FC<Props> = ({ showFilter }) => {
         }
         className="filter-internal-external-body"
       >
-        <label htmlFor="choose-internal-external">Filter on Dress Code</label>
+        <label htmlFor="choose-internal-external">
+          Filter on Internal or External
+        </label>
         <select
           id="choose-internal-external"
           className="filter-internal-external-list"

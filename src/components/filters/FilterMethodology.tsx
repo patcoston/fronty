@@ -17,7 +17,7 @@ const FilterMethodology: FC<Props> = ({ showFilter }) => {
         }
         className="filter-methodology-body"
       >
-        <label htmlFor="choose-methodology">Filter on Dress Code</label>
+        <label htmlFor="choose-methodology">Filter on Methodology</label>
         <select
           id="choose-methodology"
           className="filter-methodology-list"
