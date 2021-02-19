@@ -1,6 +1,7 @@
 import React, { FC } from "react"
+import FilterChoose from "../FilterChoose"
 import { useStore } from "../../store/StoreProvider"
-import SelectSkills from "../SelectSkills"
+import { skills } from "../../data/skills"
 import "./FilterSkill.css"
 
 interface Props {
@@ -10,28 +11,12 @@ interface Props {
 const FilterSkill: FC<Props> = ({ showFilter }) => {
   const { filterShowSkill } = useStore()
   return (
-    <>
-      <div
-        style={!filterShowSkill ? { display: "none" } : { display: "block" }}
-        className="filter-skill-body"
-      >
-        <div>
-          <label className="filter-skill-type-skill-label">
-            Type desired tech to filter list below
-          </label>
-          <input type="text" />
-        </div>
-        <div>
-          <label htmlFor="choose-skill" className="filter-skills-choose-label">
-            Choose one or more skills
-          </label>
-          <SelectSkills />
-          <button onClick={() => showFilter("ShowResults")}>
-            Submit Filter
-          </button>
-        </div>
-      </div>
-    </>
+    <FilterChoose
+      showFilter={showFilter}
+      show={filterShowSkill}
+      list={skills}
+      label={"Skill"}
+    />
   )
 }
 
