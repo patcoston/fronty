@@ -15,6 +15,7 @@ import FilterPetsAllowed from "./filters/FilterPetsAllowed"
 import FilterSalaryRange from "./filters/FilterSalaryRange"
 import FilterSkill from "./filters/FilterSkill"
 import FilterWorkingFromHome from "./filters/FilterWorkingFromHome"
+import FilterCompany from "./filters/FilterCompany"
 import FilterMenu from "./FilterMenu"
 import { useStore } from "../store/StoreProvider"
 import "./AddFilter.css"
@@ -38,6 +39,7 @@ const AddFilter: FC = () => {
     setFilterShowSalaryRange,
     setFilterShowSkill,
     setFilterShowWorkingFromHome,
+    setFilterShowCompany,
     setShowResults,
   } = useStore()
 
@@ -59,6 +61,7 @@ const AddFilter: FC = () => {
     setFilterShowSalaryRange(false)
     setFilterShowSkill(false)
     setFilterShowWorkingFromHome(false)
+    setFilterShowCompany(false)
     setShowResults(false)
     switch (menuType) {
       case "Menu":
@@ -112,6 +115,9 @@ const AddFilter: FC = () => {
       case "WorkingFromHome":
         setFilterShowWorkingFromHome(true)
         break
+      case "Company":
+        setFilterShowCompany(true)
+        break
       case "ShowResults":
         setShowResults(true)
         break
@@ -139,6 +145,7 @@ const AddFilter: FC = () => {
         <FilterSalaryRange showFilter={showFilter} />
         <FilterSkill showFilter={showFilter} />
         <FilterWorkingFromHome showFilter={showFilter} />
+        <FilterCompany showFilter={showFilter} />
       </div>
       <div className="filters-added">Filters Added</div>
     </>

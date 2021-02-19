@@ -1,7 +1,6 @@
 import React, { FC } from "react"
 import { useStore } from "../../store/StoreProvider"
 import { methodology } from "../../data/methodology"
-import "./FilterMethodology.css"
 
 interface Props {
   showFilter(arg: string): void

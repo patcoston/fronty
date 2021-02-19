@@ -1,6 +1,5 @@
 import React, { FC } from "react"
 import { useStore } from "../../store/StoreProvider"
-import "./FilterSalaryRange.css"
 
 interface Props {
   showFilter(arg: string): void

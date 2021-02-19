@@ -35,6 +35,8 @@ export interface Store {
   setFilterShowSkill: (show: boolean) => void
   filterShowWorkingFromHome: boolean
   setFilterShowWorkingFromHome: (show: boolean) => void
+  filterShowCompany: boolean
+  setFilterShowCompany: (show: boolean) => void
   showResults: boolean
   setShowResults: (show: boolean) => void
 }
@@ -81,6 +83,7 @@ const StoreProvider: FC = ({ children }) => {
     false,
   )
   const [filterShowSkill, setFilterShowSkill] = useState<boolean>(false)
+  const [filterShowCompany, setFilterShowCompany] = useState<boolean>(false)
   const [
     filterShowWorkingFromHome,
     setFilterShowWorkingFromHome,
@@ -124,6 +127,8 @@ const StoreProvider: FC = ({ children }) => {
     setFilterShowWorkingFromHome,
     showResults,
     setShowResults,
+    filterShowCompany,
+    setFilterShowCompany,
   }
 
   return <StoreContext.Provider value={store}>{children}</StoreContext.Provider>

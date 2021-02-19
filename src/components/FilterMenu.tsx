@@ -39,6 +39,7 @@ const FilterMenu: FC<Props> = ({ showFilter }) => {
           <li onClick={() => showFilter("WorkingFromHome")}>
             Working From Home
           </li>
+          <li onClick={() => showFilter("Company")}>Popular Companies</li>
         </ul>
       </div>
     </>

@@ -1,6 +1,5 @@
 import React, { FC } from "react"
 import { useStore } from "../../store/StoreProvider"
-import "./FilterCommute.css"
 
 interface Props {
   showFilter(arg: string): void

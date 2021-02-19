@@ -2,7 +2,6 @@ import React, { FC } from "react"
 import FilterChoose from "../FilterChoose"
 import { useStore } from "../../store/StoreProvider"
 import { education } from "../../data/education"
-import "./FilterEducationRequired.css"
 
 interface Props {
   showFilter(arg: string): void

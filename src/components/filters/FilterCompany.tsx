@@ -1,22 +1,22 @@
 import React, { FC } from "react"
 import FilterChoose from "../FilterChoose"
 import { useStore } from "../../store/StoreProvider"
-import { mobile } from "../../data/mobile"
+import { company } from "../../data/company"
 
 interface Props {
   showFilter(arg: string): void
 }
 
-const FilterMobile: FC<Props> = ({ showFilter }) => {
-  const { filterShowMobile } = useStore()
+const FilterCompany: FC<Props> = ({ showFilter }) => {
+  const { filterShowCompany } = useStore()
   return (
     <FilterChoose
       showFilter={showFilter}
-      show={filterShowMobile}
-      list={mobile}
-      label={"Mobile"}
+      show={filterShowCompany}
+      list={company}
+      label={"Benefits"}
     />
   )
 }
 
-export default FilterMobile
+export default FilterCompany
