@@ -1,4 +1,5 @@
 import React, { FC } from "react"
+import FilterChoose from "../FilterChoose"
 import { useStore } from "../../store/StoreProvider"
 import { accessibility } from "../../data/accessibility"
 import "./FilterAccessible.css"
@@ -11,25 +12,12 @@ const FilterAccessible: FC<Props> = ({ showFilter }) => {
   const { filterShowAccessible } = useStore()
   return (
     <>
-      <div
-        style={
-          !filterShowAccessible ? { display: "none" } : { display: "block" }
-        }
-        className="filter-accessible-body"
-      >
-        <label htmlFor="choose-accessibility">Filter on Accessibility</label>
-        <select
-          id="choose-accessibility"
-          className="filter-skill-list"
-          multiple
-          size={9}
-        >
-          {accessibility.map(access => (
-            <option value={access}>{access}</option>
-          ))}
-        </select>
-        <button onClick={() => showFilter("ShowResults")}>Submit Filter</button>
-      </div>
+      <FilterChoose
+        showFilter={showFilter}
+        show={filterShowAccessible}
+        list={accessibility}
+        label={"Accessibility"}
+      />
     </>
   )
 }
