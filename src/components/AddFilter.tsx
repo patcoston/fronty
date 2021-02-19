@@ -140,6 +140,7 @@ const AddFilter: FC = () => {
         <FilterSkill showFilter={showFilter} />
         <FilterWorkingFromHome showFilter={showFilter} />
       </div>
+      <div className="filters-added">Filters Added</div>
     </>
   )
 }
