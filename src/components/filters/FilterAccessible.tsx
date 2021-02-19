@@ -25,7 +25,7 @@ const FilterAccessible: FC<Props> = ({ showFilter }) => {
           size={9}
         >
           {accessibility.map(access => (
-            <option value="{access}">{access}</option>
+            <option value={access}>{access}</option>
           ))}
         </select>
         <button onClick={() => showFilter("ShowResults")}>Submit Filter</button>

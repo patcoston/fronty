@@ -13,7 +13,7 @@ const SelectSkills: FC = () => {
           size={10}
         >
           {skills.map(skill => (
-            <option value="{skill}">{skill}</option>
+            <option value={skill}>{skill}</option>
           ))}
         </select>
       </div>

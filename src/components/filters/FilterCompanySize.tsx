@@ -25,7 +25,7 @@ const FilterCompanySize: FC<Props> = ({ showFilter }) => {
           size={9}
         >
           {companySize.map(size => (
-            <option value="{size}">{size}</option>
+            <option value={size}>{size}</option>
           ))}
         </select>
         <button onClick={() => showFilter("ShowResults")}>Submit Filter</button>

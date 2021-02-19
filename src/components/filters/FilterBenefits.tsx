@@ -23,7 +23,7 @@ const FilterBenefits: FC<Props> = ({ showFilter }) => {
           size={9}
         >
           {benefits.map(benefit => (
-            <option value="{benefit}">{benefit}</option>
+            <option value={benefit}>{benefit}</option>
           ))}
         </select>
         <button onClick={() => showFilter("ShowResults")}>Submit Filter</button>

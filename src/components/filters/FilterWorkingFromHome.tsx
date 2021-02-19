@@ -29,7 +29,7 @@ const FilterWorkingFromHome: FC<Props> = ({ showFilter }) => {
             size={11}
           >
             {percentWfh.map(percent => (
-              <option value="{percent}">{percent}</option>
+              <option value={percent}>{percent}</option>
             ))}
           </select>
         </div>
