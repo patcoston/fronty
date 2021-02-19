@@ -11,14 +11,12 @@ interface Props {
 const FilterAccessible: FC<Props> = ({ showFilter }) => {
   const { filterShowAccessible } = useStore()
   return (
-    <>
-      <FilterChoose
-        showFilter={showFilter}
-        show={filterShowAccessible}
-        list={accessibility}
-        label={"Accessibility"}
-      />
-    </>
+    <FilterChoose
+      showFilter={showFilter}
+      show={filterShowAccessible}
+      list={accessibility}
+      label={"Accessibility"}
+    />
   )
 }
 

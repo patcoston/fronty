@@ -1,4 +1,5 @@
 import React, { FC } from "react"
+import FilterChoose from "../FilterChoose"
 import { useStore } from "../../store/StoreProvider"
 import { companySize } from "../../data/company-size"
 import "./FilterCompanySize.css"
@@ -10,27 +11,12 @@ interface Props {
 const FilterCompanySize: FC<Props> = ({ showFilter }) => {
   const { filterShowCompanySize } = useStore()
   return (
-    <>
-      <div
-        style={
-          !filterShowCompanySize ? { display: "none" } : { display: "block" }
-        }
-        className="filter-company-size-body"
-      >
-        <label htmlFor="choose-company-size">Filter on Company Size</label>
-        <select
-          id="choose-company-size"
-          className="filter-company-size-list"
-          multiple
-          size={9}
-        >
-          {companySize.map(size => (
-            <option value={size}>{size}</option>
-          ))}
-        </select>
-        <button onClick={() => showFilter("ShowResults")}>Submit Filter</button>
-      </div>
-    </>
+    <FilterChoose
+      showFilter={showFilter}
+      show={filterShowCompanySize}
+      list={companySize}
+      label={"Company Size"}
+    />
   )
 }
 
