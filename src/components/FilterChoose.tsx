@@ -9,7 +9,7 @@ interface Props {
 }
 
 const FilterMobile: FC<Props> = ({ showFilter, show, list, label }) => {
-  const size = list.length < 11 ? list.length : 10
+  const size = list.length < 21 ? list.length : 20
   return (
     <>
       <div
