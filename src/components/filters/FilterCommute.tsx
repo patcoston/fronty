@@ -1,5 +1,7 @@
 import React, { FC } from "react"
+import FilterChoose from "../FilterChoose"
 import { useStore } from "../../store/StoreProvider"
+import { commute } from "../../data/commute"
 
 interface Props {
   showFilter(arg: string): void
@@ -8,15 +10,12 @@ interface Props {
 const FilterCommute: FC<Props> = ({ showFilter }) => {
   const { filterShowCommute } = useStore()
   return (
-    <>
-      <div
-        style={!filterShowCommute ? { display: "none" } : { display: "block" }}
-        className="filter-commute-body"
-      >
-        Filter Commute
-        <button onClick={() => showFilter("ShowResults")}>Submit Filter</button>
-      </div>
-    </>
+    <FilterChoose
+      showFilter={showFilter}
+      show={filterShowCommute}
+      list={commute}
+      label={"Commute"}
+    />
   )
 }
 
