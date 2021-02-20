@@ -29,8 +29,8 @@ export interface Store {
   setFilterShowMobile: (show: boolean) => void
   filterShowPetsAllowed: boolean
   setFilterShowPetsAllowed: (show: boolean) => void
-  filterShowSalaryRange: boolean
-  setFilterShowSalaryRange: (show: boolean) => void
+  filterShowPayment: boolean
+  setFilterShowPayment: (show: boolean) => void
   filterShowSkill: boolean
   setFilterShowSkill: (show: boolean) => void
   filterShowWorkingFromHome: boolean
@@ -79,9 +79,7 @@ const StoreProvider: FC = ({ children }) => {
   const [filterShowPetsAllowed, setFilterShowPetsAllowed] = useState<boolean>(
     false,
   )
-  const [filterShowSalaryRange, setFilterShowSalaryRange] = useState<boolean>(
-    false,
-  )
+  const [filterShowPayment, setFilterShowPayment] = useState<boolean>(false)
   const [filterShowSkill, setFilterShowSkill] = useState<boolean>(false)
   const [filterShowCompany, setFilterShowCompany] = useState<boolean>(false)
   const [
@@ -119,8 +117,8 @@ const StoreProvider: FC = ({ children }) => {
     setFilterShowMobile,
     filterShowPetsAllowed,
     setFilterShowPetsAllowed,
-    filterShowSalaryRange,
-    setFilterShowSalaryRange,
+    filterShowPayment,
+    setFilterShowPayment,
     filterShowSkill,
     setFilterShowSkill,
     filterShowWorkingFromHome,

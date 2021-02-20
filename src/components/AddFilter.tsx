@@ -12,7 +12,7 @@ import FilterInternalExternal from "./filters/FilterInternalExternal"
 import FilterMethodology from "./filters/FilterMethodology"
 import FilterMobile from "./filters/FilterMobile"
 import FilterPetsAllowed from "./filters/FilterPetsAllowed"
-import FilterSalaryRange from "./filters/FilterSalaryRange"
+import FilterPayment from "./filters/FilterPayment"
 import FilterSkill from "./filters/FilterSkill"
 import FilterWorkingFromHome from "./filters/FilterWorkingFromHome"
 import FilterCompany from "./filters/FilterCompany"
@@ -43,7 +43,7 @@ const AddFilter: FC = () => {
     setFilterShowMethodology,
     setFilterShowMobile,
     setFilterShowPetsAllowed,
-    setFilterShowSalaryRange,
+    setFilterShowPayment,
     setFilterShowSkill,
     setFilterShowWorkingFromHome,
     setFilterShowCompany,
@@ -65,7 +65,7 @@ const AddFilter: FC = () => {
     setFilterShowMethodology(false)
     setFilterShowMobile(false)
     setFilterShowPetsAllowed(false)
-    setFilterShowSalaryRange(false)
+    setFilterShowPayment(false)
     setFilterShowSkill(false)
     setFilterShowWorkingFromHome(false)
     setFilterShowCompany(false)
@@ -113,8 +113,8 @@ const AddFilter: FC = () => {
       case "PetsAllowed":
         setFilterShowPetsAllowed(true)
         break
-      case "SalaryRange":
-        setFilterShowSalaryRange(true)
+      case "Payment":
+        setFilterShowPayment(true)
         break
       case "Skill":
         setFilterShowSkill(true)
@@ -149,7 +149,7 @@ const AddFilter: FC = () => {
         <FilterMethodology showFilter={showFilter} />
         <FilterMobile showFilter={showFilter} />
         <FilterPetsAllowed showFilter={showFilter} />
-        <FilterSalaryRange showFilter={showFilter} />
+        <FilterPayment showFilter={showFilter} />
         <FilterSkill showFilter={showFilter} />
         <FilterWorkingFromHome showFilter={showFilter} />
         <FilterCompany showFilter={showFilter} />
