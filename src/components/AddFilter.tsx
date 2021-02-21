@@ -21,12 +21,12 @@ import { useStore } from "../store/StoreProvider"
 import "./AddFilter.css"
 
 const AddFilter: FC = () => {
-  interface FilterType {
-    filterType: string
-    filterValue: string
-  }
+  // interface FilterType {
+  //   filterType: string
+  //   filterValue: string
+  // }
 
-  const filters: Array<FilterType> = []
+  // const filters: Array<FilterType> = []
 
   const {
     setFilterShowMenu,
