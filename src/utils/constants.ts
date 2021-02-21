@@ -1,0 +1,17 @@
+export const FILTER_ACCESSIBLE = 0
+export const FILTER_BENEFITS = 1
+export const FILTER_COMMUTE = 2
+export const FILTER_COMPANY_SIZE = 3
+export const FILTER_DRESS_CODE = 4
+export const FILTER_EDUCATION_REQUIRED = 5
+export const FILTER_EMPLOYEE_TYPE = 6
+export const FILTER_EXPERIENCE_LEVEL = 7
+export const FILTER_INDUSTRY = 8
+export const FILTER_INTERNAL_EXTERNAL = 9
+export const FILTER_METHODOLOGY = 10
+export const FILTER_MOBILE = 11
+export const FILTER_PAYMENT = 12
+export const FILTER_PETS_ALLOWED = 13
+export const FILTER_COMPANY = 14
+export const FILTER_SKILL = 15
+export const FILTER_WORKING_FROM_HOME = 16
