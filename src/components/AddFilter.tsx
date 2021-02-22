@@ -1,5 +1,5 @@
 import { FC } from "react"
-import FilterAccessible from "./filters/FilterAccessible"
+//import FilterAccessible from "./filters/FilterAccessible"
 import FilterBenefits from "./filters/FilterBenefits"
 import FilterCommute from "./filters/FilterCommute"
 import FilterCompanySize from "./filters/FilterCompanySize"
@@ -17,7 +17,10 @@ import FilterSkill from "./filters/FilterSkill"
 import FilterWorkingFromHome from "./filters/FilterWorkingFromHome"
 import FilterCompany from "./filters/FilterCompany"
 import FilterMenu from "./FilterMenu"
+import FilterChoose from "./FilterChoose"
 import { useStore } from "../store/StoreProvider"
+import { filterData } from "../data/filter-data"
+import * as filterType from "../utils/constants"
 import "./AddFilter.css"
 
 const AddFilter: FC = () => {
@@ -27,6 +30,8 @@ const AddFilter: FC = () => {
   // }
 
   // const filters: Array<FilterType> = []
+
+  const { filterShowAccessible } = useStore()
 
   const {
     setFilterShowMenu,
@@ -136,7 +141,12 @@ const AddFilter: FC = () => {
       <div className="add-filter">
         <button onClick={() => showFilter("Menu")}>Choose Filter Type</button>
         <FilterMenu showFilter={showFilter} />
-        <FilterAccessible showFilter={showFilter} />
+        <FilterChoose
+          showFilter={showFilter}
+          show={filterShowAccessible}
+          list={filterData[filterType.FILTER_ACCESSIBLE].list}
+          label={filterData[filterType.FILTER_ACCESSIBLE].label}
+        />
         <FilterBenefits showFilter={showFilter} />
         <FilterCommute showFilter={showFilter} />
         <FilterCompanySize showFilter={showFilter} />
