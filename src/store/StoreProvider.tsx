@@ -1,4 +1,4 @@
-import React, { createContext, FC, useState, useContext } from "react"
+import { createContext, FC, useState, useContext } from "react"
 
 export interface Store {
   filterShowMenu: boolean

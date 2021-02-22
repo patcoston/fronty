@@ -1,4 +1,4 @@
-import React, { FC } from "react"
+import { FC } from "react"
 import FilterAccessible from "./filters/FilterAccessible"
 import FilterBenefits from "./filters/FilterBenefits"
 import FilterCommute from "./filters/FilterCommute"
