@@ -16,6 +16,7 @@ const AddFilter: FC = () => {
   const showFilter = (menuType: string) => {
     setFilterShowMenu(false)
     setShow(false)
+    let filterIndex = 1
 
     switch (menuType) {
       case "Menu":
@@ -23,93 +24,78 @@ const AddFilter: FC = () => {
         break
       case "Accessible":
         setShow(true)
-        setList(filterData[filterType.FILTER_ACCESSIBLE].list)
-        setLabel(filterData[filterType.FILTER_ACCESSIBLE].label)
+        filterIndex = filterType.FILTER_ACCESSIBLE
         break
       case "Benefits":
         setShow(true)
-        setList(filterData[filterType.FILTER_BENEFITS].list)
-        setLabel(filterData[filterType.FILTER_BENEFITS].label)
+        filterIndex = filterType.FILTER_BENEFITS
         break
       case "Commute":
         setShow(true)
-        setList(filterData[filterType.FILTER_COMMUTE].list)
-        setLabel(filterData[filterType.FILTER_COMMUTE].label)
+        filterIndex = filterType.FILTER_COMMUTE
         break
       case "Company":
         setShow(true)
-        setList(filterData[filterType.FILTER_COMPANY].list)
-        setLabel(filterData[filterType.FILTER_COMPANY].label)
+        filterIndex = filterType.FILTER_COMPANY
         break
       case "CompanySize":
         setShow(true)
-        setList(filterData[filterType.FILTER_COMPANY_SIZE].list)
-        setLabel(filterData[filterType.FILTER_COMPANY_SIZE].label)
+        filterIndex = filterType.FILTER_COMPANY_SIZE
         break
       case "DressCode":
         setShow(true)
-        setList(filterData[filterType.FILTER_DRESS_CODE].list)
-        setLabel(filterData[filterType.FILTER_DRESS_CODE].label)
+        filterIndex = filterType.FILTER_DRESS_CODE
         break
       case "EducationRequired":
         setShow(true)
-        setList(filterData[filterType.FILTER_EDUCATION_REQUIRED].list)
-        setLabel(filterData[filterType.FILTER_EDUCATION_REQUIRED].label)
+        filterIndex = filterType.FILTER_EDUCATION_REQUIRED
         break
       case "EmployeeType":
         setShow(true)
-        setList(filterData[filterType.FILTER_EMPLOYEE_TYPE].list)
-        setLabel(filterData[filterType.FILTER_EMPLOYEE_TYPE].label)
+        filterIndex = filterType.FILTER_EMPLOYEE_TYPE
         break
       case "ExperienceLevel":
         setShow(true)
-        setList(filterData[filterType.FILTER_EXPERIENCE_LEVEL].list)
-        setLabel(filterData[filterType.FILTER_EXPERIENCE_LEVEL].label)
+        filterIndex = filterType.FILTER_EXPERIENCE_LEVEL
         break
       case "Industry":
         setShow(true)
-        setList(filterData[filterType.FILTER_INDUSTRY].list)
-        setLabel(filterData[filterType.FILTER_INDUSTRY].label)
+        filterIndex = filterType.FILTER_INDUSTRY
         break
       case "InternalExternal":
         setShow(true)
-        setList(filterData[filterType.FILTER_INTERNAL_EXTERNAL].list)
-        setLabel(filterData[filterType.FILTER_INTERNAL_EXTERNAL].label)
+        filterIndex = filterType.FILTER_INTERNAL_EXTERNAL
         break
       case "Methodology":
         setShow(true)
-        setList(filterData[filterType.FILTER_METHODOLOGY].list)
-        setLabel(filterData[filterType.FILTER_METHODOLOGY].label)
+        filterIndex = filterType.FILTER_METHODOLOGY
         break
       case "Mobile":
         setShow(true)
-        setList(filterData[filterType.FILTER_MOBILE].list)
-        setLabel(filterData[filterType.FILTER_MOBILE].label)
+        filterIndex = filterType.FILTER_MOBILE
         break
       case "Payment":
         setShow(true)
-        setList(filterData[filterType.FILTER_PAYMENT].list)
-        setLabel(filterData[filterType.FILTER_PAYMENT].label)
+        filterIndex = filterType.FILTER_PAYMENT
         break
       case "PetsAllowed":
         setShow(true)
-        setList(filterData[filterType.FILTER_PETS_ALLOWED].list)
-        setLabel(filterData[filterType.FILTER_PETS_ALLOWED].label)
+        filterIndex = filterType.FILTER_PETS_ALLOWED
         break
       case "Skill":
         setShow(true)
-        setList(filterData[filterType.FILTER_SKILL].list)
-        setLabel(filterData[filterType.FILTER_SKILL].label)
+        filterIndex = filterType.FILTER_SKILL
         break
       case "WorkingFromHome":
         setShow(true)
-        setList(filterData[filterType.FILTER_WORKING_FROM_HOME].list)
-        setLabel(filterData[filterType.FILTER_WORKING_FROM_HOME].label)
+        filterIndex = filterType.FILTER_WORKING_FROM_HOME
         break
       case "ShowResults":
         setShowResults(true)
         break
     }
+    setList(filterData[filterIndex].list)
+    setLabel(filterData[filterIndex].label)
   }
 
   return (
