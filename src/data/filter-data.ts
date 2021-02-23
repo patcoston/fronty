@@ -5,7 +5,7 @@ interface IData {
   label: string
 }
 
-export const filterData: Array<IData> = []
+const filterData: Array<IData> = []
 
 filterData[filterType.FILTER_ACCESSIBLE] = {
   label: "Accessibility",
@@ -255,6 +255,7 @@ filterData[filterType.FILTER_MOBILE] = {
     "Mobile Only",
     "Responsive Design",
     "Mobile Only and Web Only",
+    "Mobile Only and Responsive Design",
   ],
 }
 
@@ -423,3 +424,5 @@ filterData[filterType.FILTER_WORKING_FROM_HOME] = {
     "100% Always",
   ],
 }
+
+export default filterData

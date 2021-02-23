@@ -1,125 +1,110 @@
-import { FC } from "react"
+import { FC, useState } from "react"
 import FilterMenu from "./FilterMenu"
 import FilterChoose from "./FilterChoose"
 import { useStore } from "../store/StoreProvider"
-import { filterData } from "../data/filter-data"
+import filterData from "../data/filter-data"
 import * as filterType from "../utils/constants"
 import "./AddFilter.css"
 
 const AddFilter: FC = () => {
-  const {
-    setFilterShowMenu,
-    filterShowAccessible,
-    setFilterShowAccessible,
-    filterShowBenefits,
-    setFilterShowBenefits,
-    filterShowCommute,
-    setFilterShowCommute,
-    filterShowCompanySize,
-    setFilterShowCompanySize,
-    filterShowDressCode,
-    setFilterShowDressCode,
-    filterShowEducationRequired,
-    setFilterShowEducationRequired,
-    filterShowEmployeeType,
-    setFilterShowEmployeeType,
-    filterShowExperienceLevel,
-    setFilterShowExperienceLevel,
-    filterShowIndustry,
-    setFilterShowIndustry,
-    filterShowInternalExternal,
-    setFilterShowInternalExternal,
-    filterShowMethodology,
-    setFilterShowMethodology,
-    filterShowMobile,
-    setFilterShowMobile,
-    filterShowPetsAllowed,
-    setFilterShowPetsAllowed,
-    filterShowPayment,
-    setFilterShowPayment,
-    filterShowSkill,
-    setFilterShowSkill,
-    filterShowWorkingFromHome,
-    setFilterShowWorkingFromHome,
-    setShowResults,
-    filterShowCompany,
-    setFilterShowCompany,
-  } = useStore()
+  const [show, setShow] = useState<boolean>(false)
+  const [list, setList] = useState<Array<string>>([])
+  const [label, setLabel] = useState<string>("")
+
+  const { setFilterShowMenu, setShowResults } = useStore()
 
   const showFilter = (menuType: string) => {
     setFilterShowMenu(false)
-    setFilterShowAccessible(false)
-    setFilterShowBenefits(false)
-    setFilterShowCommute(false)
-    setFilterShowCompanySize(false)
-    setFilterShowDressCode(false)
-    setFilterShowEducationRequired(false)
-    setFilterShowEmployeeType(false)
-    setFilterShowExperienceLevel(false)
-    setFilterShowIndustry(false)
-    setFilterShowInternalExternal(false)
-    setFilterShowMethodology(false)
-    setFilterShowMobile(false)
-    setFilterShowPetsAllowed(false)
-    setFilterShowPayment(false)
-    setFilterShowSkill(false)
-    setFilterShowWorkingFromHome(false)
-    setFilterShowCompany(false)
-    setShowResults(false)
+    setShow(false)
+
     switch (menuType) {
       case "Menu":
         setFilterShowMenu(true)
         break
       case "Accessible":
-        setFilterShowAccessible(true)
+        setShow(true)
+        setList(filterData[filterType.FILTER_ACCESSIBLE].list)
+        setLabel(filterData[filterType.FILTER_ACCESSIBLE].label)
         break
       case "Benefits":
-        setFilterShowBenefits(true)
+        setShow(true)
+        setList(filterData[filterType.FILTER_BENEFITS].list)
+        setLabel(filterData[filterType.FILTER_BENEFITS].label)
         break
       case "Commute":
-        setFilterShowCommute(true)
-        break
-      case "CompanySize":
-        setFilterShowCompanySize(true)
-        break
-      case "DressCode":
-        setFilterShowDressCode(true)
-        break
-      case "EducationRequired":
-        setFilterShowEducationRequired(true)
-        break
-      case "EmployeeType":
-        setFilterShowEmployeeType(true)
-        break
-      case "ExperienceLevel":
-        setFilterShowExperienceLevel(true)
-        break
-      case "Industry":
-        setFilterShowIndustry(true)
-        break
-      case "InternalExternal":
-        setFilterShowInternalExternal(true)
-        break
-      case "Methodology":
-        setFilterShowMethodology(true)
-        break
-      case "Mobile":
-        setFilterShowMobile(true)
-        break
-      case "PetsAllowed":
-        setFilterShowPetsAllowed(true)
-        break
-      case "Payment":
-        setFilterShowPayment(true)
-        break
-      case "Skill":
-        setFilterShowSkill(true)
-        break
-      case "WorkingFromHome":
-        setFilterShowWorkingFromHome(true)
+        setShow(true)
+        setList(filterData[filterType.FILTER_COMMUTE].list)
+        setLabel(filterData[filterType.FILTER_COMMUTE].label)
         break
       case "Company":
-        setFilterShowCompany(true)
+        setShow(true)
+        setList(filterData[filterType.FILTER_COMPANY].list)
+        setLabel(filterData[filterType.FILTER_COMPANY].label)
+        break
+      case "CompanySize":
+        setShow(true)
+        setList(filterData[filterType.FILTER_COMPANY_SIZE].list)
+        setLabel(filterData[filterType.FILTER_COMPANY_SIZE].label)
+        break
+      case "DressCode":
+        setShow(true)
+        setList(filterData[filterType.FILTER_DRESS_CODE].list)
+        setLabel(filterData[filterType.FILTER_DRESS_CODE].label)
+        break
+      case "EducationRequired":
+        setShow(true)
+        setList(filterData[filterType.FILTER_EDUCATION_REQUIRED].list)
+        setLabel(filterData[filterType.FILTER_EDUCATION_REQUIRED].label)
+        break
+      case "EmployeeType":
+        setShow(true)
+        setList(filterData[filterType.FILTER_EMPLOYEE_TYPE].list)
+        setLabel(filterData[filterType.FILTER_EMPLOYEE_TYPE].label)
+        break
+      case "ExperienceLevel":
+        setShow(true)
+        setList(filterData[filterType.FILTER_EXPERIENCE_LEVEL].list)
+        setLabel(filterData[filterType.FILTER_EXPERIENCE_LEVEL].label)
+        break
+      case "Industry":
+        setShow(true)
+        setList(filterData[filterType.FILTER_INDUSTRY].list)
+        setLabel(filterData[filterType.FILTER_INDUSTRY].label)
+        break
+      case "InternalExternal":
+        setShow(true)
+        setList(filterData[filterType.FILTER_INTERNAL_EXTERNAL].list)
+        setLabel(filterData[filterType.FILTER_INTERNAL_EXTERNAL].label)
+        break
+      case "Methodology":
+        setShow(true)
+        setList(filterData[filterType.FILTER_METHODOLOGY].list)
+        setLabel(filterData[filterType.FILTER_METHODOLOGY].label)
+        break
+      case "Mobile":
+        setShow(true)
+        setList(filterData[filterType.FILTER_MOBILE].list)
+        setLabel(filterData[filterType.FILTER_MOBILE].label)
+        break
+      case "Payment":
+        setShow(true)
+        setList(filterData[filterType.FILTER_PAYMENT].list)
+        setLabel(filterData[filterType.FILTER_PAYMENT].label)
+        break
+      case "PetsAllowed":
+        setShow(true)
+        setList(filterData[filterType.FILTER_PETS_ALLOWED].list)
+        setLabel(filterData[filterType.FILTER_PETS_ALLOWED].label)
+        break
+      case "Skill":
+        setShow(true)
+        setList(filterData[filterType.FILTER_SKILL].list)
+        setLabel(filterData[filterType.FILTER_SKILL].label)
+        break
+      case "WorkingFromHome":
+        setShow(true)
+        setList(filterData[filterType.FILTER_WORKING_FROM_HOME].list)
+        setLabel(filterData[filterType.FILTER_WORKING_FROM_HOME].label)
         break
       case "ShowResults":
         setShowResults(true)
@@ -134,105 +119,9 @@ const AddFilter: FC = () => {
         <FilterMenu showFilter={showFilter} />
         <FilterChoose
           showFilter={showFilter}
-          show={filterShowAccessible}
-          list={filterData[filterType.FILTER_ACCESSIBLE].list}
-          label={filterData[filterType.FILTER_ACCESSIBLE].label}
-        />
-        <FilterChoose
-          showFilter={showFilter}
-          show={filterShowBenefits}
-          list={filterData[filterType.FILTER_BENEFITS].list}
-          label={filterData[filterType.FILTER_BENEFITS].label}
-        />
-        <FilterChoose
-          showFilter={showFilter}
-          show={filterShowCommute}
-          list={filterData[filterType.FILTER_COMMUTE].list}
-          label={filterData[filterType.FILTER_COMMUTE].label}
-        />
-        <FilterChoose
-          showFilter={showFilter}
-          show={filterShowCompanySize}
-          list={filterData[filterType.FILTER_COMPANY_SIZE].list}
-          label={filterData[filterType.FILTER_COMPANY_SIZE].label}
-        />
-        <FilterChoose
-          showFilter={showFilter}
-          show={filterShowDressCode}
-          list={filterData[filterType.FILTER_DRESS_CODE].list}
-          label={filterData[filterType.FILTER_DRESS_CODE].label}
-        />
-        <FilterChoose
-          showFilter={showFilter}
-          show={filterShowEducationRequired}
-          list={filterData[filterType.FILTER_EDUCATION_REQUIRED].list}
-          label={filterData[filterType.FILTER_EDUCATION_REQUIRED].label}
-        />
-        <FilterChoose
-          showFilter={showFilter}
-          show={filterShowEmployeeType}
-          list={filterData[filterType.FILTER_EMPLOYEE_TYPE].list}
-          label={filterData[filterType.FILTER_EMPLOYEE_TYPE].label}
-        />
-        <FilterChoose
-          showFilter={showFilter}
-          show={filterShowExperienceLevel}
-          list={filterData[filterType.FILTER_EXPERIENCE_LEVEL].list}
-          label={filterData[filterType.FILTER_EXPERIENCE_LEVEL].label}
-        />
-        <FilterChoose
-          showFilter={showFilter}
-          show={filterShowIndustry}
-          list={filterData[filterType.FILTER_INDUSTRY].list}
-          label={filterData[filterType.FILTER_INDUSTRY].label}
-        />
-        <FilterChoose
-          showFilter={showFilter}
-          show={filterShowInternalExternal}
-          list={filterData[filterType.FILTER_INTERNAL_EXTERNAL].list}
-          label={filterData[filterType.FILTER_INTERNAL_EXTERNAL].label}
-        />
-        <FilterChoose
-          showFilter={showFilter}
-          show={filterShowMethodology}
-          list={filterData[filterType.FILTER_METHODOLOGY].list}
-          label={filterData[filterType.FILTER_METHODOLOGY].label}
-        />
-        <FilterChoose
-          showFilter={showFilter}
-          show={filterShowMobile}
-          list={filterData[filterType.FILTER_MOBILE].list}
-          label={filterData[filterType.FILTER_MOBILE].label}
-        />
-        <FilterChoose
-          showFilter={showFilter}
-          show={filterShowPetsAllowed}
-          list={filterData[filterType.FILTER_PETS_ALLOWED].list}
-          label={filterData[filterType.FILTER_PETS_ALLOWED].label}
-        />
-        <FilterChoose
-          showFilter={showFilter}
-          show={filterShowPayment}
-          list={filterData[filterType.FILTER_PAYMENT].list}
-          label={filterData[filterType.FILTER_PAYMENT].label}
-        />
-        <FilterChoose
-          showFilter={showFilter}
-          show={filterShowSkill}
-          list={filterData[filterType.FILTER_SKILL].list}
-          label={filterData[filterType.FILTER_SKILL].label}
-        />
-        <FilterChoose
-          showFilter={showFilter}
-          show={filterShowWorkingFromHome}
-          list={filterData[filterType.FILTER_WORKING_FROM_HOME].list}
-          label={filterData[filterType.FILTER_WORKING_FROM_HOME].label}
-        />
-        <FilterChoose
-          showFilter={showFilter}
-          show={filterShowCompany}
-          list={filterData[filterType.FILTER_COMPANY].list}
-          label={filterData[filterType.FILTER_COMPANY].label}
+          show={show}
+          list={list}
+          label={label}
         />
       </div>
       <div className="filters-added">Filters Added</div>
