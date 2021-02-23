@@ -24,71 +24,71 @@ const AddFilter: FC = () => {
         break
       case "Accessible":
         setShow(true)
-        filterIndex = filterType.FILTER_ACCESSIBLE
+        filterIndex = filterType.SHOW_ACCESSIBLE
         break
       case "Benefits":
         setShow(true)
-        filterIndex = filterType.FILTER_BENEFITS
+        filterIndex = filterType.SHOW_BENEFITS
         break
       case "Commute":
         setShow(true)
-        filterIndex = filterType.FILTER_COMMUTE
+        filterIndex = filterType.SHOW_COMMUTE
         break
       case "Company":
         setShow(true)
-        filterIndex = filterType.FILTER_COMPANY
+        filterIndex = filterType.SHOW_COMPANY
         break
       case "CompanySize":
         setShow(true)
-        filterIndex = filterType.FILTER_COMPANY_SIZE
+        filterIndex = filterType.SHOW_COMPANY_SIZE
         break
       case "DressCode":
         setShow(true)
-        filterIndex = filterType.FILTER_DRESS_CODE
+        filterIndex = filterType.SHOW_DRESS_CODE
         break
       case "EducationRequired":
         setShow(true)
-        filterIndex = filterType.FILTER_EDUCATION_REQUIRED
+        filterIndex = filterType.SHOW_EDUCATION_REQUIRED
         break
       case "EmployeeType":
         setShow(true)
-        filterIndex = filterType.FILTER_EMPLOYEE_TYPE
+        filterIndex = filterType.SHOW_EMPLOYEE_TYPE
         break
       case "ExperienceLevel":
         setShow(true)
-        filterIndex = filterType.FILTER_EXPERIENCE_LEVEL
+        filterIndex = filterType.SHOW_EXPERIENCE_LEVEL
         break
       case "Industry":
         setShow(true)
-        filterIndex = filterType.FILTER_INDUSTRY
+        filterIndex = filterType.SHOW_INDUSTRY
         break
       case "InternalExternal":
         setShow(true)
-        filterIndex = filterType.FILTER_INTERNAL_EXTERNAL
+        filterIndex = filterType.SHOW_INTERNAL_EXTERNAL
         break
       case "Methodology":
         setShow(true)
-        filterIndex = filterType.FILTER_METHODOLOGY
+        filterIndex = filterType.SHOW_METHODOLOGY
         break
       case "Mobile":
         setShow(true)
-        filterIndex = filterType.FILTER_MOBILE
+        filterIndex = filterType.SHOW_MOBILE
         break
       case "Payment":
         setShow(true)
-        filterIndex = filterType.FILTER_PAYMENT
+        filterIndex = filterType.SHOW_PAYMENT
         break
       case "PetsAllowed":
         setShow(true)
-        filterIndex = filterType.FILTER_PETS_ALLOWED
+        filterIndex = filterType.SHOW_PETS_ALLOWED
         break
       case "Skill":
         setShow(true)
-        filterIndex = filterType.FILTER_SKILL
+        filterIndex = filterType.SHOW_SKILL
         break
       case "WorkingFromHome":
         setShow(true)
-        filterIndex = filterType.FILTER_WORKING_FROM_HOME
+        filterIndex = filterType.SHOW_WORKING_FROM_HOME
         break
       case "ShowResults":
         setShowResults(true)
