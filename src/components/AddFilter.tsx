@@ -7,108 +7,39 @@ import * as filterType from "../utils/constants"
 import "./AddFilter.css"
 
 const AddFilter: FC = () => {
-  const [show, setShow] = useState<boolean>(false)
+  const [showFilters, setShowFilters] = useState<boolean>(false)
   const [list, setList] = useState<Array<string>>([])
   const [label, setLabel] = useState<string>("")
+  const { setShowMenu, setShowResults } = useStore()
 
-  const { setFilterShowMenu, setShowResults } = useStore()
-
-  const showFilter = (menuType: string) => {
-    setFilterShowMenu(false)
-    setShow(false)
-    let filterIndex = filterType.SHOW_ACCESSIBLE
+  const showFilter = (menuType: number) => {
+    setShowMenu(false)
+    setShowResults(false)
+    setShowFilters(false)
 
     switch (menuType) {
-      case "Menu":
-        setFilterShowMenu(true)
+      case filterType.SHOW_MENU:
+        setShowMenu(true)
         break
-      case "Accessible":
-        setShow(true)
-        filterIndex = filterType.SHOW_ACCESSIBLE
-        break
-      case "Benefits":
-        setShow(true)
-        filterIndex = filterType.SHOW_BENEFITS
-        break
-      case "Commute":
-        setShow(true)
-        filterIndex = filterType.SHOW_COMMUTE
-        break
-      case "Company":
-        setShow(true)
-        filterIndex = filterType.SHOW_COMPANY
-        break
-      case "CompanySize":
-        setShow(true)
-        filterIndex = filterType.SHOW_COMPANY_SIZE
-        break
-      case "DressCode":
-        setShow(true)
-        filterIndex = filterType.SHOW_DRESS_CODE
-        break
-      case "EducationRequired":
-        setShow(true)
-        filterIndex = filterType.SHOW_EDUCATION_REQUIRED
-        break
-      case "EmployeeType":
-        setShow(true)
-        filterIndex = filterType.SHOW_EMPLOYEE_TYPE
-        break
-      case "ExperienceLevel":
-        setShow(true)
-        filterIndex = filterType.SHOW_EXPERIENCE_LEVEL
-        break
-      case "Industry":
-        setShow(true)
-        filterIndex = filterType.SHOW_INDUSTRY
-        break
-      case "InternalExternal":
-        setShow(true)
-        filterIndex = filterType.SHOW_INTERNAL_EXTERNAL
-        break
-      case "Methodology":
-        setShow(true)
-        filterIndex = filterType.SHOW_METHODOLOGY
-        break
-      case "Mobile":
-        setShow(true)
-        filterIndex = filterType.SHOW_MOBILE
-        break
-      case "Payment":
-        setShow(true)
-        filterIndex = filterType.SHOW_PAYMENT
-        break
-      case "PetsAllowed":
-        setShow(true)
-        filterIndex = filterType.SHOW_PETS_ALLOWED
-        break
-      case "Skill":
-        setShow(true)
-        filterIndex = filterType.SHOW_SKILL
-        break
-      case "WorkingFromHome":
-        setShow(true)
-        filterIndex = filterType.SHOW_WORKING_FROM_HOME
-        break
-      case "ShowResults":
+      case filterType.SHOW_RESULTS:
         setShowResults(true)
         break
+      default:
+        setShowFilters(true)
+        setList(filterData[menuType].list)
+        setLabel(filterData[menuType].label)
+        break
     }
-    setList(filterData[filterIndex].list)
-    setLabel(filterData[filterIndex].label)
   }
 
   return (
     <>
       <div className="add-filter">
-        <button onClick={() => showFilter("Menu")}>Choose Filter Type</button>
+        <button onClick={() => showFilter(filterType.SHOW_MENU)}>
+          Choose Filter Type
+        </button>
         <FilterMenu showFilter={showFilter} />
-        <FilterChoose
-          showFilter={showFilter}
-          show={show}
-          list={list}
-          label={label}
-        />
+        <FilterChoose show={showFilters} list={list} label={label} />
       </div>
       <div className="filters-added">Filters Added</div>
     </>

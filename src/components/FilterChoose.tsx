@@ -2,13 +2,12 @@ import { FC } from "react"
 import "./FilterChoose.css"
 
 interface Props {
-  showFilter(arg: string): void
   show: boolean
   list: Array<string>
   label: string
 }
 
-const FilterMobile: FC<Props> = ({ showFilter, show, list, label }) => {
+const FilterChoose: FC<Props> = ({ show, list, label }) => {
   const size = list.length < 21 ? list.length : 20
   return (
     <>
@@ -27,11 +26,10 @@ const FilterMobile: FC<Props> = ({ showFilter, show, list, label }) => {
               </option>
             ))}
           </select>
-          <button onClick={() => showFilter("ShowResults")}>Add Filter</button>
         </div>
       )}
     </>
   )
 }
 
-export default FilterMobile
+export default FilterChoose
