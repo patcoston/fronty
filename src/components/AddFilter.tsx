@@ -16,7 +16,7 @@ const AddFilter: FC = () => {
   const showFilter = (menuType: string) => {
     setFilterShowMenu(false)
     setShow(false)
-    let filterIndex = 1
+    let filterIndex = filterType.SHOW_ACCESSIBLE
 
     switch (menuType) {
       case "Menu":
