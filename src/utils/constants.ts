@@ -1,5 +1,6 @@
 export const SHOW_MENU = 0
 export const SHOW_RESULTS = 1
+export const SHOW_ACTIVE_FILTERS = 2
 export const SHOW_ACCESSIBLE = 10
 export const SHOW_BENEFITS = 11
 export const SHOW_COMMUTE = 12

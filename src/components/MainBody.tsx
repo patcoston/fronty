@@ -1,19 +1,22 @@
 import { FC, useState } from "react"
 import FilterMenu from "./FilterMenu"
 import FilterChoose from "./FilterChoose"
+import ShowActiveFilters from "./ShowActiveFilters"
+import ShowResults from "./ShowResults"
 import { useStore } from "../store/StoreProvider"
 import filterData from "../data/filter-data"
 import * as filterType from "../utils/constants"
-import "./AddFilter.css"
+import "./MainBody.css"
 
 const AddFilter: FC = () => {
   const [showFilters, setShowFilters] = useState<boolean>(false)
   const [list, setList] = useState<Array<string>>([])
   const [label, setLabel] = useState<string>("")
-  const { setShowMenu, setShowResults } = useStore()
+  const { setShowMenu, setShowActiveFilters, setShowResults } = useStore()
 
   const showFilter = (menuType: number) => {
     setShowMenu(false)
+    setShowActiveFilters(true)
     setShowResults(false)
     setShowFilters(false)
 
@@ -23,6 +26,9 @@ const AddFilter: FC = () => {
         break
       case filterType.SHOW_RESULTS:
         setShowResults(true)
+        break
+      case filterType.SHOW_ACTIVE_FILTERS:
+        setShowActiveFilters(true)
         break
       default:
         setShowFilters(true)
@@ -34,14 +40,15 @@ const AddFilter: FC = () => {
 
   return (
     <>
-      <div className="add-filter">
+      <div className="main-body">
         <button onClick={() => showFilter(filterType.SHOW_MENU)}>
           Choose Filter Type
         </button>
         <FilterMenu showFilter={showFilter} />
-        <FilterChoose show={showFilters} list={list} label={label} />
+        {showFilters && <FilterChoose list={list} label={label} />}
       </div>
-      <div className="filters-added">Filters Added</div>
+      <ShowActiveFilters />
+      <ShowResults />
     </>
   )
 }
