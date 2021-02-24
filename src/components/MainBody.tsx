@@ -8,7 +8,7 @@ import filterData from "../data/filter-data"
 import * as showType from "../utils/constants"
 import "./MainBody.css"
 
-const AddFilter: FC = () => {
+const MainBody: FC = () => {
   const [showFilters, setShowFilters] = useState<boolean>(false)
   const [list, setList] = useState<Array<string>>([])
   const [label, setLabel] = useState<string>("")
@@ -53,4 +53,4 @@ const AddFilter: FC = () => {
   )
 }
 
-export default AddFilter
+export default MainBody
