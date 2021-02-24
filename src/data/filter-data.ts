@@ -1,4 +1,4 @@
-import * as filterType from "../utils/constants"
+import * as showType from "../utils/constants"
 
 interface IData {
   list: Array<string>
@@ -7,7 +7,7 @@ interface IData {
 
 const filterData: Array<IData> = []
 
-filterData[filterType.SHOW_ACCESSIBLE] = {
+filterData[showType.SHOW_FILTER_ACCESSIBLE] = {
   label: "Accessibility",
   list: [
     "No compliance",
@@ -22,7 +22,7 @@ filterData[filterType.SHOW_ACCESSIBLE] = {
   ],
 }
 
-filterData[filterType.SHOW_BENEFITS] = {
+filterData[showType.SHOW_FILTER_BENEFITS] = {
   label: "Benefits",
   list: [
     "401K Matching",
@@ -42,7 +42,7 @@ filterData[filterType.SHOW_BENEFITS] = {
   ],
 }
 
-filterData[filterType.SHOW_COMMUTE] = {
+filterData[showType.SHOW_FILTER_COMMUTE] = {
   label: "Commute",
   list: [
     "5 miles max",
@@ -63,7 +63,7 @@ filterData[filterType.SHOW_COMMUTE] = {
   ],
 }
 
-filterData[filterType.SHOW_COMPANY] = {
+filterData[showType.SHOW_FILTER_COMPANY] = {
   label: "Popular Company",
   list: [
     "ADP",
@@ -125,7 +125,7 @@ filterData[filterType.SHOW_COMPANY] = {
   ],
 }
 
-filterData[filterType.SHOW_COMPANY_SIZE] = {
+filterData[showType.SHOW_FILTER_COMPANY_SIZE] = {
   label: "Company Size",
   list: [
     "1-10",
@@ -142,7 +142,7 @@ filterData[filterType.SHOW_COMPANY_SIZE] = {
   ],
 }
 
-filterData[filterType.SHOW_DRESS_CODE] = {
+filterData[showType.SHOW_FILTER_DRESS_CODE] = {
   label: "Dress Code",
   list: [
     "None",
@@ -154,7 +154,7 @@ filterData[filterType.SHOW_DRESS_CODE] = {
   ],
 }
 
-filterData[filterType.SHOW_EDUCATION_REQUIRED] = {
+filterData[showType.SHOW_FILTER_EDUCATION_REQUIRED] = {
   label: "Education Required",
   list: [
     "High School Equivalency",
@@ -169,7 +169,7 @@ filterData[filterType.SHOW_EDUCATION_REQUIRED] = {
   ],
 }
 
-filterData[filterType.SHOW_EMPLOYEE_TYPE] = {
+filterData[showType.SHOW_FILTER_EMPLOYEE_TYPE] = {
   label: "Employee Type",
   list: [
     "Full-Time",
@@ -184,12 +184,12 @@ filterData[filterType.SHOW_EMPLOYEE_TYPE] = {
   ],
 }
 
-filterData[filterType.SHOW_EXPERIENCE_LEVEL] = {
+filterData[showType.SHOW_FILTER_EXPERIENCE_LEVEL] = {
   label: "Experience Level",
   list: ["Intern", "Junior", "Senior"],
 }
 
-filterData[filterType.SHOW_INDUSTRY] = {
+filterData[showType.SHOW_FILTER_INDUSTRY] = {
   label: "Industry",
   list: [
     "Education",
@@ -224,7 +224,7 @@ filterData[filterType.SHOW_INDUSTRY] = {
   ],
 }
 
-filterData[filterType.SHOW_INTERNAL_EXTERNAL] = {
+filterData[showType.SHOW_FILTER_INTERNAL_EXTERNAL] = {
   label: "Internal External",
   list: [
     "Interal Employee facing only",
@@ -235,7 +235,7 @@ filterData[filterType.SHOW_INTERNAL_EXTERNAL] = {
   ],
 }
 
-filterData[filterType.SHOW_METHODOLOGY] = {
+filterData[showType.SHOW_FILTER_METHODOLOGY] = {
   label: "Methodology",
   list: [
     "Waterfall",
@@ -248,7 +248,7 @@ filterData[filterType.SHOW_METHODOLOGY] = {
   ],
 }
 
-filterData[filterType.SHOW_MOBILE] = {
+filterData[showType.SHOW_FILTER_MOBILE] = {
   label: "Mobile",
   list: [
     "Web Only",
@@ -259,7 +259,7 @@ filterData[filterType.SHOW_MOBILE] = {
   ],
 }
 
-filterData[filterType.SHOW_PAYMENT] = {
+filterData[showType.SHOW_FILTER_PAYMENT] = {
   label: "Payment",
   list: [
     "$20+ per hour",
@@ -321,7 +321,7 @@ filterData[filterType.SHOW_PAYMENT] = {
   ],
 }
 
-filterData[filterType.SHOW_PETS_ALLOWED] = {
+filterData[showType.SHOW_FILTER_PETS_ALLOWED] = {
   label: "Pets Allowed",
   list: [
     "No pets allowed",
@@ -332,7 +332,7 @@ filterData[filterType.SHOW_PETS_ALLOWED] = {
   ],
 }
 
-filterData[filterType.SHOW_SKILL] = {
+filterData[showType.SHOW_FILTER_SKILL] = {
   label: "Skill",
   list: [
     "Angular JS 1.x",
@@ -400,7 +400,7 @@ filterData[filterType.SHOW_SKILL] = {
   ],
 }
 
-filterData[filterType.SHOW_WORKING_FROM_HOME] = {
+filterData[showType.SHOW_FILTER_WORKING_FROM_HOME] = {
   label: "Working From Home",
   list: [
     "0% Never",

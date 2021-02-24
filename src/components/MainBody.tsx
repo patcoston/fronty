@@ -5,7 +5,7 @@ import ShowActiveFilters from "./ShowActiveFilters"
 import ShowResults from "./ShowResults"
 import { useStore } from "../store/StoreProvider"
 import filterData from "../data/filter-data"
-import * as filterType from "../utils/constants"
+import * as showType from "../utils/constants"
 import "./MainBody.css"
 
 const AddFilter: FC = () => {
@@ -14,26 +14,26 @@ const AddFilter: FC = () => {
   const [label, setLabel] = useState<string>("")
   const { setShowMenu, setShowActiveFilters, setShowResults } = useStore()
 
-  const showFilter = (menuType: number) => {
+  const showFilter = (showIndex: number) => {
     setShowMenu(false)
     setShowActiveFilters(true)
     setShowResults(false)
     setShowFilters(false)
 
-    switch (menuType) {
-      case filterType.SHOW_MENU:
+    switch (showIndex) {
+      case showType.SHOW_MENU:
         setShowMenu(true)
         break
-      case filterType.SHOW_RESULTS:
+      case showType.SHOW_RESULTS:
         setShowResults(true)
         break
-      case filterType.SHOW_ACTIVE_FILTERS:
+      case showType.SHOW_ACTIVE_FILTERS:
         setShowActiveFilters(true)
         break
       default:
         setShowFilters(true)
-        setList(filterData[menuType].list)
-        setLabel(filterData[menuType].label)
+        setList(filterData[showIndex].list)
+        setLabel(filterData[showIndex].label)
         break
     }
   }
@@ -41,7 +41,7 @@ const AddFilter: FC = () => {
   return (
     <>
       <div className="main-body">
-        <button onClick={() => showFilter(filterType.SHOW_MENU)}>
+        <button onClick={() => showFilter(showType.SHOW_MENU)}>
           Choose Filter Type
         </button>
         <FilterMenu showFilter={showFilter} />

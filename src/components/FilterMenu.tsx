@@ -1,5 +1,5 @@
 import { FC } from "react"
-import * as filterType from "../utils/constants"
+import * as showType from "../utils/constants"
 import { useStore } from "../store/StoreProvider"
 import "./FilterMenu.css"
 
@@ -14,47 +14,65 @@ const FilterMenu: FC<Props> = ({ showFilter }) => {
       {showMenu && (
         <div className="filter-menu-body">
           <ul>
-            <li onClick={() => showFilter(filterType.SHOW_ACCESSIBLE)}>
+            <li onClick={() => showFilter(showType.SHOW_FILTER_ACCESSIBLE)}>
               Accessible
             </li>
-            <li onClick={() => showFilter(filterType.SHOW_BENEFITS)}>
+            <li onClick={() => showFilter(showType.SHOW_FILTER_BENEFITS)}>
               Benefits
             </li>
-            <li onClick={() => showFilter(filterType.SHOW_COMMUTE)}>Commute</li>
-            <li onClick={() => showFilter(filterType.SHOW_COMPANY)}>
+            <li onClick={() => showFilter(showType.SHOW_FILTER_COMMUTE)}>
+              Commute
+            </li>
+            <li onClick={() => showFilter(showType.SHOW_FILTER_COMPANY)}>
               Popular Companies
             </li>
-            <li onClick={() => showFilter(filterType.SHOW_COMPANY_SIZE)}>
+            <li onClick={() => showFilter(showType.SHOW_FILTER_COMPANY_SIZE)}>
               Company Size
             </li>
-            <li onClick={() => showFilter(filterType.SHOW_DRESS_CODE)}>
+            <li onClick={() => showFilter(showType.SHOW_FILTER_DRESS_CODE)}>
               Dress Code
             </li>
-            <li onClick={() => showFilter(filterType.SHOW_EDUCATION_REQUIRED)}>
+            <li
+              onClick={() =>
+                showFilter(showType.SHOW_FILTER_EDUCATION_REQUIRED)
+              }
+            >
               Education Required
             </li>
-            <li onClick={() => showFilter(filterType.SHOW_EMPLOYEE_TYPE)}>
+            <li onClick={() => showFilter(showType.SHOW_FILTER_EMPLOYEE_TYPE)}>
               Employee Type
             </li>
-            <li onClick={() => showFilter(filterType.SHOW_EXPERIENCE_LEVEL)}>
+            <li
+              onClick={() => showFilter(showType.SHOW_FILTER_EXPERIENCE_LEVEL)}
+            >
               Experience Level
             </li>
-            <li onClick={() => showFilter(filterType.SHOW_INDUSTRY)}>
+            <li onClick={() => showFilter(showType.SHOW_FILTER_INDUSTRY)}>
               Industry
             </li>
-            <li onClick={() => showFilter(filterType.SHOW_INTERNAL_EXTERNAL)}>
+            <li
+              onClick={() => showFilter(showType.SHOW_FILTER_INTERNAL_EXTERNAL)}
+            >
               Internal or External
             </li>
-            <li onClick={() => showFilter(filterType.SHOW_METHODOLOGY)}>
+            <li onClick={() => showFilter(showType.SHOW_FILTER_METHODOLOGY)}>
               Methodology
             </li>
-            <li onClick={() => showFilter(filterType.SHOW_MOBILE)}>Mobile</li>
-            <li onClick={() => showFilter(filterType.SHOW_PAYMENT)}>Payment</li>
-            <li onClick={() => showFilter(filterType.SHOW_PETS_ALLOWED)}>
+            <li onClick={() => showFilter(showType.SHOW_FILTER_MOBILE)}>
+              Mobile
+            </li>
+            <li onClick={() => showFilter(showType.SHOW_FILTER_PAYMENT)}>
+              Payment
+            </li>
+            <li onClick={() => showFilter(showType.SHOW_FILTER_PETS_ALLOWED)}>
               Pets Allowed
             </li>
-            <li onClick={() => showFilter(filterType.SHOW_SKILL)}>Skill</li>
-            <li onClick={() => showFilter(filterType.SHOW_WORKING_FROM_HOME)}>
+            <li onClick={() => showFilter(showType.SHOW_FILTER_SKILL)}>
+              Skill
+            </li>
+            <li
+              onClick={() => showFilter(showType.SHOW_FILTER_WORKING_FROM_HOME)}
+            >
               Working From Home
             </li>
           </ul>
