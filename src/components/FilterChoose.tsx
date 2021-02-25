@@ -6,16 +6,21 @@ interface Props {
   label: string
 }
 
-const handleChange = () => {
-  const itemList = document.getElementById("filter-choose") as HTMLSelectElement
-  const collection = itemList.selectedOptions as HTMLOptionsCollection
-  for (let i: number = 0; i < collection.length; i++) {
-    console.log(collection[i].label)
-  }
-}
-
 const FilterChoose: FC<Props> = ({ list, label }) => {
   const size = list.length < 21 ? list.length : 20
+
+  const handleChange = () => {
+    const itemList = document.getElementById(
+      "filter-choose",
+    ) as HTMLSelectElement
+    const collection = itemList.selectedOptions as HTMLOptionsCollection
+    const filters: Array<string> = []
+    for (let i: number = 0; i < collection.length; i++) {
+      filters.push(collection[i].label)
+    }
+    console.log(`${label}: ${filters.join()}`)
+  }
+
   return (
     <>
       <div className="filter-choose-body">
