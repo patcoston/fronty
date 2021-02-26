@@ -8,8 +8,13 @@ const ShowFilters: FC = () => {
     <>
       {showActiveFilters && (
         <div className="show-active-filters">
+          <h3>Filters:</h3>
           {Object.entries(activeFilters).map(filter => {
-            return <div key={filter[0]}>{filter[0]}</div>
+            return (
+              <div key={filter[0]}>
+                <strong>{filter[0]}:</strong> {filter[1].join()}
+              </div>
+            )
           })}
         </div>
       )}
