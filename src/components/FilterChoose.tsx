@@ -1,4 +1,7 @@
 import { FC } from "react"
+import { useStore } from "../store/StoreProvider"
+import { IFilters } from "../utils/interfaces"
+import { TFilters } from "../utils/types"
 import "./FilterChoose.css"
 
 interface Props {
@@ -7,6 +10,7 @@ interface Props {
 }
 
 const FilterChoose: FC<Props> = ({ list, label }) => {
+  const { activeFilters, setActiveFilters } = useStore()
   const size = list.length < 21 ? list.length : 20
 
   const handleChange = () => {
@@ -14,11 +18,14 @@ const FilterChoose: FC<Props> = ({ list, label }) => {
       "filter-choose",
     ) as HTMLSelectElement
     const collection = itemList.selectedOptions as HTMLOptionsCollection
-    const filters: Array<string> = []
+    const filters: TFilters = []
     for (let i: number = 0; i < collection.length; i++) {
       filters.push(collection[i].label)
     }
-    console.log(`${label}: ${filters.join()}`)
+    //const filter: string = `${label}: ${filters.join()}`
+    const newActiveFitlers: IFilters = { ...activeFilters, [label]: filters }
+    console.log(newActiveFitlers)
+    setActiveFilters(newActiveFitlers)
   }
 
   return (

@@ -1,13 +1,14 @@
 import { FC } from "react"
 import { useStore } from "../store/StoreProvider"
+import { SHOW_FILTER_FIRST, SHOW_FILTER_LAST } from "../utils/constants"
 import "./ShowActiveFilters.css"
 
 const ShowFilters: FC = () => {
-  const { showActiveFilters } = useStore()
+  const { showActiveFilters, activeFilters } = useStore()
   return (
     <>
       {showActiveFilters && (
-        <div className="show-active-filters">Show Active Filters</div>
+        <div className="show-active-filters">Active Filters</div>
       )}
     </>
   )
