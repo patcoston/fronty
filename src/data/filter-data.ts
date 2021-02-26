@@ -10,6 +10,7 @@ const filterData: Array<IData> = []
 filterData[showType.SHOW_FILTER_ACCESSIBLE] = {
   label: "Accessibility",
   list: [
+    "NO FILTER",
     "No compliance",
     "25% ADA Compliant",
     "50% ADA Compliant",
@@ -25,6 +26,7 @@ filterData[showType.SHOW_FILTER_ACCESSIBLE] = {
 filterData[showType.SHOW_FILTER_BENEFITS] = {
   label: "Benefits",
   list: [
+    "NO FILTER",
     "401K Matching",
     "Paid Vacations",
     "Paid Sick Days",
@@ -45,6 +47,7 @@ filterData[showType.SHOW_FILTER_BENEFITS] = {
 filterData[showType.SHOW_FILTER_COMMUTE] = {
   label: "Commute",
   list: [
+    "NO FILTER",
     "5 miles max",
     "10 miles max",
     "15 miles max",
@@ -66,6 +69,7 @@ filterData[showType.SHOW_FILTER_COMMUTE] = {
 filterData[showType.SHOW_FILTER_COMPANY] = {
   label: "Popular Company",
   list: [
+    "NO FILTER",
     "ADP",
     "Adobe",
     "Airbnb",
@@ -128,6 +132,7 @@ filterData[showType.SHOW_FILTER_COMPANY] = {
 filterData[showType.SHOW_FILTER_COMPANY_SIZE] = {
   label: "Company Size",
   list: [
+    "NO FILTER",
     "1-10",
     "11-50",
     "51-100",
@@ -145,7 +150,8 @@ filterData[showType.SHOW_FILTER_COMPANY_SIZE] = {
 filterData[showType.SHOW_FILTER_DRESS_CODE] = {
   label: "Dress Code",
   list: [
-    "None",
+    "NO FILTER",
+    "No dress code",
     "Shorts or Jeans and T-shirts",
     "Jeans and T-shirts",
     "Business Casual",
@@ -157,6 +163,7 @@ filterData[showType.SHOW_FILTER_DRESS_CODE] = {
 filterData[showType.SHOW_FILTER_EDUCATION_REQUIRED] = {
   label: "Education Required",
   list: [
+    "NO FILTER",
     "High School Equivalency",
     "High School Diploma",
     "Boot-Camp (less than 1 year)",
@@ -172,6 +179,7 @@ filterData[showType.SHOW_FILTER_EDUCATION_REQUIRED] = {
 filterData[showType.SHOW_FILTER_EMPLOYEE_TYPE] = {
   label: "Employee Type",
   list: [
+    "NO FILTER",
     "Full-Time",
     "Part-Time",
     "Contract Independent",
@@ -186,12 +194,13 @@ filterData[showType.SHOW_FILTER_EMPLOYEE_TYPE] = {
 
 filterData[showType.SHOW_FILTER_EXPERIENCE_LEVEL] = {
   label: "Experience Level",
-  list: ["Intern", "Junior", "Senior"],
+  list: ["NO FILTER", "Intern", "Junior", "Senior"],
 }
 
 filterData[showType.SHOW_FILTER_INDUSTRY] = {
   label: "Industry",
   list: [
+    "NO FILTER",
     "Education",
     "Finance",
     "Banking",
@@ -227,6 +236,7 @@ filterData[showType.SHOW_FILTER_INDUSTRY] = {
 filterData[showType.SHOW_FILTER_INTERNAL_EXTERNAL] = {
   label: "Internal External",
   list: [
+    "NO FILTER",
     "Interal Employee facing only",
     "External Customer facing only",
     "Mostly Internal Some External",
@@ -238,6 +248,7 @@ filterData[showType.SHOW_FILTER_INTERNAL_EXTERNAL] = {
 filterData[showType.SHOW_FILTER_METHODOLOGY] = {
   label: "Methodology",
   list: [
+    "NO FILTER",
     "Waterfall",
     "Agile",
     "Scrum",
@@ -251,6 +262,7 @@ filterData[showType.SHOW_FILTER_METHODOLOGY] = {
 filterData[showType.SHOW_FILTER_MOBILE] = {
   label: "Mobile",
   list: [
+    "NO FILTER",
     "Web Only",
     "Mobile Only",
     "Responsive Design",
@@ -262,6 +274,7 @@ filterData[showType.SHOW_FILTER_MOBILE] = {
 filterData[showType.SHOW_FILTER_PAYMENT] = {
   label: "Payment",
   list: [
+    "NO FILTER",
     "$20+ per hour",
     "$30+ per hour",
     "$40+ per hour",
@@ -324,6 +337,7 @@ filterData[showType.SHOW_FILTER_PAYMENT] = {
 filterData[showType.SHOW_FILTER_PETS_ALLOWED] = {
   label: "Pets Allowed",
   list: [
+    "NO FILTER",
     "No pets allowed",
     "Dogs allowed",
     "Cats allowed",
@@ -335,6 +349,7 @@ filterData[showType.SHOW_FILTER_PETS_ALLOWED] = {
 filterData[showType.SHOW_FILTER_SKILL] = {
   label: "Skill",
   list: [
+    "NO FILTER",
     "Angular JS 1.x",
     "Angular 2.x",
     "Angular 4.x",
@@ -403,6 +418,7 @@ filterData[showType.SHOW_FILTER_SKILL] = {
 filterData[showType.SHOW_FILTER_WORKING_FROM_HOME] = {
   label: "Working From Home",
   list: [
+    "NO FILTER",
     "0% Never",
     "10%",
     "20%",

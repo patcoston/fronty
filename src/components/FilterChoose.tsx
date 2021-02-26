@@ -27,8 +27,6 @@ const FilterChoose: FC<Props> = ({ list, label }) => {
     setActiveFilters(newActiveFitlers)
   }
 
-  const handleClick = () => {}
-
   return (
     <>
       <div className="filter-choose-body">
@@ -41,7 +39,7 @@ const FilterChoose: FC<Props> = ({ list, label }) => {
           onChange={handleChange}
         >
           {list.map(val => (
-            <option key={val} value={val} onClick={handleClick}>
+            <option key={val} value={val}>
               {val}
             </option>
           ))}
