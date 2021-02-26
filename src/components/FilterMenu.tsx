@@ -15,7 +15,9 @@ const FilterMenu: FC<Props> = ({ showFilter }) => {
         <div className="filter-menu-body">
           <ul>
             {filterData.map((filter, index) => (
-              <li onClick={() => showFilter(index)}>{filter.label}</li>
+              <li key={index} onClick={() => showFilter(index)}>
+                {filter.label}
+              </li>
             ))}
           </ul>
         </div>
