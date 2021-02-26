@@ -5,8 +5,8 @@ import "./ShowActiveFilters.css"
 const ShowFilters: FC = () => {
   const { activeFilters } = useStore()
   const activeFilterArray = Object.entries(activeFilters)
-  const filtersToShow = activeFilterArray.length > 0
-  const show = activeFilters && filtersToShow
+  const filtersToShow: boolean = activeFilterArray.length > 0
+  const show: boolean = activeFilters && filtersToShow
   return (
     <>
       {show && (
