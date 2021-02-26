@@ -24,7 +24,7 @@ const FilterChoose: FC<Props> = ({ list, label }) => {
     }
     //const filter: string = `${label}: ${filters.join()}`
     const newActiveFitlers: IFilters = { ...activeFilters, [label]: filters }
-    console.log(newActiveFitlers)
+    console.log(Object.entries(newActiveFitlers))
     setActiveFilters(newActiveFitlers)
   }
 
