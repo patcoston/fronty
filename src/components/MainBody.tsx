@@ -17,18 +17,12 @@ const MainBody: FC = () => {
   const showFilter = (showIndex: number) => {
     setShowMenu(false)
     setShowActiveFilters(true)
-    setShowResults(false)
+    setShowResults(true)
     setShowFilters(false)
 
     switch (showIndex) {
       case showType.SHOW_MENU:
         setShowMenu(true)
-        break
-      case showType.SHOW_RESULTS:
-        setShowResults(true)
-        break
-      case showType.SHOW_ACTIVE_FILTERS:
-        setShowActiveFilters(true)
         break
       default:
         setShowFilters(true)
