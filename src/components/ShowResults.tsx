@@ -12,7 +12,7 @@ const getSkills = () => {
     let rnd: number = rand(1, len - 1)
     skills.push(filterData[SHOW_FILTER_SKILL].list[rnd])
   }
-  console.log(skills)
+  //console.log(skills)
   //const uniqueSkills = [...new Set(skills)]
   return skills
 }
@@ -32,7 +32,7 @@ const ShowResults: FC = () => {
   return (
     <>
       {show && (
-        <section>
+        <section className="show-results-wrapper">
           <h3>Results</h3>
           <div className="show-results">
             {companies.map(company => (

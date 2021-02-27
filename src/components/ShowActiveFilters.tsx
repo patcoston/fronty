@@ -10,7 +10,7 @@ const ShowFilters: FC = () => {
   return (
     <>
       {show && (
-        <section>
+        <section className="show-active-filters-wrapper">
           <h3>Filters</h3>
           <div className="show-active-filters">
             {activeFilterArray.map(filter => {
