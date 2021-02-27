@@ -11,3 +11,34 @@
 .show-results-wrapper h3 {
   margin-left: 5px;
 }
+
+.show-results-next {
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+}
+
+.show-results-next ul {
+  list-style: none;
+  display: flex;
+}
+
+.show-results-next li {
+  margin-right: 10px;
+  padding: 10px 15px;
+  font-weight: bold;
+  color: #fff;
+  background-color: #bbb;
+  cursor: pointer;
+  border-radius: 7px;
+}
+
+.show-results-next li:hover {
+  background-color: #aaa;
+}
+
+.show-results-next li.selected,
+.show-results-next li.selected:hover {
+  background-color: #666;
+}

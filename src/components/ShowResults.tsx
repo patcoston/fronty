@@ -41,6 +41,16 @@ const ShowResults: FC = () => {
                 {getSkills().join().replace(/,/g, ", ")}
               </section>
             ))}
+            <div className="show-results-next">
+              <ul>
+                <li className="selected">1</li>
+                <li>2</li>
+                <li>3</li>
+                <li>4</li>
+                <li>5</li>
+                <li>&gt;</li>
+              </ul>
+            </div>
           </div>
         </section>
       )}
