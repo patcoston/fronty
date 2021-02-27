@@ -4,7 +4,15 @@ import "./Footer.css"
 const Footer: FC = () => {
   return (
     <>
-      <div className="footer">Footer</div>
+      <div className="footer">
+        <ul>
+          <li>&#169; 2021 Fronty</li>
+          <li>Terms</li>
+          <li>Cookies</li>
+          <li>Privacy</li>
+          <li>Jobs</li>
+        </ul>
+      </div>
     </>
   )
 }
