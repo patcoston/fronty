@@ -13,6 +13,7 @@ const getSkills = () => {
     skills.push(filterData[SHOW_FILTER_SKILL].list[rnd])
   }
   console.log(skills)
+  //const uniqueSkills = [...new Set(skills)]
   return skills
 }
 
@@ -31,14 +32,17 @@ const ShowResults: FC = () => {
   return (
     <>
       {show && (
-        <div className="show-results">
-          {companies.map(company => (
-            <section key={rand(0, 1000)}>
-              <strong>{company}:</strong>{" "}
-              {getSkills().join().replace(/,/g, ", ")}
-            </section>
-          ))}
-        </div>
+        <section>
+          <h3>Results</h3>
+          <div className="show-results">
+            {companies.map(company => (
+              <section key={rand(0, 1000)}>
+                <strong>{company}:</strong>{" "}
+                {getSkills().join().replace(/,/g, ", ")}
+              </section>
+            ))}
+          </div>
+        </section>
       )}
     </>
   )

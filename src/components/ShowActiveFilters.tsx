@@ -10,16 +10,19 @@ const ShowFilters: FC = () => {
   return (
     <>
       {show && (
-        <div className="show-active-filters">
-          {activeFilterArray.map(filter => {
-            return (
-              <section key={filter[0]}>
-                <strong>{filter[0]}:</strong>{" "}
-                {filter[1].join().replace(/,/g, ", ")}
-              </section>
-            )
-          })}
-        </div>
+        <section>
+          <h3>Filters</h3>
+          <div className="show-active-filters">
+            {activeFilterArray.map(filter => {
+              return (
+                <section key={filter[0]}>
+                  <strong>{filter[0]}:</strong>{" "}
+                  {filter[1].join().replace(/,/g, ", ")}
+                </section>
+              )
+            })}
+          </div>
+        </section>
       )}
     </>
   )
