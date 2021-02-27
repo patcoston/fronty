@@ -8,6 +8,11 @@
   padding: 5px;
 }
 
+.show-results section:hover {
+  background-color: #eee;
+  cursor: pointer;
+}
+
 .show-results-wrapper h3 {
   margin-left: 5px;
 }

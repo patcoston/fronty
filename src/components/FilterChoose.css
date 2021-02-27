@@ -5,3 +5,8 @@
   justify-content: center;
   margin: 5px 0;
 }
+
+.filter-choose-body option:hover {
+  cursor: pointer;
+  background-color: #eee;
+}

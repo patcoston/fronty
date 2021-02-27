@@ -9,3 +9,8 @@
   margin-left: 0;
   cursor: pointer;
 }
+
+.filter-menu-body li:hover {
+  cursor: pointer;
+  background-color: #eee;
+}
