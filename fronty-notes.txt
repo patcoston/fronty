@@ -28,6 +28,6 @@ package.json add
 npm run build
 fronty-backup3
 
-
-
+Google Font: Lobster
+https://fonts.google.com/specimen/Lobster?sort=popularity&query=lobster&preview.text_type=custom
 

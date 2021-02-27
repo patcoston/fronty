@@ -5,8 +5,8 @@ const Header: FC = () => {
   return (
     <>
       <div className="header">
-        <div>Fronty</div>
-        <div>
+        <div className="logo">Fronty</div>
+        <div className="hamburger">
           <svg
             width="20"
             height="14"
@@ -21,6 +21,16 @@ const Header: FC = () => {
               <rect x="2" y="11" width="20" height="2" rx="1"></rect>
             </g>
           </svg>
+          <div className="header-dropdown-wrapper">
+            <div className="header-dropdown">
+              <ul>
+                <li>Profile</li>
+                <li>Settings</li>
+                <li>Help</li>
+                <li>Signout</li>
+              </ul>
+            </div>
+          </div>
         </div>
       </div>
     </>
