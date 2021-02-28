@@ -1,6 +1,7 @@
 import { FC } from "react"
 import filterData from "../data/filter-data"
 import { useStore } from "../store/StoreProvider"
+import CloseIcon from "../svg/closeicon"
 import "./FilterMenu.css"
 
 interface Props {
@@ -19,7 +20,7 @@ const FilterMenu: FC<Props> = ({ showFilter }) => {
               className="filter-menu-close"
               onClick={() => setShowMenu(false)}
             >
-              X
+              <CloseIcon />
             </div>
           </div>
           <ul>

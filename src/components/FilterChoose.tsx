@@ -2,6 +2,7 @@ import { FC } from "react"
 import { useStore } from "../store/StoreProvider"
 import { IFilters } from "../utils/interfaces"
 import { TFilters } from "../utils/types"
+import CloseIcon from "../svg/closeicon"
 import "./FilterChoose.css"
 
 interface Props {
@@ -36,7 +37,7 @@ const FilterChoose: FC<Props> = ({ list, label }) => {
             className="filter-choose-close"
             onClick={() => setShowFilters(false)}
           >
-            X
+            <CloseIcon />
           </div>
         </div>
         <select
