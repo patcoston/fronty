@@ -12,7 +12,7 @@ interface Props {
 }
 
 const ShowJob: FC<Props> = ({ companyName, skills }) => {
-  //const { showMenu, setShowMenu } = useStore()
+  const { setShowJob } = useStore()
 
   const getSingleValue = (index: number) => {
     const last: number = filterData[index].list.length - 1
@@ -23,8 +23,12 @@ const ShowJob: FC<Props> = ({ companyName, skills }) => {
   return (
     <>
       <div className="show-job">
-        <h3>{companyName}</h3>
-        <CloseIcon />
+        <div className="show-job-header">
+          <h3>{companyName}</h3>
+          <div className="show-job-close" onClick={() => setShowJob(false)}>
+            <CloseIcon />
+          </div>
+        </div>
         <section>
           <strong>Skills: </strong>
           {skills}

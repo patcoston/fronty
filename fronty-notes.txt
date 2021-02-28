@@ -1,6 +1,7 @@
 TODO
 * Results should only re-render when active filters change
 * Click on Results show job details
+* Array of FilterChoose so selected values are remembered?
 
 NOTE: if node_modules folder is deleted, then restore with these commands
 npm install react-scripts
