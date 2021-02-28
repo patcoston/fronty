@@ -22,9 +22,9 @@ const ShowFilters: FC = () => {
         <section className="show-active-filters-wrapper">
           <h3>Filters</h3>
           <div className="show-active-filters">
-            {activeFilterArray.map(filter => {
+            {activeFilterArray.map((filter, index) => {
               return (
-                <section key={filter[0]}>
+                <section key={index}>
                   <span
                     className="show-active-close"
                     onClick={() => handleDelete(filter[0])}

@@ -28,7 +28,6 @@ const ShowResults: FC = () => {
     let rnd: number = rand(1, len - 1)
     companies.push(filterData[SHOW_FILTER_COMPANY].list[rnd])
   }
-  let nextKey = 0
 
   return (
     <>
@@ -36,8 +35,8 @@ const ShowResults: FC = () => {
         <section className="show-results-wrapper">
           <h3>Results</h3>
           <div className="show-results">
-            {companies.map(company => (
-              <section key={++nextKey}>
+            {companies.map((company, index) => (
+              <section key={index}>
                 <strong>{company}:</strong>{" "}
                 {getSkills().join().replace(/,/g, ", ")}
               </section>
