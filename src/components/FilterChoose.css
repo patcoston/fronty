@@ -6,6 +6,10 @@
   margin: 5px 0;
 }
 
+.filter-choose-body option {
+  font-size: 13px;
+}
+
 .filter-choose-header {
   display: flex;
   justify-content: space-between;
