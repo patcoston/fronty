@@ -11,6 +11,8 @@ const Footer: FC = () => {
           <li>Cookies</li>
           <li>Privacy</li>
           <li>Jobs</li>
+          <li>FAQs</li>
+          <li>About</li>
         </ul>
       </div>
     </>
