@@ -10,7 +10,7 @@ interface Props {
 }
 
 const FilterChoose: FC<Props> = ({ list, label }) => {
-  const { activeFilters, setActiveFilters } = useStore()
+  const { activeFilters, setActiveFilters, setShowFilters } = useStore()
   const size = list.length < 21 ? list.length : 20
 
   const handleChange = () => {
@@ -30,7 +30,15 @@ const FilterChoose: FC<Props> = ({ list, label }) => {
   return (
     <>
       <div className="filter-choose-body">
-        <label htmlFor="filter-choose">Filter on {label}</label>
+        <div className="filter-choose-header">
+          <div>Filter on {label}</div>
+          <div
+            className="filter-choose-close"
+            onClick={() => setShowFilters(false)}
+          >
+            X
+          </div>
+        </div>
         <select
           id="filter-choose"
           className="filter-choose-list"

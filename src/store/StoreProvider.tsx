@@ -4,6 +4,8 @@ import { IFilters } from "../utils/interfaces"
 export interface Store {
   showMenu: boolean
   setShowMenu: (show: boolean) => void
+  showFilters: boolean
+  setShowFilters: (show: boolean) => void
   showActiveFilters: boolean
   setShowActiveFilters: (show: boolean) => void
   activeFilters: IFilters
@@ -18,6 +20,7 @@ export const useStore = () => useContext<Store>(StoreContext)
 
 const StoreProvider: FC = ({ children }) => {
   const [showMenu, setShowMenu] = useState<boolean>(false)
+  const [showFilters, setShowFilters] = useState<boolean>(false)
   const [showActiveFilters, setShowActiveFilters] = useState<boolean>(false)
   const [activeFilters, setActiveFilters] = useState<IFilters>({})
   const [showResults, setShowResults] = useState<boolean>(false)
@@ -25,6 +28,8 @@ const StoreProvider: FC = ({ children }) => {
   const store: Store = {
     showMenu,
     setShowMenu,
+    showFilters,
+    setShowFilters,
     showActiveFilters,
     setShowActiveFilters,
     activeFilters,

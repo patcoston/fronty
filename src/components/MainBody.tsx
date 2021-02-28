@@ -9,10 +9,15 @@ import * as showType from "../utils/constants"
 import "./MainBody.css"
 
 const MainBody: FC = () => {
-  const [showFilters, setShowFilters] = useState<boolean>(false)
   const [list, setList] = useState<Array<string>>([])
   const [label, setLabel] = useState<string>("")
-  const { setShowMenu, setShowActiveFilters, setShowResults } = useStore()
+  const {
+    setShowMenu,
+    setShowActiveFilters,
+    setShowResults,
+    showFilters,
+    setShowFilters,
+  } = useStore()
 
   const showFilter = (showIndex: number) => {
     setShowMenu(false)
