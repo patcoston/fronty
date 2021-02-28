@@ -1,5 +1,6 @@
 import { FC } from "react"
 import { useStore } from "../store/StoreProvider"
+import CloseIcon from "../svg/closeicon"
 import "./ShowActiveFilters.css"
 
 const ShowFilters: FC = () => {
@@ -16,6 +17,9 @@ const ShowFilters: FC = () => {
             {activeFilterArray.map(filter => {
               return (
                 <section key={filter[0]}>
+                  <span className="show-active-close">
+                    <CloseIcon />
+                  </span>
                   <strong>{filter[0]}:</strong>{" "}
                   {filter[1].join().replace(/,/g, ", ")}
                 </section>
