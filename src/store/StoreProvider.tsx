@@ -14,6 +14,10 @@ export interface Store {
   setShowResults: (show: boolean) => void
   showJob: boolean
   setShowJob: (show: boolean) => void
+  showJobCompany: string
+  setShowJobCompany: (company: string) => void
+  showJobSkills: string
+  setShowJobSkills: (company: string) => void
 }
 
 export const StoreContext = createContext({} as Store)
@@ -27,7 +31,8 @@ const StoreProvider: FC = ({ children }) => {
   const [activeFilters, setActiveFilters] = useState<IFilters>({})
   const [showResults, setShowResults] = useState<boolean>(false)
   const [showJob, setShowJob] = useState<boolean>(false)
-
+  const [showJobCompany, setShowJobCompany] = useState<string>("")
+  const [showJobSkills, setShowJobSkills] = useState<string>("")
   const store: Store = {
     showMenu,
     setShowMenu,
@@ -41,6 +46,10 @@ const StoreProvider: FC = ({ children }) => {
     setShowResults,
     showJob,
     setShowJob,
+    showJobCompany,
+    setShowJobCompany,
+    showJobSkills,
+    setShowJobSkills,
   }
 
   return <StoreContext.Provider value={store}>{children}</StoreContext.Provider>

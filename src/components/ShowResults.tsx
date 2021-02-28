@@ -3,7 +3,6 @@ import { useStore } from "../store/StoreProvider"
 import filterData from "../data/filter-data"
 import { rand } from "../utils/tools"
 import { SHOW_FILTER_COMPANY, SHOW_FILTER_SKILL } from "../utils/constants"
-import ShowJob from "./ShowJob"
 import "./ShowResults.css"
 
 const getSkills = () => {
@@ -19,7 +18,13 @@ const getSkills = () => {
 }
 
 const ShowResults: FC = () => {
-  const { showResults, activeFilters } = useStore()
+  const {
+    showResults,
+    activeFilters,
+    setShowJob,
+    setShowJobCompany,
+    setShowJobSkills,
+  } = useStore()
   const activeFilterArray = Object.entries(activeFilters)
   const filtersToShow: boolean = activeFilterArray.length > 0
   const show: boolean = showResults && filtersToShow
@@ -35,8 +40,9 @@ const ShowResults: FC = () => {
 
   const handleClick = (index: number) => {
     const companyNum = companyIndex[index]
-    console.log(filterData[SHOW_FILTER_COMPANY].list[companyNum])
-    console.log(companySkills[index])
+    setShowJobCompany(filterData[SHOW_FILTER_COMPANY].list[companyNum])
+    setShowJobSkills(companySkills[index])
+    setShowJob(true)
   }
 
   return (
@@ -66,7 +72,6 @@ const ShowResults: FC = () => {
           </div>
         </section>
       )}
-      <ShowJob companyName={"Microsoft"} skills={"JavaScript HTML CSS"} />
     </>
   )
 }

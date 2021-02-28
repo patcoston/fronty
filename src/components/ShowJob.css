@@ -1,5 +1,13 @@
 .show-job {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 5px;
+  bottom: 5px;
+  background-color: #fff;
   border: 1px solid black;
+  margin: 10px;
+  padding: 10px;
 }
 
 .show-job-header {

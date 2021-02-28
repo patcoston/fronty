@@ -3,6 +3,7 @@ import FilterMenu from "./FilterMenu"
 import FilterChoose from "./FilterChoose"
 import ShowActiveFilters from "./ShowActiveFilters"
 import ShowResults from "./ShowResults"
+import ShowJob from "./ShowJob"
 import { useStore } from "../store/StoreProvider"
 import filterData from "../data/filter-data"
 import * as showType from "../utils/constants"
@@ -40,6 +41,7 @@ const MainBody: FC = () => {
   return (
     <>
       <div className="main-body">
+        <ShowJob />
         <button onClick={() => showFilter(showType.SHOW_MENU)}>
           Choose Filter Type
         </button>
