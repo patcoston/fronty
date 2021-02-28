@@ -23,9 +23,9 @@ const FilterChoose: FC<Props> = ({ list, label }) => {
     for (let i: number = 0; i < collection.length; i++) {
       filters.push(collection[i].label)
     }
-    const newActiveFitlers: IFilters = { ...activeFilters, [label]: filters }
-    //console.log(Object.entries(newActiveFitlers))
-    setActiveFilters(newActiveFitlers)
+    const newActiveFilters: IFilters = { ...activeFilters, [label]: filters }
+    //console.log(Object.entries(newActiveFilters))
+    setActiveFilters(newActiveFilters)
   }
 
   return (
