@@ -8,11 +8,20 @@ interface Props {
 }
 
 const FilterMenu: FC<Props> = ({ showFilter }) => {
-  const { showMenu } = useStore()
+  const { showMenu, setShowMenu } = useStore()
   return (
     <>
       {showMenu && (
         <div className="filter-menu-body">
+          <div className="filter-menu-header">
+            <div>Filter Types</div>
+            <div
+              className="filter-menu-close"
+              onClick={() => setShowMenu(false)}
+            >
+              X
+            </div>
+          </div>
           <ul>
             {filterData.map((filter, index) => (
               <li key={index} onClick={() => showFilter(index)}>
