@@ -3,6 +3,7 @@ import { useStore } from "../store/StoreProvider"
 import filterData from "../data/filter-data"
 import { rand } from "../utils/tools"
 import { SHOW_FILTER_COMPANY, SHOW_FILTER_SKILL } from "../utils/constants"
+import ShowJob from "./ShowJob"
 import "./ShowResults.css"
 
 const getSkills = () => {
@@ -22,11 +23,20 @@ const ShowResults: FC = () => {
   const activeFilterArray = Object.entries(activeFilters)
   const filtersToShow: boolean = activeFilterArray.length > 0
   const show: boolean = showResults && filtersToShow
-  const companies: Array<string> = []
+  const companyIndex: Array<number> = []
+  const companySkills: Array<string> = []
   const len: number = filterData[SHOW_FILTER_COMPANY].list.length
   for (let i: number = 0; i < 10; i++) {
     let rnd: number = rand(1, len - 1)
-    companies.push(filterData[SHOW_FILTER_COMPANY].list[rnd])
+    companyIndex.push(rnd)
+    let skills = getSkills().join().replace(/,/g, ", ")
+    companySkills.push(skills)
+  }
+
+  const handleClick = (index: number) => {
+    const companyNum = companyIndex[index]
+    console.log(filterData[SHOW_FILTER_COMPANY].list[companyNum])
+    console.log(companySkills[index])
   }
 
   return (
@@ -35,10 +45,12 @@ const ShowResults: FC = () => {
         <section className="show-results-wrapper">
           <h3>Results</h3>
           <div className="show-results">
-            {companies.map((company, index) => (
-              <section key={index}>
-                <strong>{company}:</strong>{" "}
-                {getSkills().join().replace(/,/g, ", ")}
+            {companyIndex.map((company, index) => (
+              <section key={index} onClick={() => handleClick(index)}>
+                <strong>
+                  {filterData[SHOW_FILTER_COMPANY].list[company]}:
+                </strong>{" "}
+                {companySkills[index]}
               </section>
             ))}
             <div className="show-results-next">
@@ -54,6 +66,7 @@ const ShowResults: FC = () => {
           </div>
         </section>
       )}
+      <ShowJob companyName={"Microsoft"} skills={"JavaScript HTML CSS"} />
     </>
   )
 }
