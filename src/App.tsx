@@ -2,7 +2,6 @@ import React from "react"
 import MainBody from "./components/MainBody"
 import Header from "./components/Header"
 import Footer from "./components/Footer"
-import "./App.css"
 
 function App() {
   return (
