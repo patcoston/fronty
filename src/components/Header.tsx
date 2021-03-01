@@ -12,9 +12,15 @@ const Header: FC = () => {
           <div className="header-dropdown-wrapper">
             <div className="header-dropdown">
               <ul>
+                <li>
+                  Inbox
+                  <span className="header-dropdown-count"> 24 </span>
+                </li>
                 <li>Profile</li>
                 <li>Settings</li>
                 <li>Help</li>
+                <li>About Fronty</li>
+                <li>Contact Us</li>
                 <li>Signout</li>
               </ul>
             </div>
