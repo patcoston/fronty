@@ -25,7 +25,7 @@ export const StoreContext = createContext({} as Store)
 export const useStore = () => useContext<Store>(StoreContext)
 
 const StoreProvider: FC = ({ children }) => {
-  const [showMenu, setShowMenu] = useState<boolean>(false)
+  const [showMenu, setShowMenu] = useState<boolean>(true)
   const [showFilters, setShowFilters] = useState<boolean>(false)
   const [showActiveFilters, setShowActiveFilters] = useState<boolean>(false)
   const [activeFilters, setActiveFilters] = useState<IFilters>({})
