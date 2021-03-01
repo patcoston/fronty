@@ -18,10 +18,10 @@ const ShowJob: FC = () => {
   return (
     <>
       {showJob && (
-        <div className="show-job">
+        <div className="show-job-modal" onClick={() => setShowJob(false)}>
           <div className="show-job-header">
             <h3>{showJobCompany}</h3>
-            <div className="show-job-close" onClick={() => setShowJob(false)}>
+            <div className="show-job-close">
               <CloseIcon />
             </div>
           </div>
