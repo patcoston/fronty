@@ -15,12 +15,25 @@ const ShowJob: FC = () => {
     return filterData[index].list[pick]
   }
 
+  const getMultipleValues = (index: number, count: number) => {
+    const vals: Array<string> = []
+    for (let i: number = 0; i < count; i++) {
+      const last: number = filterData[index].list.length - 1
+      const pick: number = rand(0, last)
+      vals[i] = filterData[index].list[pick]
+    }
+    //vals = [...new Set(vals)]
+    const values = vals.join().replace(/,/g, ", ")
+    return values
+  }
+
   return (
     <>
       {showJob && (
         <div className="show-job-modal" onClick={() => setShowJob(false)}>
           <div className="show-job-header">
             <h3>{showJobCompany}</h3>
+            <button>Apply</button>
             <div className="show-job-close">
               <CloseIcon />
             </div>
@@ -43,7 +56,7 @@ const ShowJob: FC = () => {
           </section>
           <section>
             <strong>Payment: </strong>
-            {getSingleValue(showType.SHOW_FILTER_PAYMENT)}
+            {getSingleValue(showType.SHOW_FILTER_PAYMENT).replace("+", "")}
           </section>
           <section>
             <strong>Working From Home: </strong>
@@ -71,14 +84,14 @@ const ShowJob: FC = () => {
           </section>
           <section>
             <strong>Benefits: </strong>
-            {getSingleValue(showType.SHOW_FILTER_BENEFITS)}
+            {getMultipleValues(showType.SHOW_FILTER_BENEFITS, 4)}
           </section>
           <section>
             <strong>Commute: </strong>
             {"22 miles / 25 minutes"}
           </section>
           <section>
-            <strong>Pets Allowed: </strong>
+            <strong>Pets: </strong>
             {getSingleValue(showType.SHOW_FILTER_PETS_ALLOWED)}
           </section>
           <section>
@@ -87,7 +100,17 @@ const ShowJob: FC = () => {
           </section>
           <section>
             <strong>Company Size: </strong>
-            {getSingleValue(showType.SHOW_FILTER_COMPANY_SIZE)}
+            {rand(5, 500000)}
+          </section>
+          <section>
+            <strong>Description: </strong>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam et
+            ex consequat, ullamcorper augue ut, sollicitudin nunc. Suspendisse
+            luctus luctus metus ut efficitur. Nulla velit lectus, accumsan at
+            semper at, egestas quis justo. Ut vel nisi varius, sagittis tellus
+            nec, egestas tortor. Donec pretium est ac nibh blandit, et placerat
+            diam placerat. Ut id dictum risus. Donec non rutrum leo, non mollis
+            nunc. Etiam eu hendrerit justo, vitae finibus neque.
           </section>
         </div>
       )}
