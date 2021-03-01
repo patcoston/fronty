@@ -9,9 +9,6 @@ TODO
   - Contact phone number
   - Contact email
   - Link to website
-* Add more options to hamburger menu
-  - About
-  - Contact Us
 * Limit width on PC so design doesn't look too stretched out
 * Refactor CSS to SCSS
   https://www.sitepoint.com/react-components-styling-options/
