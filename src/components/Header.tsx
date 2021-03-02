@@ -16,8 +16,10 @@ const Header: FC = () => {
             <div className="header-dropdown">
               <ul>
                 <li>
-                  Inbox
-                  <span className="header-dropdown-count"> 24 </span>
+                  <Link to="/inbox">
+                    Inbox
+                    <span className="header-dropdown-count"> 24 </span>
+                  </Link>
                 </li>
                 <li>Jobs Applied</li>
                 <li>Profile</li>

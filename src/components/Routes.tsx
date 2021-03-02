@@ -1,5 +1,6 @@
 import { FC } from "react"
 import Home from "./Home"
+import Inbox from "./Inbox"
 import About from "./About"
 import ShowJob from "./ShowJob"
 import NotFound from "./NotFound"
@@ -10,6 +11,9 @@ const Routes: FC = () => {
     <Switch>
       <Route exact path="/">
         <Home />
+      </Route>
+      <Route path="/inbox">
+        <Inbox />
       </Route>
       <Route path="/about">
         <About />
