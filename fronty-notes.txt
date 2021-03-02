@@ -6,6 +6,10 @@ TODO
 * Refactor CSS to SCSS
   https://www.sitepoint.com/react-components-styling-options/
 * Add comment to top of each component describing it's purpose
+* Move each component to its own folder
+* Remove Duplicates
+  - Skills
+  - Benefits
 
 
 NOTE: if node_modules folder is deleted, then restore with these commands

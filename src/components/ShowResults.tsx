@@ -31,6 +31,16 @@ const ShowResults: FC = () => {
   const companyIndex: Array<number> = []
   const companySkills: Array<string> = []
   const len: number = filterData[SHOW_FILTER_COMPANY].list.length
+
+  const next: { label: string; selected: boolean }[] = [
+    { label: "1", selected: true },
+    { label: "2", selected: false },
+    { label: "3", selected: false },
+    { label: "4", selected: false },
+    { label: "5", selected: false },
+    { label: ">", selected: false },
+  ]
+
   for (let i: number = 0; i < 10; i++) {
     let rnd: number = rand(1, len - 1)
     companyIndex.push(rnd)
@@ -61,12 +71,9 @@ const ShowResults: FC = () => {
             ))}
             <div className="show-results-next">
               <ul>
-                <li className="selected">1</li>
-                <li>2</li>
-                <li>3</li>
-                <li>4</li>
-                <li>5</li>
-                <li>&gt;</li>
+                {next.map((val, index) => (
+                  <li key={index}>{val.label}</li>
+                ))}
               </ul>
             </div>
           </div>
