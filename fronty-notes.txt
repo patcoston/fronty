@@ -1,8 +1,9 @@
 TODO
+* Rearrange filters to most popular first rather than alphabetical
+* Change skills to Tech Stack in UI and code
 * Results should only re-render when active filters change
 * Array of FilterChoose so selected values are remembered?
 * Ability to set NOT on any filter value
-* Make clicking on Next buttons work
 * Refactor CSS to SCSS
   https://www.sitepoint.com/react-components-styling-options/
 * Add comment to top of each component describing it's purpose
@@ -10,6 +11,26 @@ TODO
 * Remove Duplicates
   - Skills
   - Benefits
+* Dynamically load data via AJAX calls and promises
+* About popup
+  - This is a recruiter-free zone. You connect directly with the companies with no middleman.
+  - Fronty is the only job-search site targetted specifically for front-end web-developers.
+  - Fronty lets you filter your search results more accurately than any other job search site.
+  - This means less false-positives for you and lets you more easily find the job you want.
+  - If you filter on the exact tech stack you're looking for, including specifying which versions you want.
+  - You can also specify which tech-stack you don't want.
+  - We have search filters most other job search sites don't have for example
+    - Payment
+    - Company Size
+	- Working From Home
+	- Pets Allowed
+	- Commute distance and time
+	- Benefits
+	- Education Required
+	- Methodology
+	- Mobile
+	- Is the site internal and/or external?
+
 
 
 NOTE: if node_modules folder is deleted, then restore with these commands
@@ -20,6 +41,12 @@ fronty-backup0
 
 npx create-react-app fronty --template typescript
 fronty-backup1
+
+React Router
+npm install react-router-dom
+npm audit fix
+npm i --save-dev @types/react-router-dom
+https://reactrouter.com/web/guides/quick-start
 
 git add .
 git commit

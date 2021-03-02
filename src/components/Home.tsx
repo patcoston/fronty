@@ -7,9 +7,9 @@ import ShowJob from "./ShowJob"
 import { useStore } from "../store/StoreProvider"
 import filterData from "../data/filter-data"
 import * as showType from "../utils/constants"
-import "./MainBody.css"
+import "./Home.css"
 
-const MainBody: FC = () => {
+const Home: FC = () => {
   const [list, setList] = useState<Array<string>>([])
   const [label, setLabel] = useState<string>("")
   const {
@@ -54,4 +54,4 @@ const MainBody: FC = () => {
   )
 }
 
-export default MainBody
+export default Home
