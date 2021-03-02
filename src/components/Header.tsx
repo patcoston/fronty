@@ -24,7 +24,9 @@ const Header: FC = () => {
                 <li>
                   <Link to="/applied">Jobs Applied</Link>
                 </li>
-                <li>Profile</li>
+                <li>
+                  <Link to="/profile">Profile</Link>
+                </li>
                 <li>Settings</li>
                 <li>Help</li>
                 <li>
