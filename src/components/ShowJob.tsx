@@ -27,6 +27,14 @@ const ShowJob: FC = () => {
     return values
   }
 
+  const getCompany = () => {
+    return showJobCompany.toLowerCase().replace(/[^a-z]/g, "")
+  }
+
+  const getWebsite = () => {
+    return `http://${getCompany()}.com/`
+  }
+
   return (
     <>
       {showJob && (
@@ -111,6 +119,24 @@ const ShowJob: FC = () => {
             nec, egestas tortor. Donec pretium est ac nibh blandit, et placerat
             diam placerat. Ut id dictum risus. Donec non rutrum leo, non mollis
             nunc. Etiam eu hendrerit justo, vitae finibus neque.
+          </section>
+          <section>
+            <strong>Address: </strong>285 Fulton St, New York, NY 10007
+          </section>
+          <section>
+            <strong>Contact Name: </strong>John Smith
+          </section>
+          <section>
+            <strong>Contact Phone: </strong>212-555-1212
+          </section>
+          <section>
+            <strong>Contact Email: </strong>johnsmith@{getCompany()}.com
+          </section>
+          <section>
+            <strong>Website: </strong>
+            <a target="_blank" rel="noreferrer" href={getWebsite()}>
+              {getWebsite()}
+            </a>
           </section>
         </div>
       )}

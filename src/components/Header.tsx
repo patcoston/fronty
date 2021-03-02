@@ -16,6 +16,7 @@ const Header: FC = () => {
                   Inbox
                   <span className="header-dropdown-count"> 24 </span>
                 </li>
+                <li>Jobs Applied</li>
                 <li>Profile</li>
                 <li>Settings</li>
                 <li>Help</li>
