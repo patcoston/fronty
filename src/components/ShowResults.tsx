@@ -55,6 +55,10 @@ const ShowResults: FC = () => {
     setShowJob(true)
   }
 
+  const handleSelectNext = (index: number) => {
+    console.log(index)
+  }
+
   return (
     <>
       {show && (
@@ -72,7 +76,9 @@ const ShowResults: FC = () => {
             <div className="show-results-next">
               <ul>
                 {next.map((val, index) => (
-                  <li key={index}>{val.label}</li>
+                  <li key={index} onClick={() => handleSelectNext(index)}>
+                    {val.label}
+                  </li>
                 ))}
               </ul>
             </div>
