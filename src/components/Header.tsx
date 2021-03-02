@@ -27,7 +27,9 @@ const Header: FC = () => {
                 <li>
                   <Link to="/profile">Profile</Link>
                 </li>
-                <li>Settings</li>
+                <li>
+                  <Link to="/settings">Settings</Link>
+                </li>
                 <li>Help</li>
                 <li>
                   <Link to="/about">About Fronty</Link>
