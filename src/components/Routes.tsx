@@ -2,6 +2,7 @@ import { FC } from "react"
 import Home from "./Home"
 import Inbox from "./InBox"
 import About from "./About"
+import Help from "./Help"
 import Profile from "./Profile"
 import Settings from "./Settings"
 import JobsApplied from "./JobsApplied"
@@ -26,6 +27,9 @@ const Routes: FC = () => {
       </Route>
       <Route path="/settings">
         <Settings />
+      </Route>
+      <Route path="/help">
+        <Help />
       </Route>
       <Route path="/applied">
         <JobsApplied />
