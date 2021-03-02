@@ -1,4 +1,5 @@
 import { FC } from "react"
+import { Link } from "react-router-dom"
 import Hamburger from "../svg/hamburger"
 import "./Header.css"
 
@@ -6,7 +7,9 @@ const Header: FC = () => {
   return (
     <>
       <div className="header">
-        <div className="logo">Fronty</div>
+        <div className="logo">
+          <Link to="/">Fronty</Link>
+        </div>
         <div className="hamburger">
           <Hamburger />
           <div className="header-dropdown-wrapper">
@@ -20,7 +23,9 @@ const Header: FC = () => {
                 <li>Profile</li>
                 <li>Settings</li>
                 <li>Help</li>
-                <li>About Fronty</li>
+                <li>
+                  <Link to="/about">About Fronty</Link>
+                </li>
                 <li>Contact Us</li>
                 <li>Signout</li>
               </ul>

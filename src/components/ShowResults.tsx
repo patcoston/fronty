@@ -1,5 +1,6 @@
 import { FC, useState } from "react"
 import { useStore } from "../store/StoreProvider"
+import { useHistory } from "react-router-dom"
 import filterData from "../data/filter-data"
 import { rand } from "../utils/tools"
 import { SHOW_FILTER_COMPANY, SHOW_FILTER_SKILL } from "../utils/constants"
@@ -21,7 +22,6 @@ const ShowResults: FC = () => {
   const {
     showResults,
     activeFilters,
-    setShowJob,
     setShowJobCompany,
     setShowJobSkills,
   } = useStore()
@@ -31,6 +31,7 @@ const ShowResults: FC = () => {
   const companyIndex: Array<number> = []
   const companySkills: Array<string> = []
   const len: number = filterData[SHOW_FILTER_COMPANY].list.length
+  const history = useHistory()
 
   type TNext = { label: string; selected: string }[]
 
@@ -54,7 +55,7 @@ const ShowResults: FC = () => {
     const companyNum = companyIndex[index]
     setShowJobCompany(filterData[SHOW_FILTER_COMPANY].list[companyNum])
     setShowJobSkills(companySkills[index])
-    setShowJob(true)
+    history.push(`/job`)
   }
 
   const handleSelectNext = (index: number) => {

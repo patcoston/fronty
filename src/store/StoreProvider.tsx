@@ -12,8 +12,6 @@ export interface Store {
   setActiveFilters: (activeFilters: IFilters) => void
   showResults: boolean
   setShowResults: (show: boolean) => void
-  showJob: boolean
-  setShowJob: (show: boolean) => void
   showJobCompany: string
   setShowJobCompany: (company: string) => void
   showJobSkills: string
@@ -30,7 +28,6 @@ const StoreProvider: FC = ({ children }) => {
   const [showActiveFilters, setShowActiveFilters] = useState<boolean>(false)
   const [activeFilters, setActiveFilters] = useState<IFilters>({})
   const [showResults, setShowResults] = useState<boolean>(false)
-  const [showJob, setShowJob] = useState<boolean>(false)
   const [showJobCompany, setShowJobCompany] = useState<string>("")
   const [showJobSkills, setShowJobSkills] = useState<string>("")
   const store: Store = {
@@ -44,8 +41,6 @@ const StoreProvider: FC = ({ children }) => {
     setActiveFilters,
     showResults,
     setShowResults,
-    showJob,
-    setShowJob,
     showJobCompany,
     setShowJobCompany,
     showJobSkills,

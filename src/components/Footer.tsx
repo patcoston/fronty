@@ -1,4 +1,5 @@
 import { FC } from "react"
+import { Link } from "react-router-dom"
 import "./Footer.css"
 
 const Footer: FC = () => {
@@ -12,7 +13,9 @@ const Footer: FC = () => {
           <li>Privacy</li>
           <li>Jobs</li>
           <li>FAQs</li>
-          <li>About</li>
+          <li>
+            <Link to="/about">About</Link>
+          </li>
         </ul>
       </div>
     </>
