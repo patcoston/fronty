@@ -39,7 +39,7 @@ const Home: FC = () => {
 
   return (
     <>
-      <div className="main-body">
+      <div className="home">
         <button onClick={() => showFilter(showType.SHOW_MENU)}>
           Choose Filter Type
         </button>

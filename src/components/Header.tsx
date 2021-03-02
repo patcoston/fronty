@@ -36,7 +36,9 @@ const Header: FC = () => {
                 <li>
                   <Link to="/about">About Fronty</Link>
                 </li>
-                <li>Contact Us</li>
+                <li>
+                  <Link to="/contactus">Contact Us</Link>
+                </li>
                 <li>Signout</li>
               </ul>
             </div>

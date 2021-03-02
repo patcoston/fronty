@@ -3,6 +3,7 @@ import Home from "./Home"
 import Inbox from "./InBox"
 import About from "./About"
 import Help from "./Help"
+import ContactUs from "./ContactUs"
 import Profile from "./Profile"
 import Settings from "./Settings"
 import JobsApplied from "./JobsApplied"
@@ -30,6 +31,9 @@ const Routes: FC = () => {
       </Route>
       <Route path="/help">
         <Help />
+      </Route>
+      <Route path="/contactus">
+        <ContactUs />
       </Route>
       <Route path="/applied">
         <JobsApplied />
