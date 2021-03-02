@@ -1,4 +1,4 @@
-import { FC } from "react"
+import { FC, useState } from "react"
 import { useStore } from "../store/StoreProvider"
 import filterData from "../data/filter-data"
 import { rand } from "../utils/tools"
@@ -32,14 +32,16 @@ const ShowResults: FC = () => {
   const companySkills: Array<string> = []
   const len: number = filterData[SHOW_FILTER_COMPANY].list.length
 
-  const next: { label: string; selected: boolean }[] = [
-    { label: "1", selected: true },
-    { label: "2", selected: false },
-    { label: "3", selected: false },
-    { label: "4", selected: false },
-    { label: "5", selected: false },
-    { label: ">", selected: false },
-  ]
+  type TNext = { label: string; selected: string }[]
+
+  const [next, setNext] = useState<TNext>([
+    { label: "1", selected: "selected" },
+    { label: "2", selected: "" },
+    { label: "3", selected: "" },
+    { label: "4", selected: "" },
+    { label: "5", selected: "" },
+    { label: ">", selected: "" },
+  ])
 
   for (let i: number = 0; i < 10; i++) {
     let rnd: number = rand(1, len - 1)
@@ -56,7 +58,10 @@ const ShowResults: FC = () => {
   }
 
   const handleSelectNext = (index: number) => {
-    console.log(index)
+    const newNext = [...next]
+    newNext.forEach(obj => (obj.selected = ""))
+    newNext[index].selected = "selected"
+    setNext(newNext)
   }
 
   return (
@@ -76,7 +81,11 @@ const ShowResults: FC = () => {
             <div className="show-results-next">
               <ul>
                 {next.map((val, index) => (
-                  <li key={index} onClick={() => handleSelectNext(index)}>
+                  <li
+                    key={index}
+                    onClick={() => handleSelectNext(index)}
+                    className={val.selected}
+                  >
                     {val.label}
                   </li>
                 ))}
