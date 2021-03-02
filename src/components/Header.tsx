@@ -21,7 +21,9 @@ const Header: FC = () => {
                     <span className="header-dropdown-count"> 24 </span>
                   </Link>
                 </li>
-                <li>Jobs Applied</li>
+                <li>
+                  <Link to="/applied">Jobs Applied</Link>
+                </li>
                 <li>Profile</li>
                 <li>Settings</li>
                 <li>Help</li>
