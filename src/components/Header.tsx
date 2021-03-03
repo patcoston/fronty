@@ -9,7 +9,7 @@ const Header: FC = () => {
     <>
       <div className="header">
         <div className="logo">
-          <Link to="/">Fronty</Link>
+          <Link to={path.PATH_BASE}>Fronty</Link>
         </div>
         <div className="hamburger">
           <Hamburger />
