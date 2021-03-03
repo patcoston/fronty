@@ -1,4 +1,8 @@
 .about {
   border: 1px solid black;
-  text-align: center;
+  padding: 10px 30px;
+}
+
+.about section {
+  margin: 7px 0;
 }
