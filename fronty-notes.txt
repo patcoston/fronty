@@ -1,9 +1,5 @@
 TODO
 * Refactor border: 1px solid black; into global border class
-* Can we remove the "Choose Filter Type" button?  If they close a filter-type, re-open filter menu.
-* If no results, then re-open Choose Filter Type menu
-* Copyright notice should not highlight
-* Footer: Highlight top to bottom?
 * Results should only re-render when active filters change
 * Array of FilterChoose so selected values are remembered?
 * Ability to set NOT on any filter value
@@ -15,7 +11,7 @@ TODO
   - Skills
   - Benefits
 * Dynamically load data via AJAX calls and promises
-* About popup
+* About page
   - This is a recruiter-free zone. You connect directly with the companies with no middleman.
   - Fronty is the only job-search site targetted specifically for front-end web-developers.
   - Fronty lets you filter your search results more accurately than any other job search site.

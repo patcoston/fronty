@@ -15,8 +15,9 @@ const Home: FC = () => {
     setShowMenu,
     setShowActiveFilters,
     setShowResults,
-    showFilters,
     setShowFilters,
+    showFilters,
+    showMenu,
   } = useStore()
 
   const showFilter = (showIndex: number) => {
@@ -40,9 +41,11 @@ const Home: FC = () => {
   return (
     <>
       <div className="home">
-        <button onClick={() => showFilter(showType.SHOW_MENU)}>
-          Choose Filter Type
-        </button>
+        {!showMenu && (
+          <button onClick={() => showFilter(showType.SHOW_MENU)}>
+            Choose Filter Type
+          </button>
+        )}
         <FilterMenu showFilter={showFilter} />
         {showFilters && <FilterChoose list={list} label={label} />}
       </div>
