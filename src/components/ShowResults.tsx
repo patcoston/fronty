@@ -8,10 +8,10 @@ import "./ShowResults.css"
 
 const getSkills = () => {
   const skills: Array<string> = []
-  const len: number = filterData[constant.SHOW_FILTER_SKILL].list.length
+  const len: number = filterData[constant.SHOW_FILTER_TECH_STACK].list.length
   for (let i: number = 0; i < 10; i++) {
     let rnd: number = rand(1, len - 1)
-    skills.push(filterData[constant.SHOW_FILTER_SKILL].list[rnd])
+    skills.push(filterData[constant.SHOW_FILTER_TECH_STACK].list[rnd])
   }
   //console.log(skills)
   //const uniqueSkills = [...new Set(skills)]

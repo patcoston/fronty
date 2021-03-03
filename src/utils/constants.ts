@@ -1,4 +1,4 @@
-export const SHOW_FILTER_SKILL: number = 0
+export const SHOW_FILTER_TECH_STACK: number = 0
 export const SHOW_FILTER_PAYMENT: number = 1
 export const SHOW_FILTER_INDUSTRY: number = 2
 export const SHOW_FILTER_BENEFITS: number = 3

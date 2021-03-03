@@ -48,7 +48,7 @@ const ShowJob: FC = () => {
           </div>
         </div>
         <section>
-          <strong>Skills: </strong>
+          <strong>Tech Stack: </strong>
           {showJobSkills}
         </section>
         <section>

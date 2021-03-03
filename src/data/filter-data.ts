@@ -7,8 +7,8 @@ interface IData {
 
 const filterData: Array<IData> = []
 
-filterData[showType.SHOW_FILTER_SKILL] = {
-  label: "Skill",
+filterData[showType.SHOW_FILTER_TECH_STACK] = {
+  label: "Tech Stack",
   list: [
     "Angular JS 1.x",
     "Angular 2.x",
