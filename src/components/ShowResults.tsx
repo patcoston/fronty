@@ -57,7 +57,7 @@ const ShowResults: FC = () => {
     setShowJobCompany(filterData[constant.SHOW_FILTER_COMPANY].list[companyNum])
     setShowJobSkills(companySkills[index])
     setShowFilters(false)
-    history.push(constant.PATH_SHOW_JOB)
+    history.push(constant.PATH_JOB)
   }
 
   const handleSelectNext = (index: number) => {
