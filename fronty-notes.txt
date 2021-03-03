@@ -1,6 +1,9 @@
 TODO
 * Refactor border: 1px solid black; into global border class
 * Can we remove the "Choose Filter Type" button?  If they close a filter-type, re-open filter menu.
+* If no results, then re-open Choose Filter Type menu
+* Copyright notice should not highlight
+* Footer: Highlight top to bottom?
 * Rearrange filters to most popular first rather than alphabetical
 * Change skills to Tech Stack in UI and code
 * Results should only re-render when active filters change

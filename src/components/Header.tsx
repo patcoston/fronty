@@ -1,6 +1,7 @@
 import { FC } from "react"
 import { Link } from "react-router-dom"
 import Hamburger from "../svg/hamburger"
+import * as path from "../utils/constants"
 import "./Header.css"
 
 const Header: FC = () => {
@@ -16,28 +17,28 @@ const Header: FC = () => {
             <div className="header-dropdown">
               <ul>
                 <li>
-                  <Link to="/inbox">
+                  <Link to={path.PATH_INBOX}>
                     Inbox
                     <span className="header-dropdown-count"> 24 </span>
                   </Link>
                 </li>
                 <li>
-                  <Link to="/applied">Jobs Applied</Link>
+                  <Link to={path.PATH_JOBS_APPLIED}>Jobs Applied</Link>
                 </li>
                 <li>
-                  <Link to="/profile">Profile</Link>
+                  <Link to={path.PATH_PROFILE}>Profile</Link>
                 </li>
                 <li>
-                  <Link to="/settings">Settings</Link>
+                  <Link to={path.PATH_SETTINGS}>Settings</Link>
                 </li>
                 <li>
-                  <Link to="/help">Help</Link>
+                  <Link to={path.PATH_HELP}>Help</Link>
                 </li>
                 <li>
-                  <Link to="/about">About Fronty</Link>
+                  <Link to={path.PATH_ABOUT}>About Fronty</Link>
                 </li>
                 <li>
-                  <Link to="/contactus">Contact Us</Link>
+                  <Link to={path.PATH_CONTACT_US}>Contact Us</Link>
                 </li>
                 <li>Signout</li>
               </ul>

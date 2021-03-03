@@ -10,41 +10,42 @@ import JobsApplied from "./JobsApplied"
 import ShowJob from "./ShowJob"
 import NotFound from "./NotFound"
 import { Switch, Route, Redirect } from "react-router-dom"
+import * as path from "../utils/constants"
 
 const Routes: FC = () => {
   return (
     <Switch>
-      <Route exact path="/">
+      <Route exact path={path.PATH_BASE}>
         <Home />
       </Route>
-      <Route path="/inbox">
+      <Route path={path.PATH_INBOX}>
         <Inbox />
       </Route>
-      <Route path="/about">
+      <Route path={path.PATH_ABOUT}>
         <About />
       </Route>
-      <Route path="/profile">
+      <Route path={path.PATH_PROFILE}>
         <Profile />
       </Route>
-      <Route path="/settings">
+      <Route path={path.PATH_SETTINGS}>
         <Settings />
       </Route>
-      <Route path="/help">
+      <Route path={path.PATH_HELP}>
         <Help />
       </Route>
-      <Route path="/contactus">
+      <Route path={path.PATH_CONTACT_US}>
         <ContactUs />
       </Route>
-      <Route path="/applied">
+      <Route path={path.PATH_JOBS_APPLIED}>
         <JobsApplied />
       </Route>
-      <Route path="/job">
+      <Route path={path.PATH_SHOW_JOB}>
         <ShowJob />
       </Route>
-      <Route path="/notfound">
+      <Route path={path.PATH_NOT_FOUND}>
         <NotFound />
       </Route>
-      <Redirect to="/notfound" />
+      <Redirect to={path.PATH_BASE} />
     </Switch>
   )
 }

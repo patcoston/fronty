@@ -3,15 +3,15 @@ import { useStore } from "../store/StoreProvider"
 import { useHistory } from "react-router-dom"
 import filterData from "../data/filter-data"
 import { rand } from "../utils/tools"
-import { SHOW_FILTER_COMPANY, SHOW_FILTER_SKILL } from "../utils/constants"
+import * as constant from "../utils/constants"
 import "./ShowResults.css"
 
 const getSkills = () => {
   const skills: Array<string> = []
-  const len: number = filterData[SHOW_FILTER_SKILL].list.length
+  const len: number = filterData[constant.SHOW_FILTER_SKILL].list.length
   for (let i: number = 0; i < 10; i++) {
     let rnd: number = rand(1, len - 1)
-    skills.push(filterData[SHOW_FILTER_SKILL].list[rnd])
+    skills.push(filterData[constant.SHOW_FILTER_SKILL].list[rnd])
   }
   //console.log(skills)
   //const uniqueSkills = [...new Set(skills)]
@@ -22,6 +22,7 @@ const ShowResults: FC = () => {
   const {
     showResults,
     activeFilters,
+    setShowFilters,
     setShowJobCompany,
     setShowJobSkills,
   } = useStore()
@@ -30,7 +31,7 @@ const ShowResults: FC = () => {
   const show: boolean = showResults && filtersToShow
   const companyIndex: Array<number> = []
   const companySkills: Array<string> = []
-  const len: number = filterData[SHOW_FILTER_COMPANY].list.length
+  const len: number = filterData[constant.SHOW_FILTER_COMPANY].list.length
   const history = useHistory()
 
   type TNext = { label: string; selected: string }[]
@@ -51,11 +52,12 @@ const ShowResults: FC = () => {
     companySkills.push(skills)
   }
 
-  const handleClick = (index: number) => {
+  const handleClickJob = (index: number) => {
     const companyNum = companyIndex[index]
-    setShowJobCompany(filterData[SHOW_FILTER_COMPANY].list[companyNum])
+    setShowJobCompany(filterData[constant.SHOW_FILTER_COMPANY].list[companyNum])
     setShowJobSkills(companySkills[index])
-    history.push(`/job`)
+    setShowFilters(false)
+    history.push(constant.PATH_SHOW_JOB)
   }
 
   const handleSelectNext = (index: number) => {
@@ -72,9 +74,9 @@ const ShowResults: FC = () => {
           <h3>Results</h3>
           <div className="show-results">
             {companyIndex.map((company, index) => (
-              <section key={index} onClick={() => handleClick(index)}>
+              <section key={index} onClick={() => handleClickJob(index)}>
                 <strong>
-                  {filterData[SHOW_FILTER_COMPANY].list[company]}:
+                  {filterData[constant.SHOW_FILTER_COMPANY].list[company]}:
                 </strong>{" "}
                 {companySkills[index]}
               </section>
