@@ -7,6 +7,11 @@ import ContactUs from "./ContactUs"
 import Profile from "./Profile"
 import Settings from "./Settings"
 import JobsApplied from "./JobsApplied"
+import Jobs from "./Jobs"
+import Terms from "./Terms"
+import Cookies from "./Cookies"
+import Privacy from "./Privacy"
+import FAQs from "./FAQs"
 import ShowJob from "./ShowJob"
 import NotFound from "./NotFound"
 import { Switch, Route, Redirect } from "react-router-dom"
@@ -39,8 +44,23 @@ const Routes: FC = () => {
       <Route path={path.PATH_JOBS_APPLIED}>
         <JobsApplied />
       </Route>
-      <Route path={path.PATH_SHOW_JOB}>
+      <Route path={path.PATH_JOB}>
         <ShowJob />
+      </Route>
+      <Route path={path.PATH_JOBS}>
+        <Jobs />
+      </Route>
+      <Route path={path.PATH_TERMS}>
+        <Terms />
+      </Route>
+      <Route path={path.PATH_COOKIES}>
+        <Cookies />
+      </Route>
+      <Route path={path.PATH_PRIVACY}>
+        <Privacy />
+      </Route>
+      <Route path={path.PATH_FAQS}>
+        <FAQs />
       </Route>
       <Route path={path.PATH_NOT_FOUND}>
         <NotFound />

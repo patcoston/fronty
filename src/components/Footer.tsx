@@ -9,11 +9,21 @@ const Footer: FC = () => {
       <div className="footer">
         <ul>
           <li>&#169; 2021 Fronty</li>
-          <li>Terms</li>
-          <li>Cookies</li>
-          <li>Privacy</li>
-          <li>Jobs</li>
-          <li>FAQs</li>
+          <li>
+            <Link to={path.PATH_TERMS}>Terms</Link>
+          </li>
+          <li>
+            <Link to={path.PATH_COOKIES}>Cookies</Link>
+          </li>
+          <li>
+            <Link to={path.PATH_PRIVACY}>Privacy</Link>
+          </li>
+          <li>
+            <Link to={path.PATH_JOBS}>Jobs</Link>
+          </li>
+          <li>
+            <Link to={path.PATH_FAQS}>FAQs</Link>
+          </li>
           <li>
             <Link to={path.PATH_ABOUT}>About</Link>
           </li>
