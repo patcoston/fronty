@@ -14,6 +14,9 @@ TODO
   - Profile
   - Settings
   - Jobs Applied
+* Hide Hamburger menu when clicked
+* Bug: Loses contents of Filter On menu when visiting other pages
+
 
 NOTE: if node_modules folder is deleted, then restore with these commands
 npm install react-scripts
@@ -57,4 +60,8 @@ https://fonts.google.com/specimen/Lobster?sort=popularity&query=lobster&preview.
 Construct className strings conditionally.
 npm install --save clsx (is --save necessary? Is it for prod and dev?)
 https://www.npmjs.com/package/clsx
+
+
+npm install axios
+https://www.npmjs.com/package/axios
 
