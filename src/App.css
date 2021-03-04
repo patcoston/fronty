@@ -22,3 +22,7 @@ a.link {
   color: #070ba7;
   text-decoration: underline;
 }
+
+.border {
+  border: 1px solid black;
+}

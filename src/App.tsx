@@ -9,7 +9,9 @@ function App() {
     <div className="app-wrapper">
       <div className="app-body">
         <Header />
-        <Routes />
+        <div className="border">
+          <Routes />
+        </div>
         <Footer />
       </div>
     </div>

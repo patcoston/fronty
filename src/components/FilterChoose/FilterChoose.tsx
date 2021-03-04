@@ -3,6 +3,7 @@ import { useStore } from "../../store/StoreProvider"
 import { IFilters } from "../../utils/interfaces"
 import { TFilters } from "../../utils/types"
 import CloseIcon from "../../svg/closeicon"
+import { SHOW_MENU } from "../../utils/constants"
 import "./FilterChoose.css"
 
 /**
@@ -12,11 +13,12 @@ import "./FilterChoose.css"
  */
 
 interface Props {
+  showFilter(arg: number): void
   list: Array<string>
   label: string
 }
 
-const FilterChoose: FC<Props> = ({ list, label }) => {
+const FilterChoose: FC<Props> = ({ showFilter, list, label }) => {
   const { activeFilters, setActiveFilters, setShowFilters } = useStore()
   const size = list.length < 21 ? list.length : 20
 
@@ -36,6 +38,7 @@ const FilterChoose: FC<Props> = ({ list, label }) => {
 
   return (
     <>
+      <button onClick={() => showFilter(SHOW_MENU)}>Choose Filter Type</button>
       <div className="filter-choose-body">
         <div className="filter-choose-header">
           <div>Filter on {label}</div>

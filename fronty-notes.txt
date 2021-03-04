@@ -15,7 +15,8 @@ TODO
   - Profile
   - Settings
   - Jobs Applied
-
+* App.tsx - use clsx conditional to use class border or no-border. Will need new context value.
+* Remove border around button "Choose Filter Type"
 
 
 
@@ -31,7 +32,7 @@ fronty-backup1
 React Router
 npm install react-router-dom
 npm audit fix
-npm i --save-dev @types/react-router-dom
+npm i --save-dev @types/react-router-dom (Why --save-dev? Is this for dev only?)
 https://reactrouter.com/web/guides/quick-start
 
 git add .
@@ -57,4 +58,8 @@ fronty-backup3
 
 Google Font: Lobster
 https://fonts.google.com/specimen/Lobster?sort=popularity&query=lobster&preview.text_type=custom
+
+Construct className strings conditionally.
+npm install --save clsx (is --save necessary? Is it for prod and dev?)
+https://www.npmjs.com/package/clsx
 

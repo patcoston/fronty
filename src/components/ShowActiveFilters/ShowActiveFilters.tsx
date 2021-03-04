@@ -2,6 +2,7 @@ import { FC } from "react"
 import { useStore } from "../../store/StoreProvider"
 import { IFilters } from "../../utils/interfaces"
 import CloseIcon from "../../svg/closeicon"
+import clsx from "clsx"
 import "./ShowActiveFilters.css"
 
 /**
@@ -27,7 +28,7 @@ const ShowActiveFilters: FC = () => {
       {show && (
         <section className="show-active-filters-wrapper">
           <h3>Filters</h3>
-          <div className="show-active-filters">
+          <div className={clsx("show-active-filters", "border")}>
             {activeFilterArray.map((filter, index) => {
               return (
                 <section key={index}>

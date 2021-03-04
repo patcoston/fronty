@@ -2,6 +2,7 @@ import { FC } from "react"
 import { Link } from "react-router-dom"
 import Hamburger from "../../svg/hamburger"
 import * as path from "../../utils/constants"
+import clsx from "clsx"
 import "./Header.css"
 
 /**
@@ -13,7 +14,7 @@ import "./Header.css"
 const Header: FC = () => {
   return (
     <>
-      <div className="header">
+      <div className={clsx("header", "border")}>
         <div className="logo">
           <Link to={path.PATH_BASE}>Fronty</Link>
         </div>
