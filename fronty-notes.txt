@@ -5,8 +5,6 @@ TODO
 * Ability to set NOT on any filter value
 * Refactor CSS to SCSS
   https://www.sitepoint.com/react-components-styling-options/
-* Rename Jobs as JobsAtFronty
-* Rename ShowActiveFilters in code is ShowFilters
 * Remove Duplicates
   - Skills
   - Benefits

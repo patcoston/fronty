@@ -10,7 +10,7 @@ import "./ShowActiveFilters.css"
  * Purpose: Displays the filters which are currently active
  */
 
-const ShowFilters: FC = () => {
+const ShowActiveFilters: FC = () => {
   const { activeFilters, setActiveFilters } = useStore()
   const activeFilterArray = Object.entries(activeFilters)
   const filtersToShow: boolean = activeFilterArray.length > 0
@@ -49,4 +49,4 @@ const ShowFilters: FC = () => {
   )
 }
 
-export default ShowFilters
+export default ShowActiveFilters
