@@ -7,7 +7,7 @@ import ContactUs from "../ContactUs/ContactUs"
 import Profile from "../Profile/Profile"
 import Settings from "../Settings/Settings"
 import JobsApplied from "../JobsApplied/JobsApplied"
-import Jobs from "../Jobs/Jobs"
+import JobsAtFronty from "../JobsAtFronty/JobsAtFronty"
 import Terms from "../Terms/Terms"
 import Cookies from "../Cookies/Cookies"
 import Privacy from "../Privacy/Privacy"
@@ -54,7 +54,7 @@ const Routes: FC = () => {
         <ShowJob />
       </Route>
       <Route path={path.PATH_JOBS}>
-        <Jobs />
+        <JobsAtFronty />
       </Route>
       <Route path={path.PATH_TERMS}>
         <Terms />
