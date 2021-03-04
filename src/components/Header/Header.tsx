@@ -1,7 +1,7 @@
 import { FC } from "react"
 import { Link } from "react-router-dom"
-import Hamburger from "../svg/hamburger"
-import * as path from "../utils/constants"
+import Hamburger from "../../svg/hamburger"
+import * as path from "../../utils/constants"
 import "./Header.css"
 
 const Header: FC = () => {

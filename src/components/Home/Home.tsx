@@ -1,11 +1,11 @@
 import { FC, useState } from "react"
-import FilterMenu from "./FilterMenu"
-import FilterChoose from "./FilterChoose"
-import ShowActiveFilters from "./ShowActiveFilters"
-import ShowResults from "./ShowResults"
-import { useStore } from "../store/StoreProvider"
-import filterData from "../data/filter-data"
-import * as showType from "../utils/constants"
+import FilterMenu from "../FilterMenu/FilterMenu"
+import FilterChoose from "../FilterChoose/FilterChoose"
+import ShowActiveFilters from "../ShowActiveFilters/ShowActiveFilters"
+import ShowResults from "../ShowResults/ShowResults"
+import { useStore } from "../../store/StoreProvider"
+import filterData from "../../data/filter-data"
+import * as showType from "../../utils/constants"
 import "./Home.css"
 
 const Home: FC = () => {

@@ -1,7 +1,7 @@
 import { FC } from "react"
-import { useStore } from "../store/StoreProvider"
-import { IFilters } from "../utils/interfaces"
-import CloseIcon from "../svg/closeicon"
+import { useStore } from "../../store/StoreProvider"
+import { IFilters } from "../../utils/interfaces"
+import CloseIcon from "../../svg/closeicon"
 import "./ShowActiveFilters.css"
 
 const ShowFilters: FC = () => {

@@ -1,10 +1,10 @@
 import { FC } from "react"
-import { useStore } from "../store/StoreProvider"
-import { Redirect, useHistory } from "react-router-dom"
-import filterData from "../data/filter-data"
-import { rand } from "../utils/tools"
-import * as showType from "../utils/constants"
-import CloseIcon from "../svg/closeicon"
+import { useStore } from "../../store/StoreProvider"
+import { useHistory } from "react-router-dom"
+import filterData from "../../data/filter-data"
+import { rand } from "../../utils/tools"
+import * as showType from "../../utils/constants"
+import CloseIcon from "../../svg/closeicon"
 import "./ShowJob.css"
 
 const ShowJob: FC = () => {

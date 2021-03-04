@@ -1,6 +1,6 @@
 import { FC } from "react"
 import { Link } from "react-router-dom"
-import * as path from "../utils/constants"
+import * as path from "../../utils/constants"
 import "./Footer.css"
 
 const Footer: FC = () => {

@@ -1,9 +1,9 @@
 import { FC, useState } from "react"
-import { useStore } from "../store/StoreProvider"
+import { useStore } from "../../store/StoreProvider"
 import { useHistory } from "react-router-dom"
-import filterData from "../data/filter-data"
-import { rand } from "../utils/tools"
-import * as constant from "../utils/constants"
+import filterData from "../../data/filter-data"
+import { rand } from "../../utils/tools"
+import * as constant from "../../utils/constants"
 import "./ShowResults.css"
 
 const getSkills = () => {

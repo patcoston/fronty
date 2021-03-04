@@ -12,14 +12,11 @@ TODO
   - Benefits
 * Dynamically load JSON via Axios calls and async/await
 * Add content to
-  - FAQs
-  - Terms
-  - Cookies
   - Privacy
   - Inbox
   - Profile
+  - Settings
   - Jobs Applied
-  - Contact Us
 
 
 

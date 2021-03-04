@@ -1,8 +1,8 @@
 import { FC } from "react"
-import { useStore } from "../store/StoreProvider"
-import { IFilters } from "../utils/interfaces"
-import { TFilters } from "../utils/types"
-import CloseIcon from "../svg/closeicon"
+import { useStore } from "../../store/StoreProvider"
+import { IFilters } from "../../utils/interfaces"
+import { TFilters } from "../../utils/types"
+import CloseIcon from "../../svg/closeicon"
 import "./FilterChoose.css"
 
 interface Props {

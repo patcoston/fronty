@@ -1,7 +1,7 @@
 import { FC } from "react"
-import filterData from "../data/filter-data"
-import { useStore } from "../store/StoreProvider"
-import CloseIcon from "../svg/closeicon"
+import filterData from "../../data/filter-data"
+import { useStore } from "../../store/StoreProvider"
+import CloseIcon from "../../svg/closeicon"
 import "./FilterMenu.css"
 
 interface Props {
