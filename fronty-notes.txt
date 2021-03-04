@@ -16,8 +16,7 @@ TODO
   - Settings
   - Jobs Applied
 * App.tsx - use clsx conditional to use class border or no-border. Will need new context value.
-* Remove border around button "Choose Filter Type"
-
+* Rename showMenu as showFilterTypeMenu
 
 NOTE: if node_modules folder is deleted, then restore with these commands
 npm install react-scripts

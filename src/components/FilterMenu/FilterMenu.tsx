@@ -19,12 +19,7 @@ const FilterMenu: FC<Props> = ({ showFilter }) => {
   return (
     <>
       <div className="filter-menu-body">
-        <div className="filter-menu-header">
-          <div>Filter Types</div>
-          <div className="filter-menu-close" onClick={() => setShowMenu(false)}>
-            <CloseIcon />
-          </div>
-        </div>
+        <div className="filter-menu-header">Filter Types</div>
         <ul>
           {filterData.map((filter, index) => (
             <li key={index} onClick={() => showFilter(index)}>
