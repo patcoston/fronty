@@ -14,7 +14,6 @@ TODO
   - Profile
   - Settings
   - Jobs Applied
-* Rename showMenu as showFilterTypeMenu
 
 NOTE: if node_modules folder is deleted, then restore with these commands
 npm install react-scripts

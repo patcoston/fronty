@@ -2,8 +2,8 @@ import { createContext, FC, useState, useContext } from "react"
 import { IFilters } from "../utils/interfaces"
 
 export interface Store {
-  showMenu: boolean
-  setShowMenu: (show: boolean) => void
+  showFilterTypeMenu: boolean
+  setShowFilterTypeMenu: (show: boolean) => void
   showFilters: boolean
   setShowFilters: (show: boolean) => void
   showActiveFilters: boolean
@@ -23,7 +23,7 @@ export const StoreContext = createContext({} as Store)
 export const useStore = () => useContext<Store>(StoreContext)
 
 const StoreProvider: FC = ({ children }) => {
-  const [showMenu, setShowMenu] = useState<boolean>(true)
+  const [showFilterTypeMenu, setShowFilterTypeMenu] = useState<boolean>(true)
   const [showFilters, setShowFilters] = useState<boolean>(false)
   const [showActiveFilters, setShowActiveFilters] = useState<boolean>(false)
   const [activeFilters, setActiveFilters] = useState<IFilters>({})
@@ -31,8 +31,8 @@ const StoreProvider: FC = ({ children }) => {
   const [showJobCompany, setShowJobCompany] = useState<string>("")
   const [showJobSkills, setShowJobSkills] = useState<string>("")
   const store: Store = {
-    showMenu,
-    setShowMenu,
+    showFilterTypeMenu,
+    setShowFilterTypeMenu,
     showFilters,
     setShowFilters,
     showActiveFilters,

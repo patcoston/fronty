@@ -22,27 +22,27 @@ const Home: FC = () => {
   const [list, setList] = useState<Array<string>>([])
   const [label, setLabel] = useState<string>("")
   const {
-    setShowMenu,
+    setShowFilterTypeMenu,
     setShowActiveFilters,
     setShowResults,
     setShowFilters,
-    showMenu,
+    showFilterTypeMenu,
     showFilters,
   } = useStore()
 
-  if (!showMenu && !showFilters) {
-    setShowMenu(true)
+  if (!showFilterTypeMenu && !showFilters) {
+    setShowFilterTypeMenu(true)
   }
 
   const showFilter = (showIndex: number) => {
-    setShowMenu(false)
+    setShowFilterTypeMenu(false)
     setShowActiveFilters(true)
     setShowResults(true)
     setShowFilters(false)
 
     switch (showIndex) {
       case showType.SHOW_MENU:
-        setShowMenu(true)
+        setShowFilterTypeMenu(true)
         break
       default:
         setShowFilters(true)
@@ -55,7 +55,7 @@ const Home: FC = () => {
   return (
     <>
       <div className="home">
-        {showMenu && <FilterMenu showFilter={showFilter} />}
+        {showFilterTypeMenu && <FilterMenu showFilter={showFilter} />}
         {showFilters && (
           <FilterChoose showFilter={showFilter} list={list} label={label} />
         )}
