@@ -4,6 +4,12 @@ import Hamburger from "../../svg/hamburger"
 import * as path from "../../utils/constants"
 import "./Header.css"
 
+/**
+ * Header
+ * Used By: App
+ * Purpose: Displays the header
+ */
+
 const Header: FC = () => {
   return (
     <>

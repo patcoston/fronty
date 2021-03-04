@@ -1,10 +1,16 @@
 import { FC } from "react"
 import "./Terms.css"
 
+/**
+ * Terms of Agreement
+ * Used By: Routes
+ * Purpose: Displays the terms of agreement
+ */
+
 const Terms: FC = () => {
   return (
     <div className="terms">
-      <h3>Terms:</h3>
+      <h3>Terms of Agreement:</h3>
       <section>MIT License</section>
       <section>Copyright (c) 2021 Patrick Coston</section>
       <section>

@@ -4,6 +4,12 @@ import { IFilters } from "../../utils/interfaces"
 import CloseIcon from "../../svg/closeicon"
 import "./ShowActiveFilters.css"
 
+/**
+ * Show Active Filters
+ * Used By: Home
+ * Purpose: Displays the filters which are currently active
+ */
+
 const ShowFilters: FC = () => {
   const { activeFilters, setActiveFilters } = useStore()
   const activeFilterArray = Object.entries(activeFilters)

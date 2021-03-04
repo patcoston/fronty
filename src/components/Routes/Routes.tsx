@@ -17,6 +17,12 @@ import NotFound from "../NotFound/NotFound"
 import { Switch, Route, Redirect } from "react-router-dom"
 import * as path from "../../utils/constants"
 
+/**
+ * Routes
+ * Used By: App
+ * Purpose: Router which decides which page to render based on path
+ */
+
 const Routes: FC = () => {
   return (
     <Switch>

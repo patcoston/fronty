@@ -7,6 +7,12 @@ import * as showType from "../../utils/constants"
 import CloseIcon from "../../svg/closeicon"
 import "./ShowJob.css"
 
+/**
+ * Show Job
+ * Used By: Routes
+ * Purpose: Displays the features and contact info for a job
+ */
+
 const ShowJob: FC = () => {
   const { showJobCompany, showJobSkills } = useStore()
   const history = useHistory()

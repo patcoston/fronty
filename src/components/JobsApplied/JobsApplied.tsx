@@ -1,6 +1,12 @@
 import { FC } from "react"
 import "./JobsApplied.css"
 
+/**
+ * Jobs Applied
+ * Used By: Routes
+ * Purpose: Displays the jobs the user has applied
+ */
+
 const JobsApplied: FC = () => {
   return (
     <div className="jobs-applied">

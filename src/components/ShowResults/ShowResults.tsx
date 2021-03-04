@@ -6,6 +6,12 @@ import { rand } from "../../utils/tools"
 import * as constant from "../../utils/constants"
 import "./ShowResults.css"
 
+/**
+ * Show Results
+ * Used By: Home
+ * Purpose: Displays the results when the user sets an active filter
+ */
+
 const getSkills = () => {
   const skills: Array<string> = []
   const len: number = filterData[constant.SHOW_FILTER_TECH_STACK].list.length

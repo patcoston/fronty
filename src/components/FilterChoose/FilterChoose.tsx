@@ -5,6 +5,12 @@ import { TFilters } from "../../utils/types"
 import CloseIcon from "../../svg/closeicon"
 import "./FilterChoose.css"
 
+/**
+ * Filter Choose
+ * Used By: Home
+ * Purpose: Choose a filter based on which Filter Type (from FilterMenu) was chosen
+ */
+
 interface Props {
   list: Array<string>
   label: string

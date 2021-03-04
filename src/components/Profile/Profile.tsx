@@ -1,6 +1,12 @@
 import { FC } from "react"
 import "./Profile.css"
 
+/**
+ * Profile
+ * Used By: Routes
+ * Purpose: Displays the Profile page
+ */
+
 const Profile: FC = () => {
   return (
     <div className="profile">

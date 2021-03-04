@@ -4,6 +4,12 @@ import { useStore } from "../../store/StoreProvider"
 import CloseIcon from "../../svg/closeicon"
 import "./FilterMenu.css"
 
+/**
+ * Filter Menu
+ * Used By: Home
+ * Purpose: Choose a filter type
+ */
+
 interface Props {
   showFilter(arg: number): void
 }

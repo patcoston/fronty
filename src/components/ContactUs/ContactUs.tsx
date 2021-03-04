@@ -1,6 +1,12 @@
 import { FC } from "react"
 import "./ContactUs.css"
 
+/**
+ * Contact Us
+ * Used By: Routes
+ * Purpose: Displays the Contact Us page
+ */
+
 const ContactUs: FC = () => {
   return (
     <div className="contact-us">

@@ -1,6 +1,12 @@
 import { FC } from "react"
 import "./FAQs.css"
 
+/**
+ * Frequently Asked Questions
+ * Used By: Routes
+ * Purpose: Displays the FAQs
+ */
+
 const FAQs: FC = () => {
   return (
     <div className="faqs">

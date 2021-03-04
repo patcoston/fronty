@@ -8,6 +8,16 @@ import filterData from "../../data/filter-data"
 import * as showType from "../../utils/constants"
 import "./Home.css"
 
+/**
+ * Home
+ * Used By: Routes
+ * Purpose: Displays the Home page which includes
+ * - Filter types menu
+ * - Filters menu
+ * - Active filters
+ * - Results
+ */
+
 const Home: FC = () => {
   const [list, setList] = useState<Array<string>>([])
   const [label, setLabel] = useState<string>("")

@@ -3,6 +3,12 @@ import { Link } from "react-router-dom"
 import * as path from "../../utils/constants"
 import "./Footer.css"
 
+/**
+ * Footer
+ * Used By: App
+ * Purpose: Displays the footer
+ */
+
 const Footer: FC = () => {
   return (
     <>

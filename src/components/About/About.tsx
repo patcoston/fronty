@@ -1,6 +1,12 @@
 import { FC } from "react"
 import "./About.css"
 
+/**
+ * About Fronty
+ * Used By: Routes
+ * Purpose: Displays the About page
+ */
+
 const About: FC = () => {
   return (
     <div className="about">
