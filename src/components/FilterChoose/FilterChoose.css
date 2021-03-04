@@ -1,3 +1,12 @@
+.filter-choose-button {
+  padding: 0 5px;
+  margin: 0;
+}
+
+.filter-choose-button button {
+  width: 100%;
+}
+
 .filter-choose-body {
   display: flex;
   flex-direction: column;
