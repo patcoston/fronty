@@ -32,7 +32,6 @@ const FilterChoose: FC<Props> = ({ showFilter, list, label }) => {
       filters.push(collection[i].label)
     }
     const newActiveFilters: IFilters = { ...activeFilters, [label]: filters }
-    //console.log(Object.entries(newActiveFilters))
     setActiveFilters(newActiveFilters)
   }
 

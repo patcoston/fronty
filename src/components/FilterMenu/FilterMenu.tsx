@@ -1,7 +1,5 @@
 import { FC } from "react"
 import filterData from "../../data/filter-data"
-import { useStore } from "../../store/StoreProvider"
-import CloseIcon from "../../svg/closeicon"
 import "./FilterMenu.css"
 
 /**
@@ -15,7 +13,6 @@ interface Props {
 }
 
 const FilterMenu: FC<Props> = ({ showFilter }) => {
-  const { setShowMenu } = useStore()
   return (
     <>
       <div className="filter-menu-body">

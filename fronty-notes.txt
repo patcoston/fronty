@@ -1,5 +1,4 @@
 TODO
-* Refactor border: 1px solid black; into global border class
 * Results should only re-render when active filters change
 * Array of FilterChoose so selected values are remembered?
 * Ability to set NOT on any filter value
@@ -15,7 +14,6 @@ TODO
   - Profile
   - Settings
   - Jobs Applied
-* App.tsx - use clsx conditional to use class border or no-border. Will need new context value.
 * Rename showMenu as showFilterTypeMenu
 
 NOTE: if node_modules folder is deleted, then restore with these commands
