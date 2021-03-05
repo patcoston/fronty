@@ -1,9 +1,34 @@
 import * as showType from "../utils/constants"
+import axios from "axios"
 
 interface IData {
-  list: Array<string>
   label: string
+  list: Array<string>
 }
+/*
+const getTechStack = async (): Promise<IData> => {
+  const response = await axios.get(
+    `http://patcoston.com/portfolio/data/techstack.js`,
+  )
+  console.log(response.data)
+  return response.data
+}
+
+const testAxios = async (): Promise<IData> => {
+  const techStack = await getTechStack()
+  console.log(techStack)
+  return techStack
+}
+
+const test = testAxios()
+
+console.log(test)
+
+axios.get("http://patcoston.com/portfolio/data/techstack.js").then(response => {
+  console.log(response.data)
+  //filterData[showType.SHOW_FILTER_TECH_STACK] = response.data
+})
+*/
 
 const filterData: Array<IData> = []
 

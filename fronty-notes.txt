@@ -65,3 +65,7 @@ https://www.npmjs.com/package/clsx
 npm install axios
 https://www.npmjs.com/package/axios
 
+3 ways t ofix CORS error
+https://medium.com/@dtkatz/3-ways-to-fix-the-cors-error-and-how-access-control-allow-origin-works-d97d55946d9
+Chrome extension
+https://chrome.google.com/webstore/detail/moesif-orign-cors-changer/digfbfaphojjndkpccljibejjbppifbc?hl=en-US
