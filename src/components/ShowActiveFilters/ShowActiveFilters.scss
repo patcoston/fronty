@@ -10,6 +10,11 @@
     flex-direction: column;
     align-items: flex-start;
 
+    section {
+      padding: 0;
+      margin: 0;
+    }
+
     .show-active-filters-close {
       padding: 0;
       margin: 0 5px 0 0;
