@@ -25,16 +25,7 @@ const getSkills = () => {
 }
 
 const ShowResults: FC = () => {
-  const {
-    showResults,
-    activeFilters,
-    setShowFilters,
-    setShowJobCompany,
-    setShowJobSkills,
-  } = useStore()
-  const activeFilterArray = Object.entries(activeFilters)
-  const filtersToShow: boolean = activeFilterArray.length > 0
-  const show: boolean = showResults && filtersToShow
+  const { setShowFilters, setShowJobCompany, setShowJobSkills } = useStore()
   const companyIndex: Array<number> = []
   const companySkills: Array<string> = []
   const len: number = filterData[constant.SHOW_FILTER_COMPANY].list.length
@@ -74,36 +65,32 @@ const ShowResults: FC = () => {
   }
 
   return (
-    <>
-      {show && (
-        <section className="show-results">
-          <h3>Results</h3>
-          <div className="show-results-body">
-            {companyIndex.map((company, index) => (
-              <section key={index} onClick={() => handleClickJob(index)}>
-                <strong>
-                  {filterData[constant.SHOW_FILTER_COMPANY].list[company]}:
-                </strong>{" "}
-                {companySkills[index]}
-              </section>
+    <section className="show-results">
+      <h3>Results</h3>
+      <div className="show-results-body">
+        {companyIndex.map((company, index) => (
+          <section key={index} onClick={() => handleClickJob(index)}>
+            <strong>
+              {filterData[constant.SHOW_FILTER_COMPANY].list[company]}:
+            </strong>{" "}
+            {companySkills[index]}
+          </section>
+        ))}
+        <div className="show-results-next">
+          <ul>
+            {next.map((val, index) => (
+              <li
+                key={index}
+                onClick={() => handleSelectNext(index)}
+                className={val.selected}
+              >
+                {val.label}
+              </li>
             ))}
-            <div className="show-results-next">
-              <ul>
-                {next.map((val, index) => (
-                  <li
-                    key={index}
-                    onClick={() => handleSelectNext(index)}
-                    className={val.selected}
-                  >
-                    {val.label}
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </div>
-        </section>
-      )}
-    </>
+          </ul>
+        </div>
+      </div>
+    </section>
   )
 }
 

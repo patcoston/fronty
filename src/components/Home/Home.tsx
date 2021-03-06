@@ -2,10 +2,10 @@ import { FC, useState } from "react"
 import FilterMenu from "../FilterMenu/FilterMenu"
 import FilterChoose from "../FilterChoose/FilterChoose"
 import ShowActiveFilters from "../ShowActiveFilters/ShowActiveFilters"
-import ShowResults from "../ShowResults/ShowResults"
 import { useStore } from "../../store/StoreProvider"
 import filterData from "../../data/filter-data"
 import * as showType from "../../utils/constants"
+import { TObjectEntries } from "../../utils/types"
 import "./Home.scss"
 
 /**
@@ -28,7 +28,12 @@ const Home: FC = () => {
     setShowFilters,
     showFilterTypeMenu,
     showFilters,
+    showResults,
+    activeFilters,
   } = useStore()
+
+  const activeFilterArray: TObjectEntries = Object.entries(activeFilters)
+  const show: boolean = showResults && activeFilterArray.length > 0
 
   if (!showFilterTypeMenu && !showFilters) {
     setShowFilterTypeMenu(true)
@@ -61,8 +66,7 @@ const Home: FC = () => {
         )}
       </div>
       <div className="home-body">
-        <ShowActiveFilters />
-        <ShowResults />
+        {show && <ShowActiveFilters activeFilterArray={activeFilterArray} />}
       </div>
     </div>
   )
