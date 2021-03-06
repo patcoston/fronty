@@ -1,5 +1,4 @@
 import { FC } from "react"
-import "./JobsAtFronty.scss"
 
 /**
  * Jobs at Fronty
