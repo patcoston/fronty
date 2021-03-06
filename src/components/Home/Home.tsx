@@ -53,16 +53,18 @@ const Home: FC = () => {
   }
 
   return (
-    <>
-      <div className="home">
+    <div className="home">
+      <div className="home-header">
         {showFilterTypeMenu && <FilterMenu showFilter={showFilter} />}
         {showFilters && (
           <FilterChoose showFilter={showFilter} list={list} label={label} />
         )}
       </div>
-      <ShowActiveFilters />
-      <ShowResults />
-    </>
+      <div className="home-body">
+        <ShowActiveFilters />
+        <ShowResults />
+      </div>
+    </div>
   )
 }
 

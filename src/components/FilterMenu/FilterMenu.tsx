@@ -14,20 +14,18 @@ interface Props {
 
 const FilterMenu: FC<Props> = ({ showFilter }) => {
   return (
-    <>
-      <div className="filter-menu">
-        <div className="filter-menu-body">
-          <div className="filter-menu-header">Filter Types</div>
-          <ul>
-            {filterData.map((filter, index) => (
-              <li key={index} onClick={() => showFilter(index)}>
-                {filter.label}
-              </li>
-            ))}
-          </ul>
-        </div>
+    <div className="filter-menu">
+      <div className="filter-menu-body">
+        <div className="filter-menu-header">Filter Types</div>
+        <ul>
+          {filterData.map((filter, index) => (
+            <li key={index} onClick={() => showFilter(index)}>
+              {filter.label}
+            </li>
+          ))}
+        </ul>
       </div>
-    </>
+    </div>
   )
 }
 

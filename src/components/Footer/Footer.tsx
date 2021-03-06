@@ -11,31 +11,29 @@ import "./Footer.scss"
 
 const Footer: FC = () => {
   return (
-    <>
-      <div className="footer">
-        <ul>
-          <li>&#169; 2021 Fronty</li>
-          <li>
-            <Link to={path.PATH_TERMS}>Terms</Link>
-          </li>
-          <li>
-            <Link to={path.PATH_COOKIES}>Cookies</Link>
-          </li>
-          <li>
-            <Link to={path.PATH_PRIVACY}>Privacy</Link>
-          </li>
-          <li>
-            <Link to={path.PATH_JOBS}>Jobs</Link>
-          </li>
-          <li>
-            <Link to={path.PATH_FAQS}>FAQs</Link>
-          </li>
-          <li>
-            <Link to={path.PATH_ABOUT}>About</Link>
-          </li>
-        </ul>
-      </div>
-    </>
+    <div className="footer">
+      <ul>
+        <li>&#169; 2021 Fronty</li>
+        <li>
+          <Link to={path.PATH_TERMS}>Terms</Link>
+        </li>
+        <li>
+          <Link to={path.PATH_COOKIES}>Cookies</Link>
+        </li>
+        <li>
+          <Link to={path.PATH_PRIVACY}>Privacy</Link>
+        </li>
+        <li>
+          <Link to={path.PATH_JOBS}>Jobs</Link>
+        </li>
+        <li>
+          <Link to={path.PATH_FAQS}>FAQs</Link>
+        </li>
+        <li>
+          <Link to={path.PATH_ABOUT}>About</Link>
+        </li>
+      </ul>
+    </div>
   )
 }
 

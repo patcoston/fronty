@@ -36,39 +36,37 @@ const FilterChoose: FC<Props> = ({ showFilter, list, label }) => {
   }
 
   return (
-    <>
-      <div className="filter-choose">
-        <div className="filter-choose-button">
-          <button onClick={() => showFilter(SHOW_MENU)}>
-            Choose Filter Type
-          </button>
-        </div>
-        <div className="filter-choose-body">
-          <div className="filter-choose-header">
-            <div>Filter on {label}</div>
-            <div
-              className="filter-choose-close"
-              onClick={() => setShowFilters(false)}
-            >
-              <CloseIcon />
-            </div>
-          </div>
-          <select
-            id="filter-choose"
-            className="filter-choose-list"
-            multiple
-            size={size}
-            onChange={handleChange}
-          >
-            {list.map((val, index) => (
-              <option key={index} value={val}>
-                {val}
-              </option>
-            ))}
-          </select>
-        </div>
+    <div className="filter-choose">
+      <div className="filter-choose-button">
+        <button onClick={() => showFilter(SHOW_MENU)}>
+          Choose Filter Type
+        </button>
       </div>
-    </>
+      <div className="filter-choose-body">
+        <div className="filter-choose-header">
+          <div>Filter on {label}</div>
+          <div
+            className="filter-choose-close"
+            onClick={() => setShowFilters(false)}
+          >
+            <CloseIcon />
+          </div>
+        </div>
+        <select
+          id="filter-choose"
+          className="filter-choose-list"
+          multiple
+          size={size}
+          onChange={handleChange}
+        >
+          {list.map((val, index) => (
+            <option key={index} value={val}>
+              {val}
+            </option>
+          ))}
+        </select>
+      </div>
+    </div>
   )
 }
 

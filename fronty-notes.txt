@@ -16,7 +16,10 @@ TODO
 * Bug: Loses contents of Filter On menu when visiting other pages
 * SCSS variables
 * Mixins for border style?
-
+* Standardize: Hiding/Showing a component using {show && <Component />} should occur outside the component
+  - ShowActiveFilters should show in Home
+  - ShowResults should show in Home
+* Too much space around Filters/Results and under Next buttons
 
 NOTE: if node_modules folder is deleted, then restore with these commands
 npm install react-scripts
