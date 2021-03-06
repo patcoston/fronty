@@ -11,7 +11,9 @@ const Settings: FC = () => {
   return (
     <div className="settings">
       <h3>Settings:</h3>
-      <section>Your settings will be here</section>
+      <section>
+        Your settings will allow you to change your email and password.
+      </section>
     </div>
   )
 }

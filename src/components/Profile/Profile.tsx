@@ -12,8 +12,8 @@ const Profile: FC = () => {
     <div className="profile">
       <h3>Profile:</h3>
       <section>
-        Profile will include your address so we can calulcate commute distance
-        and time since every job has the address where you will work.
+        Profile will include your home address so we can calulcate commute
+        distance and time since every job has the address where you will work.
       </section>
     </div>
   )

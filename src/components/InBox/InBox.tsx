@@ -8,7 +8,12 @@ import "./InBox.scss"
  */
 
 const Inbox: FC = () => {
-  return <div className="inbox">Inbox</div>
+  return (
+    <div className="inbox">
+      <h3>Inbox:</h3>
+      <section>This is your inbox</section>
+    </div>
+  )
 }
 
 export default Inbox

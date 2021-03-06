@@ -10,7 +10,7 @@ import "./FAQs.scss"
 const FAQs: FC = () => {
   return (
     <div className="faqs">
-      <h3>Frequently Asked Questions</h3>
+      <h3>Frequently Asked Questions:</h3>
       <section>
         <div>
           <strong>Question:</strong> What tech was used to build this?
