@@ -39,12 +39,14 @@ const FilterChoose: FC<Props> = ({ showFilter, list, label }) => {
     <div className="filter-choose">
       <div className="filter-choose-button">
         <button onClick={() => showFilter(SHOW_MENU)}>
-          Choose Filter Type
+          Choose a Filter Type
         </button>
       </div>
       <div className="filter-choose-body">
         <div className="filter-choose-header">
-          <div>Filter on {label}</div>
+          <div>
+            <strong>Filter:</strong> {label} (choose one or more)
+          </div>
           <div
             className="filter-choose-close"
             onClick={() => setShowFilters(false)}

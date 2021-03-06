@@ -17,7 +17,7 @@ const FilterMenu: FC<Props> = ({ showFilter }) => {
   return (
     <div className="filter-menu">
       <div className={clsx("filter-menu-body", "border")}>
-        <div className="filter-menu-header">Filter Types</div>
+        <div className="filter-menu-header">Choose a Filter Type</div>
         <ul>
           {filterData.map((filter, index) => (
             <li key={index} onClick={() => showFilter(index)}>
