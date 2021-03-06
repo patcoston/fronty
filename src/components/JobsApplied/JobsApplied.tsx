@@ -10,7 +10,8 @@ import "./JobsApplied.scss"
 const JobsApplied: FC = () => {
   return (
     <div className="jobs-applied">
-      This will list the status of the jobs you applied
+      <h3>Jobs Applied:</h3>
+      <section>This will list the status of the jobs you applied</section>
     </div>
   )
 }

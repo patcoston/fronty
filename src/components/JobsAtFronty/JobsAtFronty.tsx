@@ -9,7 +9,10 @@ import "./JobsAtFronty.scss"
 
 const JobsAtFronty: FC = () => {
   return (
-    <div className="jobs">No jobs at Fronty currently. Check back later.</div>
+    <div className="jobs">
+      <h3>Jobs at Fronty:</h3>
+      <section>No jobs at Fronty currently. Check back later.</section>
+    </div>
   )
 }
 

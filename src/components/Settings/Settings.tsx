@@ -8,7 +8,12 @@ import "./Settings.scss"
  */
 
 const Settings: FC = () => {
-  return <div className="settings">Settings</div>
+  return (
+    <div className="settings">
+      <h3>Settings:</h3>
+      <section>Your settings will be here</section>
+    </div>
+  )
 }
 
 export default Settings

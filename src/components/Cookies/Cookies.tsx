@@ -8,7 +8,12 @@ import "./Cookies.scss"
  */
 
 const Cookies: FC = () => {
-  return <div className="cookies">This website does not use cookies</div>
+  return (
+    <div className="cookies">
+      <h3>Cookies:</h3>
+      <section>This website does not use cookies</section>
+    </div>
+  )
 }
 
 export default Cookies

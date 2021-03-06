@@ -8,7 +8,12 @@ import "./Privacy.scss"
  */
 
 const Privacy: FC = () => {
-  return <div className="privacy">No data is stored.</div>
+  return (
+    <div className="privacy">
+      <h3>Privacy:</h3>
+      <section>No data is stored.</section>
+    </div>
+  )
 }
 
 export default Privacy

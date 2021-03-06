@@ -8,7 +8,12 @@ import "./Help.scss"
  */
 
 const Help: FC = () => {
-  return <div className="help">Help</div>
+  return (
+    <div className="help">
+      <h3>Help:</h3>
+      <section>This is the Help section</section>
+    </div>
+  )
 }
 
 export default Help

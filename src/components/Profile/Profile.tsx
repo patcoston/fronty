@@ -10,8 +10,11 @@ import "./Profile.scss"
 const Profile: FC = () => {
   return (
     <div className="profile">
-      Profile will include your address so we can calulcate commute distance and
-      time since every job has the address where you will work.
+      <h3>Profile:</h3>
+      <section>
+        Profile will include your address so we can calulcate commute distance
+        and time since every job has the address where you will work.
+      </section>
     </div>
   )
 }
