@@ -1,0 +1,47 @@
+.filter-choose {
+  padding: 0;
+  margin: 0;
+  border: 0;
+
+  .filter-choose-button {
+    padding: 0 5px;
+    margin: 0;
+  }
+
+  .filter-choose-button button {
+    width: 100%;
+  }
+
+  .filter-choose-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0;
+  }
+
+  .filter-choose-body option {
+    font-size: 13px;
+  }
+
+  .filter-choose-header {
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+    margin: 0 0 3px 0;
+  }
+
+  .filter-choose-header div {
+    padding: 0;
+    margin: 0 5px 0 0;
+  }
+
+  .filter-choose-close {
+    cursor: pointer;
+    margin-right: 5px;
+  }
+
+  .filter-choose-body option:hover {
+    cursor: pointer;
+    background-color: #eee;
+  }
+}

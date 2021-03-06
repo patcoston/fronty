@@ -1,5 +1,5 @@
 import { FC } from "react"
-import "./NotFound.css"
+import "./NotFound.scss"
 
 /**
  * Not Found

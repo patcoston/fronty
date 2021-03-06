@@ -1,5 +1,5 @@
 import { FC } from "react"
-import "./Settings.css"
+import "./Settings.scss"
 
 /**
  * Settings

@@ -6,7 +6,7 @@ import ShowResults from "../ShowResults/ShowResults"
 import { useStore } from "../../store/StoreProvider"
 import filterData from "../../data/filter-data"
 import * as showType from "../../utils/constants"
-import "./Home.css"
+import "./Home.scss"
 
 /**
  * Home

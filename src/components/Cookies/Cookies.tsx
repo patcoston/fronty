@@ -1,5 +1,5 @@
 import { FC } from "react"
-import "./Cookies.css"
+import "./Cookies.scss"
 
 /**
  * Cookies

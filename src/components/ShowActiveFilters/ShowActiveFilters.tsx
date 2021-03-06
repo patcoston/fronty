@@ -3,7 +3,7 @@ import { useStore } from "../../store/StoreProvider"
 import { IFilters } from "../../utils/interfaces"
 import CloseIcon from "../../svg/closeicon"
 import clsx from "clsx"
-import "./ShowActiveFilters.css"
+import "./ShowActiveFilters.scss"
 
 /**
  * Show Active Filters
@@ -26,14 +26,14 @@ const ShowActiveFilters: FC = () => {
   return (
     <>
       {show && (
-        <section className="show-active-filters-wrapper">
+        <section className="show-active-filters">
           <h3>Filters</h3>
-          <div className={clsx("show-active-filters", "border")}>
+          <div className={clsx("show-active-filters-body", "border")}>
             {activeFilterArray.map((filter, index) => {
               return (
                 <section key={index}>
                   <span
-                    className="show-active-close"
+                    className="show-active-filters-close"
                     onClick={() => handleDelete(filter[0])}
                   >
                     <CloseIcon />

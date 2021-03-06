@@ -1,7 +1,7 @@
 import { FC } from "react"
 import { Link } from "react-router-dom"
 import * as path from "../../utils/constants"
-import "./Footer.css"
+import "./Footer.scss"
 
 /**
  * Footer

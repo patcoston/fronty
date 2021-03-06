@@ -2,8 +2,6 @@ TODO
 * Results should only re-render when active filters change
 * Array of FilterChoose so selected values are remembered?
 * Ability to set NOT on any filter value
-* Refactor CSS to SCSS
-  https://www.sitepoint.com/react-components-styling-options/
 * Remove Duplicates
   - Skills
   - Benefits
@@ -16,6 +14,8 @@ TODO
   - Jobs Applied
 * Hide Hamburger menu when clicked
 * Bug: Loses contents of Filter On menu when visiting other pages
+* SCSS variables
+* Mixins for border style?
 
 
 NOTE: if node_modules folder is deleted, then restore with these commands
@@ -69,3 +69,9 @@ https://www.npmjs.com/package/axios
 https://medium.com/@dtkatz/3-ways-to-fix-the-cors-error-and-how-access-control-allow-origin-works-d97d55946d9
 Chrome extension
 https://chrome.google.com/webstore/detail/moesif-orign-cors-changer/digfbfaphojjndkpccljibejjbppifbc?hl=en-US
+
+
+npm install node-sass --save
+https://www.npmjs.com/package/node-sass
+https://sass-lang.com/
+https://www.sitepoint.com/react-components-styling-options/

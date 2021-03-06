@@ -3,7 +3,7 @@ import { Link } from "react-router-dom"
 import Hamburger from "../../svg/hamburger"
 import * as path from "../../utils/constants"
 import clsx from "clsx"
-import "./Header.css"
+import "./Header.scss"
 
 /**
  * Header

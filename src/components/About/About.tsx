@@ -1,5 +1,5 @@
 import { FC } from "react"
-import "./About.css"
+import "./About.scss"
 
 /**
  * About Fronty

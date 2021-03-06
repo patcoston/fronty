@@ -5,7 +5,7 @@ import filterData from "../../data/filter-data"
 import { rand } from "../../utils/tools"
 import * as showType from "../../utils/constants"
 import CloseIcon from "../../svg/closeicon"
-import "./ShowJob.css"
+import "./ShowJob.scss"
 
 /**
  * Show Job

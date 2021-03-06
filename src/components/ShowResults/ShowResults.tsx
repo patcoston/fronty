@@ -4,7 +4,7 @@ import { useHistory } from "react-router-dom"
 import filterData from "../../data/filter-data"
 import { rand } from "../../utils/tools"
 import * as constant from "../../utils/constants"
-import "./ShowResults.css"
+import "./ShowResults.scss"
 
 /**
  * Show Results
@@ -76,9 +76,9 @@ const ShowResults: FC = () => {
   return (
     <>
       {show && (
-        <section className="show-results-wrapper">
+        <section className="show-results">
           <h3>Results</h3>
-          <div className="show-results">
+          <div className="show-results-body">
             {companyIndex.map((company, index) => (
               <section key={index} onClick={() => handleClickJob(index)}>
                 <strong>

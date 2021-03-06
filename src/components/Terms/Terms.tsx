@@ -1,5 +1,5 @@
 import { FC } from "react"
-import "./Terms.css"
+import "./Terms.scss"
 
 /**
  * Terms of Agreement

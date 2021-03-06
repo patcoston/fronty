@@ -1,5 +1,5 @@
 import { FC } from "react"
-import "./Help.css"
+import "./Help.scss"
 
 /**
  * Help

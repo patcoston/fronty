@@ -1,5 +1,5 @@
 import { FC } from "react"
-import "./Privacy.css"
+import "./Privacy.scss"
 
 /**
  * Privacy

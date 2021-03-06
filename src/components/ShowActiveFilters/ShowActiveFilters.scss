@@ -1,0 +1,16 @@
+.show-active-filters {
+  h3 {
+    margin-left: 5px;
+  }
+  .show-active-filters-body {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    .show-active-filters-close {
+      padding: 0;
+      margin: 0 5px 0 0;
+      cursor: pointer;
+    }
+  }
+}
