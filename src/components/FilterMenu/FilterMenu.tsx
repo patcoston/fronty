@@ -1,5 +1,6 @@
 import { FC } from "react"
 import filterData from "../../data/filter-data"
+import clsx from "clsx"
 import "./FilterMenu.scss"
 
 /**
@@ -15,7 +16,7 @@ interface Props {
 const FilterMenu: FC<Props> = ({ showFilter }) => {
   return (
     <div className="filter-menu">
-      <div className="filter-menu-body">
+      <div className={clsx("filter-menu-body", "border")}>
         <div className="filter-menu-header">Filter Types</div>
         <ul>
           {filterData.map((filter, index) => (

@@ -69,7 +69,11 @@ const ShowResults: FC = () => {
       <h3>Results</h3>
       <div className="show-results-body">
         {companyIndex.map((company, index) => (
-          <section key={index} onClick={() => handleClickJob(index)}>
+          <section
+            key={index}
+            onClick={() => handleClickJob(index)}
+            className="border"
+          >
             <strong>
               {filterData[constant.SHOW_FILTER_COMPANY].list[company]}:
             </strong>{" "}

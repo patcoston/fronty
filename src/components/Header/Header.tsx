@@ -20,7 +20,7 @@ const Header: FC = () => {
       <div className="hamburger">
         <Hamburger />
         <div className="header-dropdown-wrapper">
-          <div className="header-dropdown">
+          <div className={clsx("header-dropdown", "border")}>
             <ul>
               <li>
                 <Link to={path.PATH_INBOX}>
