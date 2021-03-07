@@ -11,8 +11,16 @@ const Profile: FC = () => {
     <div className="profile">
       <h3>Profile:</h3>
       <section>
-        Profile will include your home address so we can calulcate commute
-        distance and time since every job has the address where you will work.
+        <button>Change</button>
+        <strong> Address: </strong> Zzyzx Road, Seattle, WA 98112-2735
+      </section>
+      <section>
+        <button>Change</button>
+        <strong> Email: </strong> johnsmith@gmail.com
+      </section>
+      <section>
+        <button>Change</button>
+        <strong> Password: </strong> ***********
       </section>
     </div>
   )

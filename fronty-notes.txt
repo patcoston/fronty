@@ -6,15 +6,10 @@ TODO
   - Skills
   - Benefits
 * Dynamically load JSON via Axios calls and async/await
-* Add content to
-  - Privacy
-  - Inbox
-  - Profile
-  - Settings
-  - Jobs Applied
 * Bug: Loses contents of Filter On menu when visiting other pages
 * SCSS variables
 * Mixins for border style?
+* Add SSL
 
 
 
