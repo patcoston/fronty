@@ -41,7 +41,7 @@ const ShowActiveFilters: FC<Props> = ({ activeFilterArray }) => {
 
   return (
     <div className="show-active-filters">
-      <h3>Filters</h3>
+      <strong>Current Filters: </strong> Click to toggle NOT filter
       <div className={clsx("show-active-filters-body", "border")}>
         {activeFilterArray.map((filter, indexArray) => {
           console.log(filter)

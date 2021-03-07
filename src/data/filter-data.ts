@@ -23,14 +23,18 @@ const testAxios = async (): Promise<IData> => {
 const test = testAxios()
 
 console.log(test)
-
-axios.get("http://patcoston.com/portfolio/data/techstack.js").then(response => {
-  console.log(response.data)
-  //filterData[showType.SHOW_FILTER_TECH_STACK] = response.data
-})
 */
 
 const filterData: Array<IData> = []
+
+/*
+axios
+  .get("http://patcoston.com/portfolio/data/techstack.json")
+  .then(response => {
+    console.log(response.data)
+    filterData[showType.SHOW_FILTER_TECH_STACK] = response.data
+  })
+*/
 
 filterData[showType.SHOW_FILTER_TECH_STACK] = {
   label: "Tech Stack",
