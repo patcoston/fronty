@@ -24,7 +24,6 @@ const Home: FC = () => {
   const [label, setLabel] = useState<string>("")
   const {
     setShowFilterTypeMenu,
-    setShowActiveFilters,
     setShowResults,
     showFilterTypeMenu,
     showResults,
@@ -33,19 +32,14 @@ const Home: FC = () => {
 
   const activeFilterArray: TObjectEntries = Object.entries(activeFilters)
 
-  if (showFilterTypeMenu) {
-    setShowFilterTypeMenu(true)
-  }
-
-  if (activeFilterArray.length === 0) {
-    setShowResults(false)
-  } else {
+  if (activeFilterArray.length) {
     setShowResults(true)
+  } else {
+    setShowResults(false)
   }
 
   const showFilter = (showIndex: number) => {
     setShowFilterTypeMenu(false)
-    setShowActiveFilters(true)
     setShowResults(true)
 
     switch (showIndex) {
