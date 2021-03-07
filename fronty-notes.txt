@@ -1,13 +1,9 @@
 TODO
 * Results should only re-render when active filters change
-* Array of FilterChoose so selected values are remembered?
-* Ability to set NOT on any filter value
 * Remove Duplicates
   - Skills
   - Benefits
 * Dynamically load JSON via Axios calls and async/await
-* SCSS variables
-* Mixins for border style?
 * Add SSL
 
 

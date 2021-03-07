@@ -18,6 +18,7 @@ interface Props {
 
 const ShowActiveFilters: FC<Props> = ({ activeFilterArray }) => {
   const { activeFilters, setActiveFilters } = useStore()
+  console.log(activeFilters)
 
   const handleDelete = (filter: string) => {
     const newActiveFilters: IFilters = { ...activeFilters }
@@ -25,13 +26,27 @@ const ShowActiveFilters: FC<Props> = ({ activeFilterArray }) => {
     setActiveFilters(newActiveFilters)
   }
 
+  const toggleFilter = (label: string, indexFilter: number) => {
+    console.log("toggleFilter")
+    const newActiveFilters: IFilters = { ...activeFilters }
+    let newVal = activeFilters[label][indexFilter]
+    if (newVal.substring(0, 4) === "NOT:") {
+      newVal = activeFilters[label][indexFilter].substring(4) // Remove NOT:
+    } else {
+      newVal = `NOT:${activeFilters[label][indexFilter]}` // Prefix NOT:
+    }
+    newActiveFilters[label][indexFilter] = newVal
+    setActiveFilters(newActiveFilters)
+  }
+
   return (
     <div className="show-active-filters">
       <h3>Filters</h3>
       <div className={clsx("show-active-filters-body", "border")}>
-        {activeFilterArray.map((filter, index) => {
+        {activeFilterArray.map((filter, indexArray) => {
+          console.log(filter)
           return (
-            <section key={index}>
+            <section key={indexArray}>
               <span
                 className="show-active-filters-close"
                 onClick={() => handleDelete(filter[0])}
@@ -39,7 +54,16 @@ const ShowActiveFilters: FC<Props> = ({ activeFilterArray }) => {
                 <CloseIcon />
               </span>
               <strong>{filter[0]}:</strong>{" "}
-              {filter[1].join().replace(/,/g, ", ")}
+              {filter[1].map((val, indexFilter) => {
+                return (
+                  <button
+                    key={indexFilter}
+                    onClick={() => toggleFilter(filter[0], indexFilter)}
+                  >
+                    {val}
+                  </button>
+                )
+              })}
             </section>
           )
         })}
