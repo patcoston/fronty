@@ -34,6 +34,18 @@ const Terms: FC = () => {
         TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
         SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
       </section>
+      <section>
+        The code for this project is on{" "}
+        <a
+          href="https://github.com/patcoston/fronty"
+          className="link"
+          target="_blank"
+          rel="noreferrer"
+        >
+          GitHub
+        </a>
+        .
+      </section>
     </div>
   )
 }
