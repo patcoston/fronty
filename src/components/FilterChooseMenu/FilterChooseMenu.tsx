@@ -19,7 +19,7 @@ interface Props {
 }
 
 const FilterChooseMenu: FC<Props> = ({ showFilter, list, label }) => {
-  const { activeFilters, setActiveFilters, setShowFilters } = useStore()
+  const { activeFilters, setActiveFilters, setShowFilterTypeMenu } = useStore()
   const size = list.length < 21 ? list.length : 20
 
   const handleChange = () => {
@@ -52,7 +52,7 @@ const FilterChooseMenu: FC<Props> = ({ showFilter, list, label }) => {
           </div>
           <div
             className="filter-choose-menu-close"
-            onClick={() => setShowFilters(false)}
+            onClick={() => setShowFilterTypeMenu(true)}
           >
             <CloseIcon />
           </div>

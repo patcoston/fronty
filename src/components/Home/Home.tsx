@@ -2,6 +2,7 @@ import { FC, useState, useEffect } from "react"
 import FilterTypeMenu from "../FilterTypeMenu/FilterTypeMenu"
 import FilterChooseMenu from "../FilterChooseMenu/FilterChooseMenu"
 import ShowActiveFilters from "../ShowActiveFilters/ShowActiveFilters"
+import ShowResults from "../ShowResults/ShowResults"
 import { useStore } from "../../store/StoreProvider"
 import filterData from "../../data/filter-data"
 import * as showType from "../../utils/constants"
@@ -25,32 +26,33 @@ const Home: FC = () => {
     setShowFilterTypeMenu,
     setShowActiveFilters,
     setShowResults,
-    setShowFilters,
     showFilterTypeMenu,
-    showFilterChooseMenu,
     showResults,
     activeFilters,
   } = useStore()
 
   const activeFilterArray: TObjectEntries = Object.entries(activeFilters)
-  const show: boolean = showResults && activeFilterArray.length > 0
 
-  if (!showFilterTypeMenu && !showFilterChooseMenu) {
+  if (showFilterTypeMenu) {
     setShowFilterTypeMenu(true)
+  }
+
+  if (activeFilterArray.length === 0) {
+    setShowResults(false)
+  } else {
+    setShowResults(true)
   }
 
   const showFilter = (showIndex: number) => {
     setShowFilterTypeMenu(false)
     setShowActiveFilters(true)
     setShowResults(true)
-    setShowFilters(false)
 
     switch (showIndex) {
       case showType.SHOW_MENU:
         setShowFilterTypeMenu(true)
         break
       default:
-        setShowFilters(true)
         setList(filterData[showIndex].list)
         setLabel(filterData[showIndex].label)
         break
@@ -65,12 +67,17 @@ const Home: FC = () => {
     <div className="home">
       <div className="home-header">
         {showFilterTypeMenu && <FilterTypeMenu showFilter={showFilter} />}
-        {showFilterChooseMenu && (
+        {!showFilterTypeMenu && (
           <FilterChooseMenu showFilter={showFilter} list={list} label={label} />
         )}
       </div>
       <div className="home-body">
-        {show && <ShowActiveFilters activeFilterArray={activeFilterArray} />}
+        {showResults && (
+          <>
+            <ShowActiveFilters activeFilterArray={activeFilterArray} />
+            <ShowResults />
+          </>
+        )}
       </div>
     </div>
   )

@@ -1,5 +1,4 @@
 import { FC } from "react"
-import ShowResults from "../ShowResults/ShowResults"
 import { useStore } from "../../store/StoreProvider"
 import { IFilters } from "../../utils/interfaces"
 import { TObjectEntries } from "../../utils/types"
@@ -45,7 +44,6 @@ const ShowActiveFilters: FC<Props> = ({ activeFilterArray }) => {
           )
         })}
       </div>
-      <ShowResults />
     </div>
   )
 }
