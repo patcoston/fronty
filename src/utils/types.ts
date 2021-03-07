@@ -1,2 +1,2 @@
-export type TFilters = Array<string>
-export type TObjectEntries = [string, TFilters][]
+export type TStringArray = Array<string>
+export type TObjectEntries = [string, TStringArray][]

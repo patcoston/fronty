@@ -1,6 +1,6 @@
-import { FC, useState } from "react"
-import FilterMenu from "../FilterMenu/FilterMenu"
-import FilterChoose from "../FilterChoose/FilterChoose"
+import { FC, useState, useEffect } from "react"
+import FilterTypeMenu from "../FilterTypeMenu/FilterTypeMenu"
+import FilterChooseMenu from "../FilterChooseMenu/FilterChooseMenu"
 import ShowActiveFilters from "../ShowActiveFilters/ShowActiveFilters"
 import { useStore } from "../../store/StoreProvider"
 import filterData from "../../data/filter-data"
@@ -27,7 +27,7 @@ const Home: FC = () => {
     setShowResults,
     setShowFilters,
     showFilterTypeMenu,
-    showFilters,
+    showFilterChooseMenu,
     showResults,
     activeFilters,
   } = useStore()
@@ -35,7 +35,7 @@ const Home: FC = () => {
   const activeFilterArray: TObjectEntries = Object.entries(activeFilters)
   const show: boolean = showResults && activeFilterArray.length > 0
 
-  if (!showFilterTypeMenu && !showFilters) {
+  if (!showFilterTypeMenu && !showFilterChooseMenu) {
     setShowFilterTypeMenu(true)
   }
 
@@ -57,12 +57,16 @@ const Home: FC = () => {
     }
   }
 
+  // useEffect(() => {
+  //   setShowFilters(false)
+  // }, [label, setShowFilters])
+
   return (
     <div className="home">
       <div className="home-header">
-        {showFilterTypeMenu && <FilterMenu showFilter={showFilter} />}
-        {showFilters && (
-          <FilterChoose showFilter={showFilter} list={list} label={label} />
+        {showFilterTypeMenu && <FilterTypeMenu showFilter={showFilter} />}
+        {showFilterChooseMenu && (
+          <FilterChooseMenu showFilter={showFilter} list={list} label={label} />
         )}
       </div>
       <div className="home-body">

@@ -1,46 +1,46 @@
-.filter-choose {
+.filter-choose-menu {
   padding: 0;
   margin: 0;
   border: 0;
 
-  .filter-choose-button {
+  .filter-choose-menu-button {
     padding: 0 5px;
     margin: 0;
   }
 
-  .filter-choose-button button {
+  .filter-choose-menu-button button {
     width: 100%;
   }
 
-  .filter-choose-body {
+  .filter-choose-menu-body {
     display: flex;
     flex-direction: column;
     justify-content: center;
     margin: 0;
   }
 
-  .filter-choose-body option {
+  .filter-choose-menu-body option {
     font-size: 13px;
   }
 
-  .filter-choose-header {
+  .filter-choose-menu-header {
     display: flex;
     justify-content: space-between;
     padding: 0;
     margin: 0 0 3px 0;
   }
 
-  .filter-choose-header div {
+  .filter-choose-menu-header div {
     padding: 0;
     margin: 0 5px 0 0;
   }
 
-  .filter-choose-close {
+  .filter-choose-menu-close {
     cursor: pointer;
     margin-right: 5px;
   }
 
-  .filter-choose-body option:hover {
+  .filter-choose-menu-body option:hover {
     cursor: pointer;
     background-color: #eee;
   }

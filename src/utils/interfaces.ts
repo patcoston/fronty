@@ -1,5 +1,5 @@
-import { TFilters } from "./types"
+import { TStringArray } from "./types"
 
 export interface IFilters {
-  [key: string]: TFilters
+  [key: string]: TStringArray
 }

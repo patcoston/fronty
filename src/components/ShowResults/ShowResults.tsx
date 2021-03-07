@@ -8,7 +8,7 @@ import "./ShowResults.scss"
 
 /**
  * Show Results
- * Used By: Home
+ * Used By: ShowActiveFilters
  * Purpose: Displays the results when the user sets an active filter
  */
 
@@ -25,7 +25,7 @@ const getSkills = () => {
 }
 
 const ShowResults: FC = () => {
-  const { setShowFilters, setShowJobCompany, setShowJobSkills } = useStore()
+  const { setShowJobCompany, setShowJobSkills } = useStore()
   const companyIndex: Array<number> = []
   const companySkills: Array<string> = []
   const len: number = filterData[constant.SHOW_FILTER_COMPANY].list.length
@@ -53,7 +53,6 @@ const ShowResults: FC = () => {
     const companyNum = companyIndex[index]
     setShowJobCompany(filterData[constant.SHOW_FILTER_COMPANY].list[companyNum])
     setShowJobSkills(companySkills[index])
-    setShowFilters(false)
     history.push(constant.PATH_JOB)
   }
 

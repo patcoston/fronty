@@ -1,19 +1,19 @@
-.filter-menu {
+.filter-type-menu {
   padding: 0;
   margin: 0;
   border: 0;
 
-  .filter-menu-body {
+  .filter-type-menu-body {
     margin: 0;
     padding-top: 0;
   }
 
-  .filter-menu-body ul {
+  .filter-type-menu-body ul {
     margin: 0;
     padding: 0 0 5px 5px;
   }
 
-  .filter-menu-body li {
+  .filter-type-menu-body li {
     list-style: none;
     text-align: left;
     margin-left: 0;
@@ -21,24 +21,24 @@
     font-size: 13px;
   }
 
-  .filter-menu-header {
+  .filter-type-menu-header {
     display: flex;
     justify-content: space-between;
     padding: 0;
     margin: 0 0 3px 0;
   }
 
-  .filter-menu-header div {
+  .filter-type-menu-header div {
     padding: 0;
     margin: 0 5px 0 0;
   }
 
-  .filter-menu-close {
+  .filter-type-menu-close {
     cursor: pointer;
     margin-right: 5px;
   }
 
-  .filter-menu-body li:hover {
+  .filter-type-menu-body li:hover {
     cursor: pointer;
     background-color: #eee;
   }
