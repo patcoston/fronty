@@ -1,11 +1,10 @@
-import { FC, useState, useEffect } from "react"
+import { FC, useState } from "react"
 import FilterTypeMenu from "../FilterTypeMenu/FilterTypeMenu"
 import FilterChooseMenu from "../FilterChooseMenu/FilterChooseMenu"
 import ShowActiveFilters from "../ShowActiveFilters/ShowActiveFilters"
 import ShowResults from "../ShowResults/ShowResults"
 import { useStore } from "../../store/StoreProvider"
 import filterData from "../../data/filter-data"
-import * as showType from "../../utils/constants"
 import { TObjectEntries } from "../../utils/types"
 import "./Home.scss"
 
@@ -38,34 +37,22 @@ const Home: FC = () => {
     setShowResults(false)
   }
 
-  if (list.length) {
-    setShowFilterTypeMenu(false)
-  } else {
+  if (!list.length) {
     setShowFilterTypeMenu(true)
   }
 
   const showFilter = (showIndex: number) => {
-    setShowFilterTypeMenu(false)
     setShowResults(true)
-
-    switch (showIndex) {
-      case showType.SHOW_MENU:
-        setShowFilterTypeMenu(true)
-        break
-      default:
-        setList(filterData[showIndex].list)
-        setLabel(filterData[showIndex].label)
-        break
-    }
+    setShowFilterTypeMenu(false)
+    setList(filterData[showIndex].list)
+    setLabel(filterData[showIndex].label)
   }
 
   return (
     <div className="home">
       <div className="home-header">
         {showFilterTypeMenu && <FilterTypeMenu showFilter={showFilter} />}
-        {!showFilterTypeMenu && (
-          <FilterChooseMenu showFilter={showFilter} list={list} label={label} />
-        )}
+        {!showFilterTypeMenu && <FilterChooseMenu list={list} label={label} />}
       </div>
       <div className="home-body">
         {showResults && (

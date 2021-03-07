@@ -24,20 +24,8 @@
   }
 
   .filter-choose-menu-header {
-    display: flex;
-    justify-content: space-between;
     padding: 0;
     margin: 0 0 3px 0;
-  }
-
-  .filter-choose-menu-header div {
-    padding: 0;
-    margin: 0 5px 0 0;
-  }
-
-  .filter-choose-menu-close {
-    cursor: pointer;
-    margin-right: 5px;
   }
 
   .filter-choose-menu-body option:hover {

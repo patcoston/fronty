@@ -2,8 +2,6 @@ import { FC } from "react"
 import { useStore } from "../../store/StoreProvider"
 import { IFilters } from "../../utils/interfaces"
 import { TStringArray } from "../../utils/types"
-import CloseIcon from "../../svg/closeicon"
-import { SHOW_MENU } from "../../utils/constants"
 import "./FilterChooseMenu.scss"
 
 /**
@@ -13,12 +11,11 @@ import "./FilterChooseMenu.scss"
  */
 
 interface Props {
-  showFilter(arg: number): void
   list: TStringArray
   label: string
 }
 
-const FilterChooseMenu: FC<Props> = ({ showFilter, list, label }) => {
+const FilterChooseMenu: FC<Props> = ({ list, label }) => {
   const { activeFilters, setActiveFilters, setShowFilterTypeMenu } = useStore()
   const size = list.length < 21 ? list.length : 20
 
@@ -41,21 +38,13 @@ const FilterChooseMenu: FC<Props> = ({ showFilter, list, label }) => {
   return (
     <div className="filter-choose-menu">
       <div className="filter-choose-menu-button">
-        <button onClick={() => showFilter(SHOW_MENU)}>
+        <button onClick={() => setShowFilterTypeMenu(true)}>
           Choose a Filter Type
         </button>
       </div>
       <div className="filter-choose-menu-body">
         <div className="filter-choose-menu-header">
-          <div>
-            <strong>Filter:</strong> {label} (choose one or more)
-          </div>
-          <div
-            className="filter-choose-menu-close"
-            onClick={() => setShowFilterTypeMenu(true)}
-          >
-            <CloseIcon />
-          </div>
+          <strong>Filter:</strong> {label} (choose one or more)
         </div>
         <select
           id="filter-choose-menu"
