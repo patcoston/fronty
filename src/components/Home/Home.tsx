@@ -38,6 +38,12 @@ const Home: FC = () => {
     setShowResults(false)
   }
 
+  if (list.length) {
+    setShowFilterTypeMenu(false)
+  } else {
+    setShowFilterTypeMenu(true)
+  }
+
   const showFilter = (showIndex: number) => {
     setShowFilterTypeMenu(false)
     setShowResults(true)
@@ -52,10 +58,6 @@ const Home: FC = () => {
         break
     }
   }
-
-  // useEffect(() => {
-  //   setShowFilters(false)
-  // }, [label, setShowFilters])
 
   return (
     <div className="home">
