@@ -1,0 +1,10 @@
+{
+  "label": "Mobile",
+  "list": [
+    "Web Only",
+    "Mobile Only",
+    "Responsive Design",
+    "Mobile Only and Web Only",
+    "Mobile Only and Responsive Design"
+  ]
+}

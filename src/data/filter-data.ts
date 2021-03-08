@@ -8,7 +8,7 @@ interface IData {
 /*
 const getTechStack = async (): Promise<IData> => {
   const response = await axios.get(
-    `http://patcoston.com/portfolio/data/techstack.js`,
+    `http://patcoston.com/portfolio/data/techstack.json`,
   )
   console.log(response.data)
   return response.data
@@ -36,6 +36,7 @@ axios
   })
 */
 
+/*
 filterData[showType.SHOW_FILTER_TECH_STACK] = {
   label: "Tech Stack",
   list: [
@@ -445,5 +446,5 @@ filterData[showType.SHOW_FILTER_DRESS_CODE] = {
     "Suit and Tie Required",
   ],
 }
-
+*/
 export default filterData
