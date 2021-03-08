@@ -35,3 +35,6 @@ export const PATH_COOKIES: string = `${PATH_BASE}cookies`
 export const PATH_FAQS: string = `${PATH_BASE}faqs`
 export const PATH_PRIVACY: string = `${PATH_BASE}privacy`
 export const PATH_NOT_FOUND: string = `${PATH_BASE}notfound`
+
+export const URL_DATA: string = `http://patcoston.com/portfolio/data/`
+//export const URL_DATA: string = `http://localhost:3000$/data/`

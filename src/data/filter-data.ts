@@ -1,4 +1,4 @@
-import * as showType from "../utils/constants"
+import * as constant from "../utils/constants"
 import axios from "axios"
 
 interface IData {
@@ -27,17 +27,33 @@ console.log(test)
 
 const filterData: Array<IData> = []
 
-/*
-axios
-  .get("http://patcoston.com/portfolio/data/techstack.json")
-  .then(response => {
+const readData = async (data: string, index: number) => {
+  await axios.get(`${constant.URL_DATA}${data}.json`).then(response => {
     console.log(response.data)
-    filterData[showType.SHOW_FILTER_TECH_STACK] = response.data
+    filterData[index] = response.data
   })
-*/
+}
+
+readData("techstack", constant.SHOW_FILTER_TECH_STACK)
+readData("workingfromhome", constant.SHOW_FILTER_WORKING_FROM_HOME)
+readData("payment", constant.SHOW_FILTER_PAYMENT)
+readData("benefits", constant.SHOW_FILTER_BENEFITS)
+readData("commute", constant.SHOW_FILTER_COMMUTE)
+readData("company", constant.SHOW_FILTER_COMPANY)
+readData("companysize", constant.SHOW_FILTER_COMPANY_SIZE)
+readData("educationrequired", constant.SHOW_FILTER_EDUCATION_REQUIRED)
+readData("employeetype", constant.SHOW_FILTER_EMPLOYEE_TYPE)
+readData("experiencelevel", constant.SHOW_FILTER_EXPERIENCE_LEVEL)
+readData("industry", constant.SHOW_FILTER_INDUSTRY)
+readData("internalexternal", constant.SHOW_FILTER_INTERNAL_EXTERNAL)
+readData("methodology", constant.SHOW_FILTER_METHODOLOGY)
+readData("mobile", constant.SHOW_FILTER_MOBILE)
+readData("accessibility", constant.SHOW_FILTER_ACCESSIBLE)
+readData("petsallowed", constant.SHOW_FILTER_PETS_ALLOWED)
+readData("dresscode", constant.SHOW_FILTER_DRESS_CODE)
 
 /*
-filterData[showType.SHOW_FILTER_TECH_STACK] = {
+filterData[constant.SHOW_FILTER_TECH_STACK] = {
   label: "Tech Stack",
   list: [
     "Angular JS 1.x",
@@ -105,7 +121,7 @@ filterData[showType.SHOW_FILTER_TECH_STACK] = {
   ],
 }
 
-filterData[showType.SHOW_FILTER_WORKING_FROM_HOME] = {
+filterData[constant.SHOW_FILTER_WORKING_FROM_HOME] = {
   label: "Working From Home",
   list: [
     "0% Never",
@@ -122,7 +138,7 @@ filterData[showType.SHOW_FILTER_WORKING_FROM_HOME] = {
   ],
 }
 
-filterData[showType.SHOW_FILTER_PAYMENT] = {
+filterData[constant.SHOW_FILTER_PAYMENT] = {
   label: "Payment",
   list: [
     "$20+ per hour",
@@ -184,7 +200,7 @@ filterData[showType.SHOW_FILTER_PAYMENT] = {
   ],
 }
 
-filterData[showType.SHOW_FILTER_BENEFITS] = {
+filterData[constant.SHOW_FILTER_BENEFITS] = {
   label: "Benefits",
   list: [
     "401K Matching",
@@ -204,7 +220,7 @@ filterData[showType.SHOW_FILTER_BENEFITS] = {
   ],
 }
 
-filterData[showType.SHOW_FILTER_COMMUTE] = {
+filterData[constant.SHOW_FILTER_COMMUTE] = {
   label: "Commute",
   list: [
     "5 miles max",
@@ -225,7 +241,7 @@ filterData[showType.SHOW_FILTER_COMMUTE] = {
   ],
 }
 
-filterData[showType.SHOW_FILTER_COMPANY] = {
+filterData[constant.SHOW_FILTER_COMPANY] = {
   label: "Popular Company",
   list: [
     "ADP",
@@ -287,7 +303,7 @@ filterData[showType.SHOW_FILTER_COMPANY] = {
   ],
 }
 
-filterData[showType.SHOW_FILTER_COMPANY_SIZE] = {
+filterData[constant.SHOW_FILTER_COMPANY_SIZE] = {
   label: "Company Size",
   list: [
     "1-10",
@@ -304,7 +320,7 @@ filterData[showType.SHOW_FILTER_COMPANY_SIZE] = {
   ],
 }
 
-filterData[showType.SHOW_FILTER_EDUCATION_REQUIRED] = {
+filterData[constant.SHOW_FILTER_EDUCATION_REQUIRED] = {
   label: "Education Required",
   list: [
     "High School Equivalency",
@@ -319,7 +335,7 @@ filterData[showType.SHOW_FILTER_EDUCATION_REQUIRED] = {
   ],
 }
 
-filterData[showType.SHOW_FILTER_EMPLOYEE_TYPE] = {
+filterData[constant.SHOW_FILTER_EMPLOYEE_TYPE] = {
   label: "Employee Type",
   list: [
     "Full-Time",
@@ -334,12 +350,12 @@ filterData[showType.SHOW_FILTER_EMPLOYEE_TYPE] = {
   ],
 }
 
-filterData[showType.SHOW_FILTER_EXPERIENCE_LEVEL] = {
+filterData[constant.SHOW_FILTER_EXPERIENCE_LEVEL] = {
   label: "Experience Level",
   list: ["Intern", "Junior", "Senior"],
 }
 
-filterData[showType.SHOW_FILTER_INDUSTRY] = {
+filterData[constant.SHOW_FILTER_INDUSTRY] = {
   label: "Industry",
   list: [
     "Education",
@@ -374,7 +390,7 @@ filterData[showType.SHOW_FILTER_INDUSTRY] = {
   ],
 }
 
-filterData[showType.SHOW_FILTER_INTERNAL_EXTERNAL] = {
+filterData[constant.SHOW_FILTER_INTERNAL_EXTERNAL] = {
   label: "Internal External",
   list: [
     "Interal Employee facing only",
@@ -385,7 +401,7 @@ filterData[showType.SHOW_FILTER_INTERNAL_EXTERNAL] = {
   ],
 }
 
-filterData[showType.SHOW_FILTER_METHODOLOGY] = {
+filterData[constant.SHOW_FILTER_METHODOLOGY] = {
   label: "Methodology",
   list: [
     "Waterfall",
@@ -398,7 +414,7 @@ filterData[showType.SHOW_FILTER_METHODOLOGY] = {
   ],
 }
 
-filterData[showType.SHOW_FILTER_MOBILE] = {
+filterData[constant.SHOW_FILTER_MOBILE] = {
   label: "Mobile",
   list: [
     "Web Only",
@@ -409,7 +425,7 @@ filterData[showType.SHOW_FILTER_MOBILE] = {
   ],
 }
 
-filterData[showType.SHOW_FILTER_ACCESSIBLE] = {
+filterData[constant.SHOW_FILTER_ACCESSIBLE] = {
   label: "Accessibility",
   list: [
     "No compliance",
@@ -424,7 +440,7 @@ filterData[showType.SHOW_FILTER_ACCESSIBLE] = {
   ],
 }
 
-filterData[showType.SHOW_FILTER_PETS_ALLOWED] = {
+filterData[constant.SHOW_FILTER_PETS_ALLOWED] = {
   label: "Pets Allowed",
   list: [
     "No pets allowed",
@@ -435,7 +451,7 @@ filterData[showType.SHOW_FILTER_PETS_ALLOWED] = {
   ],
 }
 
-filterData[showType.SHOW_FILTER_DRESS_CODE] = {
+filterData[constant.SHOW_FILTER_DRESS_CODE] = {
   label: "Dress Code",
   list: [
     "No dress code",
