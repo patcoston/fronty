@@ -4,8 +4,7 @@ import FilterChooseMenu from "../FilterChooseMenu/FilterChooseMenu"
 import ShowActiveFilters from "../ShowActiveFilters/ShowActiveFilters"
 import ShowResults from "../ShowResults/ShowResults"
 import { useStore } from "../../store/StoreProvider"
-import filterData from "../../data/filter-data"
-import { TObjectEntries } from "../../utils/types"
+import { TStringArray, TObjectEntries } from "../../utils/types"
 import "./Home.scss"
 
 /**
@@ -19,11 +18,12 @@ import "./Home.scss"
  */
 
 const Home: FC = () => {
-  const [list, setList] = useState<Array<string>>([])
+  const [list, setList] = useState<TStringArray>([])
   const [label, setLabel] = useState<string>("")
   const {
     setShowFilterTypeMenu,
     setShowResults,
+    filterData,
     showFilterTypeMenu,
     showResults,
     activeFilters,

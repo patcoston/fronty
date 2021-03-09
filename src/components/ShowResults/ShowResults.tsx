@@ -1,8 +1,8 @@
 import { FC, useState } from "react"
 import { useStore } from "../../store/StoreProvider"
 import { useHistory } from "react-router-dom"
-import filterData from "../../data/filter-data"
 import { rand } from "../../utils/tools"
+import { TStringArray, TNumberArray, TFilterObject } from "../../utils/types"
 import * as constant from "../../utils/constants"
 import "./ShowResults.scss"
 
@@ -12,22 +12,23 @@ import "./ShowResults.scss"
  * Purpose: Displays the results when the user sets an active filter
  */
 
-const getSkills = () => {
-  const skills: Array<string> = []
-  const len: number = filterData[constant.SHOW_FILTER_TECH_STACK].list.length
+const getTechStack = (techStack: TFilterObject) => {
+  const skills: TStringArray = []
+  const len: number = techStack.list.length
   for (let i: number = 0; i < 10; i++) {
     let rnd: number = rand(1, len - 1)
-    skills.push(filterData[constant.SHOW_FILTER_TECH_STACK].list[rnd])
+    skills.push(techStack.list[rnd])
   }
   //console.log(skills)
   //const uniqueSkills = [...new Set(skills)]
-  return skills
+  const skillString: string = skills.join().replace(/,/g, ", ")
+  return skillString
 }
 
 const ShowResults: FC = () => {
-  const { setShowJobCompany, setShowJobSkills } = useStore()
-  const companyIndex: Array<number> = []
-  const companySkills: Array<string> = []
+  const { setShowJobCompany, setShowJobSkills, filterData } = useStore()
+  const companyIndex: TNumberArray = []
+  const companySkills: TStringArray = []
   const len: number = filterData[constant.SHOW_FILTER_COMPANY].list.length
   const history = useHistory()
 
@@ -42,10 +43,11 @@ const ShowResults: FC = () => {
     { label: ">", selected: "" },
   ])
 
+  const techStack: TFilterObject = filterData[constant.SHOW_FILTER_TECH_STACK]
   for (let i: number = 0; i < 10; i++) {
     let rnd: number = rand(1, len - 1)
     companyIndex.push(rnd)
-    let skills = getSkills().join().replace(/,/g, ", ")
+    let skills: string = getTechStack(techStack)
     companySkills.push(skills)
   }
 

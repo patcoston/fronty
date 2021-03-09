@@ -1,10 +1,8 @@
 import * as constant from "../utils/constants"
+import { useStore } from "../store/StoreProvider"
+import { TFilterDataArray } from "../utils/types"
 import axios from "axios"
 
-interface IData {
-  label: string
-  list: Array<string>
-}
 /*
 const getTechStack = async (): Promise<IData> => {
   const response = await axios.get(
@@ -25,32 +23,37 @@ const test = testAxios()
 console.log(test)
 */
 
-const filterData: Array<IData> = []
+const useJsonData = () => {
+  const { setFilterData } = useStore()
+  const jsonData: TFilterDataArray = []
 
-const readData = async (data: string, index: number) => {
-  await axios.get(`${constant.URL_DATA}${data}.json`).then(response => {
-    console.log(response.data)
-    filterData[index] = response.data
-  })
+  const readData = async (data: string, index: number) => {
+    await axios.get(`${constant.URL_DATA}${data}.json`).then(response => {
+      console.log(response.data)
+      jsonData[index] = response.data
+    })
+  }
+
+  readData("techstack", constant.SHOW_FILTER_TECH_STACK)
+  readData("workingfromhome", constant.SHOW_FILTER_WORKING_FROM_HOME)
+  readData("payment", constant.SHOW_FILTER_PAYMENT)
+  readData("benefits", constant.SHOW_FILTER_BENEFITS)
+  readData("commute", constant.SHOW_FILTER_COMMUTE)
+  readData("company", constant.SHOW_FILTER_COMPANY)
+  readData("companysize", constant.SHOW_FILTER_COMPANY_SIZE)
+  readData("educationrequired", constant.SHOW_FILTER_EDUCATION_REQUIRED)
+  readData("employeetype", constant.SHOW_FILTER_EMPLOYEE_TYPE)
+  readData("experiencelevel", constant.SHOW_FILTER_EXPERIENCE_LEVEL)
+  readData("industry", constant.SHOW_FILTER_INDUSTRY)
+  readData("internalexternal", constant.SHOW_FILTER_INTERNAL_EXTERNAL)
+  readData("methodology", constant.SHOW_FILTER_METHODOLOGY)
+  readData("mobile", constant.SHOW_FILTER_MOBILE)
+  readData("accessibility", constant.SHOW_FILTER_ACCESSIBLE)
+  readData("petsallowed", constant.SHOW_FILTER_PETS_ALLOWED)
+  readData("dresscode", constant.SHOW_FILTER_DRESS_CODE)
+
+  setFilterData(jsonData)
 }
-
-readData("techstack", constant.SHOW_FILTER_TECH_STACK)
-readData("workingfromhome", constant.SHOW_FILTER_WORKING_FROM_HOME)
-readData("payment", constant.SHOW_FILTER_PAYMENT)
-readData("benefits", constant.SHOW_FILTER_BENEFITS)
-readData("commute", constant.SHOW_FILTER_COMMUTE)
-readData("company", constant.SHOW_FILTER_COMPANY)
-readData("companysize", constant.SHOW_FILTER_COMPANY_SIZE)
-readData("educationrequired", constant.SHOW_FILTER_EDUCATION_REQUIRED)
-readData("employeetype", constant.SHOW_FILTER_EMPLOYEE_TYPE)
-readData("experiencelevel", constant.SHOW_FILTER_EXPERIENCE_LEVEL)
-readData("industry", constant.SHOW_FILTER_INDUSTRY)
-readData("internalexternal", constant.SHOW_FILTER_INTERNAL_EXTERNAL)
-readData("methodology", constant.SHOW_FILTER_METHODOLOGY)
-readData("mobile", constant.SHOW_FILTER_MOBILE)
-readData("accessibility", constant.SHOW_FILTER_ACCESSIBLE)
-readData("petsallowed", constant.SHOW_FILTER_PETS_ALLOWED)
-readData("dresscode", constant.SHOW_FILTER_DRESS_CODE)
 
 /*
 filterData[constant.SHOW_FILTER_TECH_STACK] = {

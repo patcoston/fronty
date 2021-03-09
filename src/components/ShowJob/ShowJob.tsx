@@ -1,8 +1,8 @@
 import { FC } from "react"
 import { useStore } from "../../store/StoreProvider"
 import { useHistory } from "react-router-dom"
-import filterData from "../../data/filter-data"
 import { rand } from "../../utils/tools"
+import { TStringArray } from "../../utils/types"
 import * as showType from "../../utils/constants"
 import CloseIcon from "../../svg/closeicon"
 import "./ShowJob.scss"
@@ -14,7 +14,7 @@ import "./ShowJob.scss"
  */
 
 const ShowJob: FC = () => {
-  const { showJobCompany, showJobSkills } = useStore()
+  const { showJobCompany, showJobSkills, filterData } = useStore()
   const history = useHistory()
 
   const getSingleValue = (index: number) => {
@@ -24,7 +24,7 @@ const ShowJob: FC = () => {
   }
 
   const getMultipleValues = (index: number, count: number) => {
-    const vals: Array<string> = []
+    const vals: TStringArray = []
     for (let i: number = 0; i < count; i++) {
       const last: number = filterData[index].list.length - 1
       const pick: number = rand(0, last)
