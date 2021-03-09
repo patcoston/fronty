@@ -7,6 +7,9 @@ TODO
 * Add SSL
 
 
+NOTE: Use Chrome Extention Moesif Origin & CORS Changer to prevent cross-site scripting error
+https://www.moesif.com/
+
 
 NOTE: if node_modules folder is deleted, then restore with these commands
 npm install react-scripts
