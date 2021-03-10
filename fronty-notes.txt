@@ -3,7 +3,6 @@ TODO
 * Remove Duplicates
   - Skills
   - Benefits
-* Dynamically load JSON via Axios calls and async/await
 * Add SSL
 
 
