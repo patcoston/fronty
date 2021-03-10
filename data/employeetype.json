@@ -1,5 +1,6 @@
 {
   "label": "Employee Type",
+  "index": 8,
   "list": [
     "Full-Time",
     "Part-Time",

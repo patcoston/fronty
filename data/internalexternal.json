@@ -1,5 +1,6 @@
 {
   "label": "Internal External",
+  "index": 10,
   "list": [
     "Interal Employee facing only",
     "External Customer facing only",

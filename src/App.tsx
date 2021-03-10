@@ -5,7 +5,7 @@ import Header from "./components/Header/Header"
 import Footer from "./components/Footer/Footer"
 import axios from "axios"
 import * as constant from "./utils/constants"
-import { TFilterDataArray } from "./utils/types"
+import { TFilterObject, TFilterDataArray } from "./utils/types"
 import "./App.scss"
 
 const App = () => {
@@ -13,46 +13,41 @@ const App = () => {
   const jsonData: TFilterDataArray = []
 
   useEffect(() => {
-    const readData = async (data: string, index: number) => {
+    const readData = async (source: string) => {
       try {
-        const response = await axios.get(`${constant.URL_DATA}${data}.json`)
-        jsonData[index] = await response.data
-        console.log(jsonData)
+        const response = await axios
+          .get(`${constant.URL_DATA}${source}.json`)
+          .then(response => {
+            const data: TFilterObject = response.data
+            console.log(data)
+            const index: number = data.index
+            console.log(index)
+            jsonData[index] = data
+            console.log(jsonData)
+          })
         return response
       } catch (error) {
         console.log(error)
       }
     }
 
-    const p1 = readData("techstack", constant.SHOW_FILTER_TECH_STACK)
-    const p2 = readData(
-      "workingfromhome",
-      constant.SHOW_FILTER_WORKING_FROM_HOME,
-    )
-    const p3 = readData("payment", constant.SHOW_FILTER_PAYMENT)
-    const p4 = readData("benefits", constant.SHOW_FILTER_BENEFITS)
-    const p5 = readData("commute", constant.SHOW_FILTER_COMMUTE)
-    const p6 = readData("company", constant.SHOW_FILTER_COMPANY)
-    const p7 = readData("companysize", constant.SHOW_FILTER_COMPANY_SIZE)
-    const p8 = readData(
-      "educationrequired",
-      constant.SHOW_FILTER_EDUCATION_REQUIRED,
-    )
-    const p9 = readData("employeetype", constant.SHOW_FILTER_EMPLOYEE_TYPE)
-    const p10 = readData(
-      "experiencelevel",
-      constant.SHOW_FILTER_EXPERIENCE_LEVEL,
-    )
-    const p11 = readData("industry", constant.SHOW_FILTER_INDUSTRY)
-    const p12 = readData(
-      "internalexternal",
-      constant.SHOW_FILTER_INTERNAL_EXTERNAL,
-    )
-    const p13 = readData("methodology", constant.SHOW_FILTER_METHODOLOGY)
-    const p14 = readData("mobile", constant.SHOW_FILTER_MOBILE)
-    const p15 = readData("accessibility", constant.SHOW_FILTER_ACCESSIBLE)
-    const p16 = readData("petsallowed", constant.SHOW_FILTER_PETS_ALLOWED)
-    const p17 = readData("dresscode", constant.SHOW_FILTER_DRESS_CODE)
+    const p1 = readData("techstack")
+    const p2 = readData("workingfromhome")
+    const p3 = readData("payment")
+    const p4 = readData("benefits")
+    const p5 = readData("commute")
+    const p6 = readData("company")
+    const p7 = readData("companysize")
+    const p8 = readData("educationrequired")
+    const p9 = readData("employeetype")
+    const p10 = readData("experiencelevel")
+    const p11 = readData("industry")
+    const p12 = readData("internalexternal")
+    const p13 = readData("methodology")
+    const p14 = readData("mobile")
+    const p15 = readData("accessibility")
+    const p16 = readData("petsallowed")
+    const p17 = readData("dresscode")
 
     Promise.all([
       p1,
