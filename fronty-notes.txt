@@ -11,6 +11,7 @@ NOTE: Use Chrome Extention Moesif Origin & CORS Changer to prevent cross-site sc
 https://www.moesif.com/
 
 
+
 NOTE: if node_modules folder is deleted, then restore with these commands
 npm install react-scripts
 
@@ -67,4 +68,5 @@ https://chrome.google.com/webstore/detail/moesif-orign-cors-changer/digfbfaphojj
 npm install node-sass --save
 https://www.npmjs.com/package/node-sass
 https://sass-lang.com/
+How best to style React components
 https://www.sitepoint.com/react-components-styling-options/

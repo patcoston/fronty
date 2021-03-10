@@ -10,54 +10,74 @@ import "./App.scss"
 
 const App = () => {
   const { filterData, setFilterData } = useStore()
-  const [count, setCount] = useState<number>(0)
   const jsonData: TFilterDataArray = []
 
   useEffect(() => {
     const readData = async (data: string, index: number) => {
-      if (count > 17) {
-        console.log("IF count > 17 return")
-        return
-      }
       try {
         const response = await axios.get(`${constant.URL_DATA}${data}.json`)
         jsonData[index] = await response.data
         console.log(jsonData)
-        setCount(count + 1)
-        console.log(count)
-        if (count === 17) {
-          console.log("count === 17 SET FILTER DATA show count and jsonData")
-          console.log(count)
-          console.log(jsonData)
-          setFilterData([...jsonData])
-          setCount(100) // done reading data
-        }
+        return response
       } catch (error) {
         console.log(error)
       }
     }
 
-    readData("techstack", constant.SHOW_FILTER_TECH_STACK)
-    readData("workingfromhome", constant.SHOW_FILTER_WORKING_FROM_HOME)
-    readData("payment", constant.SHOW_FILTER_PAYMENT)
-    readData("benefits", constant.SHOW_FILTER_BENEFITS)
-    readData("commute", constant.SHOW_FILTER_COMMUTE)
-    readData("company", constant.SHOW_FILTER_COMPANY)
-    readData("companysize", constant.SHOW_FILTER_COMPANY_SIZE)
-    readData("educationrequired", constant.SHOW_FILTER_EDUCATION_REQUIRED)
-    readData("employeetype", constant.SHOW_FILTER_EMPLOYEE_TYPE)
-    readData("experiencelevel", constant.SHOW_FILTER_EXPERIENCE_LEVEL)
-    readData("industry", constant.SHOW_FILTER_INDUSTRY)
-    readData("internalexternal", constant.SHOW_FILTER_INTERNAL_EXTERNAL)
-    readData("methodology", constant.SHOW_FILTER_METHODOLOGY)
-    readData("mobile", constant.SHOW_FILTER_MOBILE)
-    readData("accessibility", constant.SHOW_FILTER_ACCESSIBLE)
-    readData("petsallowed", constant.SHOW_FILTER_PETS_ALLOWED)
-    readData("dresscode", constant.SHOW_FILTER_DRESS_CODE)
+    const p1 = readData("techstack", constant.SHOW_FILTER_TECH_STACK)
+    const p2 = readData(
+      "workingfromhome",
+      constant.SHOW_FILTER_WORKING_FROM_HOME,
+    )
+    const p3 = readData("payment", constant.SHOW_FILTER_PAYMENT)
+    const p4 = readData("benefits", constant.SHOW_FILTER_BENEFITS)
+    const p5 = readData("commute", constant.SHOW_FILTER_COMMUTE)
+    const p6 = readData("company", constant.SHOW_FILTER_COMPANY)
+    const p7 = readData("companysize", constant.SHOW_FILTER_COMPANY_SIZE)
+    const p8 = readData(
+      "educationrequired",
+      constant.SHOW_FILTER_EDUCATION_REQUIRED,
+    )
+    const p9 = readData("employeetype", constant.SHOW_FILTER_EMPLOYEE_TYPE)
+    const p10 = readData(
+      "experiencelevel",
+      constant.SHOW_FILTER_EXPERIENCE_LEVEL,
+    )
+    const p11 = readData("industry", constant.SHOW_FILTER_INDUSTRY)
+    const p12 = readData(
+      "internalexternal",
+      constant.SHOW_FILTER_INTERNAL_EXTERNAL,
+    )
+    const p13 = readData("methodology", constant.SHOW_FILTER_METHODOLOGY)
+    const p14 = readData("mobile", constant.SHOW_FILTER_MOBILE)
+    const p15 = readData("accessibility", constant.SHOW_FILTER_ACCESSIBLE)
+    const p16 = readData("petsallowed", constant.SHOW_FILTER_PETS_ALLOWED)
+    const p17 = readData("dresscode", constant.SHOW_FILTER_DRESS_CODE)
+
+    Promise.all([
+      p1,
+      p2,
+      p3,
+      p4,
+      p5,
+      p6,
+      p7,
+      p8,
+      p9,
+      p10,
+      p11,
+      p12,
+      p13,
+      p14,
+      p15,
+      p16,
+      p17,
+    ]).then(() => {
+      setFilterData([...jsonData])
+    })
   }, [])
 
   console.log("count and filterData outside UseEffect()")
-  console.log(count)
   console.log(filterData)
 
   return (
