@@ -6,9 +6,13 @@ TODO
 * Add SSL
 
 
-NOTE: Use Chrome Extension Moesif Origin & CORS Changer to prevent cross-site scripting error
+NOTE: Use Chrome Extension Moesif Origin & CORS Changer to prevent cross-site scripting error. Disable when not using to test locally.
+If CORS is disabled, some websites may not work properly, for example YouTube will not play videos.
 https://www.moesif.com/
-
+Cross-origin resource sharing, or CORS, is security feature of IE10+, Chrome 4+, Firefox 3.5+ or almost every version of browser released after 2012 except Opera Mini.
+XSS: Cross Site Scripting. Can be used as an injection type of attack.
+CSRF: Cross site request forgery
+https://dev.to/maleta/cors-xss-and-csrf-with-examples-in-10-minutes-35k3
 
 
 NOTE: if node_modules folder is deleted, then restore with these commands
@@ -51,20 +55,21 @@ Google Font: Lobster
 https://fonts.google.com/specimen/Lobster?sort=popularity&query=lobster&preview.text_type=custom
 
 Construct className strings conditionally.
-npm install --save clsx (is --save necessary? Is it for prod and dev?)
+npm install clsx (do we need --save?)
 https://www.npmjs.com/package/clsx
 
 
 npm install axios
 https://www.npmjs.com/package/axios
 
-3 ways t ofix CORS error
+
+3 ways to fix CORS error
 https://medium.com/@dtkatz/3-ways-to-fix-the-cors-error-and-how-access-control-allow-origin-works-d97d55946d9
 Chrome extension
 https://chrome.google.com/webstore/detail/moesif-orign-cors-changer/digfbfaphojjndkpccljibejjbppifbc?hl=en-US
 
 
-npm install node-sass --save
+npm install node-sass --save (what does --save do?)
 https://www.npmjs.com/package/node-sass
 https://sass-lang.com/
 How best to style React components

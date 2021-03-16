@@ -1,23 +1,9 @@
-import { createContext, FC, useState, useContext } from "react"
+import { FC, useState, createContext, useContext } from "react"
 import { IFilters } from "../utils/interfaces"
 import { TFilterDataArray } from "../utils/types"
+import { Store } from "../utils/interfaces"
 
-export interface Store {
-  filterData: TFilterDataArray
-  setFilterData: (filters: TFilterDataArray) => void
-  showFilterTypeMenu: boolean
-  setShowFilterTypeMenu: (show: boolean) => void
-  activeFilters: IFilters
-  setActiveFilters: (activeFilters: IFilters) => void
-  showResults: boolean
-  setShowResults: (show: boolean) => void
-  showJobCompany: string
-  setShowJobCompany: (company: string) => void
-  showJobSkills: string
-  setShowJobSkills: (company: string) => void
-}
-
-export const StoreContext = createContext({} as Store)
+const StoreContext = createContext({} as Store)
 
 export const useStore = () => useContext<Store>(StoreContext)
 

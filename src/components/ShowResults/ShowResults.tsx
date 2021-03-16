@@ -19,8 +19,6 @@ const getTechStack = (techStack: TFilterObject) => {
     let rnd: number = rand(1, len - 1)
     skills.push(techStack.list[rnd])
   }
-  //console.log(skills)
-  //const uniqueSkills = [...new Set(skills)]
   const skillString: string = skills.join().replace(/,/g, ", ")
   return skillString
 }

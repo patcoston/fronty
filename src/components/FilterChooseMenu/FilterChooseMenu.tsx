@@ -32,9 +32,6 @@ const FilterChooseMenu: FC<Props> = ({ list, label }) => {
     setActiveFilters(newActiveFilters)
   }
 
-  console.log("FilterChooseMenu")
-  console.log(list)
-
   return (
     <div className="filter-choose-menu">
       <div className="filter-choose-menu-button">

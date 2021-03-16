@@ -18,7 +18,6 @@ interface Props {
 
 const ShowActiveFilters: FC<Props> = ({ activeFilterArray }) => {
   const { activeFilters, setActiveFilters } = useStore()
-  console.log(activeFilters)
 
   const handleDelete = (filter: string) => {
     const newActiveFilters: IFilters = { ...activeFilters }
@@ -27,7 +26,6 @@ const ShowActiveFilters: FC<Props> = ({ activeFilterArray }) => {
   }
 
   const toggleFilter = (label: string, indexFilter: number) => {
-    console.log("toggleFilter")
     const newActiveFilters: IFilters = { ...activeFilters }
     let newVal = activeFilters[label][indexFilter]
     if (newVal.substring(0, 4) === "NOT:") {
@@ -44,7 +42,6 @@ const ShowActiveFilters: FC<Props> = ({ activeFilterArray }) => {
       <strong>Current Filters: </strong> Click to toggle NOT filter
       <div className={clsx("show-active-filters-body", "border")}>
         {activeFilterArray.map((filter, indexArray) => {
-          console.log(filter)
           return (
             <section key={indexArray}>
               <span
