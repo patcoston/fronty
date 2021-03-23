@@ -26,9 +26,7 @@ const ShowJob: FC = () => {
   const getMultipleValues = (index: number, count: number) => {
     const vals: TStringArray = []
     for (let i: number = 0; i < count; i++) {
-      const last: number = filterData[index].list.length - 1
-      const pick: number = rand(0, last)
-      vals[i] = filterData[index].list[pick]
+      vals[i] = getSingleValue(index)
     }
     //vals = [...new Set(vals)]
     const values = vals.join().replace(/,/g, ", ")
