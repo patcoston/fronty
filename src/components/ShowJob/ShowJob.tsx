@@ -115,7 +115,7 @@ const ShowJob: FC = () => {
         {rand(5, 500000)}
       </section>
       <section>
-        <strong>Description: </strong>
+        <strong>Job Description: </strong>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam et ex
         consequat, ullamcorper augue ut, sollicitudin nunc. Suspendisse luctus
         luctus metus ut efficitur. Nulla velit lectus, accumsan at semper at,
@@ -141,6 +141,16 @@ const ShowJob: FC = () => {
         <a target="_blank" rel="noreferrer" href={getWebsite()}>
           {getWebsite()}
         </a>
+      </section>
+      <section>
+        <strong>Company Description: </strong>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam et ex
+        consequat, ullamcorper augue ut, sollicitudin nunc. Suspendisse luctus
+        luctus metus ut efficitur. Nulla velit lectus, accumsan at semper at,
+        egestas quis justo. Ut vel nisi varius, sagittis tellus nec, egestas
+        tortor. Donec pretium est ac nibh blandit, et placerat diam placerat. Ut
+        id dictum risus. Donec non rutrum leo, non mollis nunc. Etiam eu
+        hendrerit justo, vitae finibus neque.
       </section>
     </div>
   )
