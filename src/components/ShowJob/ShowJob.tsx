@@ -55,6 +55,16 @@ const ShowJob: FC = () => {
         {showJobSkills}
       </section>
       <section>
+        <strong>Project Description: </strong>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam et ex
+        consequat, ullamcorper augue ut, sollicitudin nunc. Suspendisse luctus
+        luctus metus ut efficitur. Nulla velit lectus, accumsan at semper at,
+        egestas quis justo. Ut vel nisi varius, sagittis tellus nec, egestas
+        tortor. Donec pretium est ac nibh blandit, et placerat diam placerat. Ut
+        id dictum risus. Donec non rutrum leo, non mollis nunc. Etiam eu
+        hendrerit justo, vitae finibus neque.
+      </section>
+      <section>
         <strong>Education Required: </strong>
         {getSingleValue(showType.SHOW_FILTER_EDUCATION_REQUIRED)}
       </section>
@@ -151,6 +161,27 @@ const ShowJob: FC = () => {
         tortor. Donec pretium est ac nibh blandit, et placerat diam placerat. Ut
         id dictum risus. Donec non rutrum leo, non mollis nunc. Etiam eu
         hendrerit justo, vitae finibus neque.
+      </section>
+      <section>
+        <section className="show-job-nav">
+          <label>&lt; Previous</label>
+          <strong>Company Photos</strong>
+          <label>Next &gt;</label>
+        </section>
+        <section className="show-job-photos">
+          <img
+            src="http://patcoston.com/portfolio/fronty/images/company1-thumb.jpg"
+            alt="team"
+          />
+          <img
+            src="http://patcoston.com/portfolio/fronty/images/company2-thumb.jpg"
+            alt="team"
+          />
+          <img
+            src="http://patcoston.com/portfolio/fronty/images/company3-thumb.jpg"
+            alt="team"
+          />
+        </section>
       </section>
     </div>
   )

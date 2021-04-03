@@ -16,4 +16,26 @@
     margin: 0 5px 0 0;
     cursor: pointer;
   }
+
+  .show-job-nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 0;
+    label {
+      font-weight: 600;
+      cursor: pointer;
+    }
+    label:first-child {
+      margin-left: 20px;
+    }
+    label:last-child {
+      margin-right: 20px;
+    }
+  }
+
+  .show-job-photos {
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+  }
 }
