@@ -65,6 +65,17 @@ const ShowJob: FC = () => {
         hendrerit justo, vitae finibus neque.
       </section>
       <section>
+        <strong>Tools:</strong> Slack, Jenkins, Jira, Git, GitHub, Docker,
+        Kubernetes (DevOps skills not required for FE Dev)
+      </section>
+      <section>
+        <strong>Middleware:</strong> Node.js (not required for FE Dev)
+      </section>
+      <section>
+        <strong>Back End:</strong> MongoDB, Microsoft Azure Cloud Services (not
+        required for FE Dev)
+      </section>
+      <section>
         <strong>Education Required: </strong>
         {getSingleValue(showType.SHOW_FILTER_EDUCATION_REQUIRED)}
       </section>
