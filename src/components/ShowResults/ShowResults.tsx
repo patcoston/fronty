@@ -36,8 +36,6 @@ const ShowResults: FC = () => {
     { label: "1", selected: "selected" },
     { label: "2", selected: "" },
     { label: "3", selected: "" },
-    { label: "4", selected: "" },
-    { label: "5", selected: "" },
     { label: ">", selected: "" },
   ])
 
