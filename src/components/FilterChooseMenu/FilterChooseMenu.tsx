@@ -50,8 +50,8 @@ const FilterChooseMenu: FC<Props> = ({ list, label }) => {
           size={size}
           onChange={handleChange}
         >
-          {list.map((val, index) => (
-            <option key={index} value={val}>
+          {list.map(val => (
+            <option key={val} value={val}>
               {val}
             </option>
           ))}

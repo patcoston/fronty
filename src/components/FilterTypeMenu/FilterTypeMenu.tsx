@@ -22,7 +22,7 @@ const FilterTypeMenu: FC<Props> = ({ showFilter }) => {
         <div className="filter-type-menu-header">Choose a Filter Type</div>
         <ul>
           {filterData.map((filter, index) => (
-            <li key={index} onClick={() => showFilter(index)}>
+            <li key={filter.label} onClick={() => showFilter(index)}>
               {filter.label}
             </li>
           ))}

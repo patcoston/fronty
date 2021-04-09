@@ -81,7 +81,7 @@ const ShowResults: FC = () => {
           <ul>
             {next.map((val, index) => (
               <li
-                key={index}
+                key={val.label}
                 onClick={() => handleSelectNext(index)}
                 className={val.selected}
               >
