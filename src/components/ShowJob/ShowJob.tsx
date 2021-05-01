@@ -45,7 +45,10 @@ const ShowJob: FC = () => {
     <div className="show-job" onClick={() => history.push(`/`)}>
       <div className="show-job-header">
         <h3>{showJobCompany}</h3>
+        <button>Hide</button>
+        <button>Save</button>
         <button>Apply</button>
+        <button>Report</button>
         <div className="show-job-close">
           <CloseIcon />
         </div>
