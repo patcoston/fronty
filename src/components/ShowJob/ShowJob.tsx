@@ -87,7 +87,7 @@ const ShowJob: FC = () => {
         {getSingleValue(showType.SHOW_FILTER_EXPERIENCE_LEVEL)}
       </section>
       <section>
-        <strong>Exployee Type: </strong>
+        <strong>Employee Type: </strong>
         {getSingleValue(showType.SHOW_FILTER_EMPLOYEE_TYPE)}
       </section>
       <section>
