@@ -2,6 +2,7 @@ import { FC } from "react"
 import { useStore } from "../../store/StoreProvider"
 import { IFilters } from "../../utils/interfaces"
 import { TStringArray } from "../../utils/types"
+import Button from "@material-ui/core/Button"
 import "./FilterChooseMenu.scss"
 
 /**
@@ -35,9 +36,13 @@ const FilterChooseMenu: FC<Props> = ({ list, label }) => {
   return (
     <div className="filter-choose-menu">
       <div className="filter-choose-menu-button">
-        <button onClick={() => setShowFilterTypeMenu(true)}>
+        <Button
+          variant="contained"
+          color="primary"
+          onClick={() => setShowFilterTypeMenu(true)}
+        >
           Choose a Filter Type
-        </button>
+        </Button>
       </div>
       <div className="filter-choose-menu-body">
         <div className="filter-choose-menu-header">

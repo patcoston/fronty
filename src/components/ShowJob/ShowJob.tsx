@@ -5,6 +5,7 @@ import { rand } from "../../utils/tools"
 import { TStringArray } from "../../utils/types"
 import * as showType from "../../utils/constants"
 import CloseIcon from "../../svg/closeicon"
+import Button from "@material-ui/core/Button"
 import "./ShowJob.scss"
 
 /**
@@ -45,10 +46,18 @@ const ShowJob: FC = () => {
     <div className="show-job" onClick={() => history.push(`/`)}>
       <div className="show-job-header">
         <h3>{showJobCompany}</h3>
-        <button>Hide</button>
-        <button>Save</button>
-        <button>Apply</button>
-        <button>Report</button>
+        <Button variant="contained" color="primary">
+          Hide
+        </Button>
+        <Button variant="contained" color="primary">
+          Save
+        </Button>
+        <Button variant="contained" color="primary">
+          Apply
+        </Button>
+        <Button variant="contained" color="primary">
+          Report
+        </Button>
         <div className="show-job-close">
           <CloseIcon />
         </div>

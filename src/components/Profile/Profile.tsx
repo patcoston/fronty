@@ -1,4 +1,5 @@
 import { FC } from "react"
+import Button from "@material-ui/core/Button"
 
 /**
  * Profile
@@ -11,15 +12,21 @@ const Profile: FC = () => {
     <div className="profile">
       <h3>Profile:</h3>
       <section>
-        <button>Change</button>
+        <Button variant="contained" color="primary">
+          Change
+        </Button>
         <strong> Address: </strong> Zzyzx Road, Seattle, WA 98112-2735
       </section>
       <section>
-        <button>Change</button>
+        <Button variant="contained" color="primary">
+          Change
+        </Button>
         <strong> Email: </strong> johnsmith@gmail.com
       </section>
       <section>
-        <button>Change</button>
+        <Button variant="contained" color="primary">
+          Change
+        </Button>
         <strong> Password: </strong> ***********
       </section>
     </div>

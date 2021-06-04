@@ -3,6 +3,7 @@ import { useStore } from "../../store/StoreProvider"
 import { IFilters } from "../../utils/interfaces"
 import { TObjectEntries } from "../../utils/types"
 import CloseIcon from "../../svg/closeicon"
+import Button from "@material-ui/core/Button"
 import clsx from "clsx"
 import "./ShowActiveFilters.scss"
 
@@ -53,12 +54,15 @@ const ShowActiveFilters: FC<Props> = ({ activeFilterArray }) => {
               <strong>{filter[0]}:</strong>{" "}
               {filter[1].map((val, indexFilter) => {
                 return (
-                  <button
+                  <Button
+                    variant="contained"
+                    color="primary"
+                    size="small"
                     key={indexFilter}
                     onClick={() => toggleFilter(filter[0], indexFilter)}
                   >
                     {val}
-                  </button>
+                  </Button>
                 )
               })}
             </section>
