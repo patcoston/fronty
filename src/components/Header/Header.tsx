@@ -35,7 +35,7 @@ const useStyles = makeStyles({
     display: "block",
   },
   headerDropdown: {
-    display: "block",
+    display: "none",
     position: "absolute",
     right: -20,
     top: 0,
