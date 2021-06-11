@@ -1,7 +1,29 @@
 import { FC } from "react"
 import { Link } from "react-router-dom"
+import { makeStyles } from "@material-ui/core/styles"
 import * as path from "../../utils/constants"
-import "./Footer.scss"
+
+const useStyles = makeStyles({
+  footer: {
+    padding: 0,
+    "& ul": {
+      display: "flex",
+      flexDirection: "row",
+      justifyContent: "space-between",
+      flexWrap: "wrap",
+      listStyle: "none",
+      margin: 0,
+      "& li": {
+        padding: "2px 5px",
+        "& a": {
+          "&:hover": {
+            backgroundColor: "#ddd",
+          },
+        },
+      },
+    },
+  },
+})
 
 /**
  * Footer
@@ -10,8 +32,10 @@ import "./Footer.scss"
  */
 
 const Footer: FC = () => {
+  const classes = useStyles()
+  console.log(classes)
   return (
-    <div className="footer">
+    <div className={classes.footer}>
       <ul>
         <li>&#169; 2021 Fronty</li>
         <li>
