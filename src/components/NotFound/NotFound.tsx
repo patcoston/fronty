@@ -1,5 +1,5 @@
 import { FC } from "react"
-import "./NotFound.scss"
+import { makeStyles } from "@material-ui/core/styles"
 
 /**
  * Not Found
@@ -7,8 +7,15 @@ import "./NotFound.scss"
  * Purpose: Displays when the page is not found by the router
  */
 
+const useStyles = makeStyles({
+  notFound: {
+    textAlign: "center",
+  },
+})
+
 const NotFound: FC = () => {
-  return <div className="not-found">Sorry, page not found</div>
+  const classes = useStyles()
+  return <div className={classes.notFound}>Sorry, page not found</div>
 }
 
 export default NotFound
