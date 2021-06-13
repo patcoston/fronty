@@ -4,8 +4,8 @@ import FilterChooseMenu from "../FilterChooseMenu/FilterChooseMenu"
 import ShowActiveFilters from "../ShowActiveFilters/ShowActiveFilters"
 import ShowResults from "../ShowResults/ShowResults"
 import { useStore } from "../../store/StoreProvider"
+import { makeStyles } from "@material-ui/core/styles"
 import { TStringArray, TObjectEntries } from "../../utils/types"
-import "./Home.scss"
 
 /**
  * Home
@@ -17,7 +17,26 @@ import "./Home.scss"
  * - Results
  */
 
+const useStyles = makeStyles({
+  home: {
+    padding: 0,
+    margin: 0,
+  },
+  homeHeader: {
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "center",
+    padding: 0,
+    margin: 0,
+  },
+  homeBody: {
+    padding: 0,
+    margin: 0,
+  },
+})
+
 const Home: FC = () => {
+  const classes = useStyles()
   const [list, setList] = useState<TStringArray>([])
   const [label, setLabel] = useState<string>("")
   const {
@@ -49,12 +68,12 @@ const Home: FC = () => {
   }
 
   return (
-    <div className="home">
-      <div className="home-header">
+    <div className={classes.home}>
+      <div className={classes.homeHeader}>
         {showFilterTypeMenu && <FilterTypeMenu showFilter={showFilter} />}
         {!showFilterTypeMenu && <FilterChooseMenu list={list} label={label} />}
       </div>
-      <div className="home-body">
+      <div className={classes.homeBody}>
         {showResults && (
           <>
             <ShowActiveFilters activeFilterArray={activeFilterArray} />
