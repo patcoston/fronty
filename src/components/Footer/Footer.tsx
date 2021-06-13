@@ -3,6 +3,12 @@ import { Link } from "react-router-dom"
 import { makeStyles } from "@material-ui/core/styles"
 import * as path from "../../utils/constants"
 
+/**
+ * Footer
+ * Used By: App
+ * Purpose: Displays the footer
+ */
+
 const useStyles = makeStyles({
   footer: {
     padding: 0,
@@ -24,12 +30,6 @@ const useStyles = makeStyles({
     },
   },
 })
-
-/**
- * Footer
- * Used By: App
- * Purpose: Displays the footer
- */
 
 const Footer: FC = () => {
   const classes = useStyles()
