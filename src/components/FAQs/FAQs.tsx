@@ -1,5 +1,5 @@
 import { FC } from "react"
-import "./FAQs.scss"
+import { makeStyles } from "@material-ui/core/styles"
 
 /**
  * Frequently Asked Questions
@@ -7,9 +7,19 @@ import "./FAQs.scss"
  * Purpose: Displays the FAQs
  */
 
+const useStyles = makeStyles({
+  faqs: {
+    "& div": {
+      margin: 0,
+      padding: 0,
+    },
+  },
+})
+
 const FAQs: FC = () => {
+  const classes = useStyles()
   return (
-    <div className="faqs">
+    <div className={classes.faqs}>
       <h3>Frequently Asked Questions:</h3>
       <section>
         <div>
