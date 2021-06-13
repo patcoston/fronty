@@ -29,22 +29,23 @@ const useStyles = makeStyles({
     fontSize: 30,
   },
   headerDropdownWrapper: {
+    display: "none",
     position: "relative",
   },
   hamburger: {
-    display: "block",
+    "&:hover": {
+      headerDropdownWrapper: {
+        display: "block",
+      },
+    },
   },
   headerDropdown: {
-    display: "none",
     position: "absolute",
     right: -20,
     top: 0,
     backgroundColor: "#fff",
     margin: 0,
     zIndex: 1,
-    "&:hover": {
-      display: "block",
-    },
   },
   dropDownList: {
     listStyle: "none",
@@ -75,6 +76,7 @@ const useStyles = makeStyles({
 
 const Header: FC = () => {
   const classes = useStyles()
+  //console.log(classes)
   return (
     <div className={clsx(classes.header, "border")}>
       <div className={classes.logo}>
